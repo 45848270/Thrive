@@ -9,17 +9,17 @@ public class Player2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Player2Speed = speed;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         float y = Input.GetAxis(InputAxes.Player2_yDir);
-        transform.Translate(y * Player2Speed * Time.deltaTime * Vector3.up);
+        transform.Translate(y * speed * Time.deltaTime * Vector3.up);
 
         float x = Input.GetAxis(InputAxes.Player2_xDir);
-        transform.Translate(x * Player2Speed * Time.deltaTime * Vector3.right);
+        transform.Translate(x * speed * Time.deltaTime * Vector3.right);
 
     }
 }

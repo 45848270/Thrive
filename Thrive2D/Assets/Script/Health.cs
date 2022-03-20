@@ -10,6 +10,8 @@ public class Health : MonoBehaviour
     public int regainHealth=50;
     public int player1_health;
     public int player2_health;
+    public GameObject p1;
+    public GameObject p2;
     public Text p1HealthText;
     public Text p2HealthText;
     
@@ -25,25 +27,28 @@ public class Health : MonoBehaviour
 
     void Update()
     {
-        if(player1_health<=0)
-        {
-            Destroy(GameObject.FindGameObjectWithTag("Player1"));
-        }
-        if(player2_health<=0)
-        {
-            Destroy(GameObject.FindGameObjectWithTag("Player2"));
-        }
+    
     }
 
     public int Decrease_P1_Health()
     {
         player1_health-=damagePerContact;
+        if(player1_health<=0)
+        {
+            Debug.Log("p1 Dead");
+            Destroy(p1);
+        }
         p1HealthText.text="Player1: "+ player1_health.ToString();
         return player1_health;
     }
     public int Decrease_P2_Health()
     {
         player2_health-=damagePerContact;
+        if(player2_health<=0)
+        {
+            Debug.Log("p2 Dead");
+            Destroy(p2);
+        }
         p2HealthText.text="Player2: "+ player2_health.ToString();
         return player2_health;
     }

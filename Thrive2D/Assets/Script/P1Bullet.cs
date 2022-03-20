@@ -96,7 +96,6 @@ public class P1Bullet : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D damageGivenToP2)
     {
-        Debug.Log(damageGivenToP2.name);
 
          if (damageGivenToP2.gameObject.tag.Equals("Player2"))                                            //condition if it comes in contact with enemy
         {

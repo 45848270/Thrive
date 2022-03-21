@@ -100,14 +100,12 @@ public class P1Bullet : MonoBehaviour
          if (damageGivenToP2.gameObject.tag.Equals("Player2"))                                            //condition if it comes in contact with enemy
         {
             Destroy(gameObject);
-            Health.instance.Decrease_P2_Health(); 
-                                                                  //Destroys the enemy
-                                                                                //Bullet Get Self Destroyed
+            Health.instance.Decrease_P2_Health();                                                                    
         }
         if (damageGivenToP2.gameObject.tag.Equals("player2Bullet"))                                            //condition if it comes in contact with enemy
         {
-            Destroy(damageGivenToP2.gameObject);                                                       //Destroys the enemy
-            Destroy(gameObject);                                                                    //Bullet Get Self Destroyed
+            Destroy(damageGivenToP2.gameObject);                                                      
+            Destroy(gameObject);                                                                    
         }
     }
 }

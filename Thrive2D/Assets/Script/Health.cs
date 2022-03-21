@@ -35,7 +35,6 @@ public class Health : MonoBehaviour
         player1_health-=damagePerContact;
         if(player1_health<=0)
         {
-            Debug.Log("p1 Dead");
             Destroy(p1);
         }
         p1HealthText.text="Player1: "+ player1_health.ToString();
@@ -46,7 +45,6 @@ public class Health : MonoBehaviour
         player2_health-=damagePerContact;
         if(player2_health<=0)
         {
-            Debug.Log("p2 Dead");
             Destroy(p2);
         }
         p2HealthText.text="Player2: "+ player2_health.ToString();
@@ -55,27 +53,23 @@ public class Health : MonoBehaviour
 
     public int Increase_P1_Health()
     {
+        player1_health+=regainHealth; 
+        Debug.Log("Health Added");
         if(player1_health >= 100)
         {
             player1_health = 100;
         }
-        else
-        {
-            player1_health+=regainHealth;   
-        }
+          
        p1HealthText.text="Player1: "+ player1_health.ToString();
         return player1_health;
     }
 
     public int Increase_P2_Health()
         {
+            player2_health+=regainHealth;
             if(player2_health >= 100)
             {
                 player2_health = 100;
-            }
-            else
-            {
-                player2_health+=regainHealth;   
             }
             p2HealthText.text="Player2: "+ player2_health.ToString();
             return player2_health;

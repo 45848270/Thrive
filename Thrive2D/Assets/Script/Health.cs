@@ -14,16 +14,12 @@ public class Health : MonoBehaviour
     public int player2_health;
     public GameObject p1;
     public GameObject p2;
-    public Text p1HealthText;
-    public Text p2HealthText;
     
     public void Awake()
     {
         instance = this;
           player1_health = 100;
             player2_health = 100;
-            p1HealthText.text="Player1: "+ player1_health.ToString();
-            p2HealthText.text="Player2: "+ player2_health.ToString();
     }
     
 
@@ -41,7 +37,6 @@ public class Health : MonoBehaviour
         {
             Destroy(p1);
         }
-        p1HealthText.text="Player1: "+ player1_health.ToString();
         return player1_health;
     }
     public int Decrease_P2_Health()
@@ -52,7 +47,6 @@ public class Health : MonoBehaviour
         {
             Destroy(p2);
         }
-        p2HealthText.text="Player2: "+ player2_health.ToString();
         return player2_health;
     }
 
@@ -66,7 +60,6 @@ public class Health : MonoBehaviour
             player1_health = 100;
         }
          P1slider.value=player1_health; 
-       p1HealthText.text="Player1: "+ player1_health.ToString();
         return player1_health;
     }
 
@@ -78,7 +71,6 @@ public class Health : MonoBehaviour
                 player2_health = 100;
             }
             P2slider.value=player2_health;
-            p2HealthText.text="Player2: "+ player2_health.ToString();
             return player2_health;
         }
 }

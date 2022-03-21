@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
+    public Slider P1slider;
+    public Slider P2slider;
     public static Health instance;
     public int damagePerContact=30;
     public int regainHealth=50;
@@ -25,14 +27,16 @@ public class Health : MonoBehaviour
     }
     
 
-    void Update()
+    void Start()
     {
-    
+        P1slider.value=player1_health;
+        P2slider.value=player2_health;
     }
 
     public int Decrease_P1_Health()
     {
         player1_health-=damagePerContact;
+        P1slider.value=player1_health;
         if(player1_health<=0)
         {
             Destroy(p1);
@@ -43,6 +47,7 @@ public class Health : MonoBehaviour
     public int Decrease_P2_Health()
     {
         player2_health-=damagePerContact;
+        P2slider.value=player2_health;
         if(player2_health<=0)
         {
             Destroy(p2);
@@ -54,12 +59,13 @@ public class Health : MonoBehaviour
     public int Increase_P1_Health()
     {
         player1_health+=regainHealth; 
+        
         Debug.Log("Health Added");
         if(player1_health >= 100)
         {
             player1_health = 100;
         }
-          
+         P1slider.value=player1_health; 
        p1HealthText.text="Player1: "+ player1_health.ToString();
         return player1_health;
     }
@@ -71,6 +77,7 @@ public class Health : MonoBehaviour
             {
                 player2_health = 100;
             }
+            P2slider.value=player2_health;
             p2HealthText.text="Player2: "+ player2_health.ToString();
             return player2_health;
         }

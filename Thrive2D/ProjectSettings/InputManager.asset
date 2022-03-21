@@ -137,10 +137,10 @@ InputManager:
     m_Name: Fire2
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: 4
-    positiveButton: 6
-    altNegativeButton: 4
-    altPositiveButton: 6
+    negativeButton: '[4]'
+    positiveButton: '[6]'
+    altNegativeButton: '[4]'
+    altPositiveButton: '[6]'
     gravity: 1000
     dead: 0.001
     sensitivity: 1000
@@ -153,10 +153,10 @@ InputManager:
     m_Name: Fire3
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: 5
-    positiveButton: 8
-    altNegativeButton: 5
-    altPositiveButton: 8
+    negativeButton: '[5]'
+    positiveButton: '[8]'
+    altNegativeButton: '[5]'
+    altPositiveButton: '[8]'
     gravity: 1000
     dead: 0.001
     sensitivity: 1000

@@ -20,7 +20,7 @@ public class Health : MonoBehaviour
     {
         instance = this;
           player1_health = 100f;
-            player2_health = 100f;
+            player2_health = 70f;
     }
     
 

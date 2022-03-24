@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: cd0763619c4a1d248896523251dea7b4, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -291,6 +291,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &683215426 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6290255593786137045, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
+  m_PrefabInstance: {fileID: 1053670403}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &754824821
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -298,9 +303,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6048941856162690919, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
+      propertyPath: accelerationFactor
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6532764984498949550, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7062758016601054950, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7062758016601054950, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
       propertyPath: m_LinearDrag
-      value: 2
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8753642854719118244, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
       propertyPath: m_RootOrder
@@ -350,8 +367,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player_B
       objectReference: {fileID: 0}
+    - target: {fileID: 9103541012551989609, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
+      propertyPath: m_TagString
+      value: Player2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
+--- !u!1 &888688491 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9103541012551989609, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
+  m_PrefabInstance: {fileID: 754824821}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1053670403
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -407,5 +433,78 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player_A
       objectReference: {fileID: 0}
+    - target: {fileID: 6290255593786137045, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
+      propertyPath: m_TagString
+      value: Player1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6772557707889910404, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
+      propertyPath: accelerationFactor
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7359801837447229738, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9001428975049791055, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9001428975049791055, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
+      propertyPath: m_LinearDrag
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
+--- !u!1 &1312713485
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1312713487}
+  - component: {fileID: 1312713486}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1312713486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312713485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da04361b0075c36488fc95fe3aaf89fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  P1slider: {fileID: 0}
+  P2slider: {fileID: 0}
+  player1DamagePerContact: 30
+  player2DamagePerContact: 30
+  regainHealth: 50
+  player1_health: 0
+  player2_health: 0
+  p1: {fileID: 683215426}
+  p2: {fileID: 888688491}
+--- !u!4 &1312713487
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312713485}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

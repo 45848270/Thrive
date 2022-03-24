@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GGun : MonoBehaviour
+public class Player1SecondGun : MonoBehaviour
 {
    public Transform initialPos;
     public GameObject bulletPrefab;

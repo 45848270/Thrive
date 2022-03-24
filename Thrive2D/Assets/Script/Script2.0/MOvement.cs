@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
-public class MOvement : MonoBehaviour
+public class Movement : MonoBehaviour
 {
-    public float accelerationFactor=30.0f;
+    public float accelerationFactor=10.0f;
     public float driftFactor=0.95f;
     public float turnFactor=3.5f;
 

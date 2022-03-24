@@ -5,7 +5,7 @@ using UnityEngine;
 public class Movement2 : MonoBehaviour
 {
     
-    public float accelerationFactor=30.0f;
+    public float accelerationFactor=10.0f;
     public float driftFactor=0.95f;
     public float turnFactor=3.5f;
 

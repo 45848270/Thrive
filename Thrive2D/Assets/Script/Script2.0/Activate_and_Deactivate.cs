@@ -5,7 +5,7 @@ using UnityEngine;
 public class Activate_and_Deactivate : MonoBehaviour
 {
     public GameObject Object;
-    public GGun script;
+    public Player1SecondGun script;
 
     // Start is called before the first frame update
     void Start()

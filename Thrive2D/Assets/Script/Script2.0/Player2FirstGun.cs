@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gun : MonoBehaviour
+public class Player2FirstGun : MonoBehaviour
 {
     public Transform initialPos;
     public GameObject bulletPrefab;
@@ -12,7 +12,7 @@ public class Gun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    if (Input.GetKeyDown(KeyCode.Space)) 
+    if (Input.GetKeyDown(KeyCode.Keypad5)) 
         {
             shoot();
         }

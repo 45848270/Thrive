@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[RequireComponent(typeof(Rigidbody2D))]
-public class MOvement : MonoBehaviour
+
+public class Movement2 : MonoBehaviour
 {
+    
     public float accelerationFactor=30.0f;
     public float driftFactor=0.95f;
     public float turnFactor=3.5f;
@@ -14,7 +15,7 @@ public class MOvement : MonoBehaviour
     float rotaionAngle=0;
     // Start is called before the first frame update
 
-    private Rigidbody2D playerRigidbody2D;
+    Rigidbody2D playerRigidbody2D;
 
 
     void Awake()
@@ -29,8 +30,8 @@ public class MOvement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      steeringInput=Input.GetAxis(InputAxes.Player1_xDir);
-        accelerationInput=Input.GetAxis(InputAxes.Player1_yDir); 
+      steeringInput=Input.GetAxis(InputAxes.Player2_xDir);
+        accelerationInput=Input.GetAxis(InputAxes.Player2_yDir); 
     }
 
     void FixedUpdate()
@@ -59,9 +60,4 @@ public class MOvement : MonoBehaviour
 
         playerRigidbody2D.velocity=forwardVelocity+rightVelocity*driftFactor;
     }
-   /* public void SetInputVector(Vector2 inputVector)
-    {
-        steeringInput=inputVector.x;
-        accelerationInput=inputVector.y;
-    }*/
 }

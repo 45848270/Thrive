@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ae025b6cee5c1ad40acd626acac01bec, type: 3}
-  m_Color: {r: 0.9811321, g: 0.21658951, b: 0.21658951, a: 1}
+  m_Color: {r: 0.14528298, g: 0.21708868, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 1274407779562488555}
   - component: {fileID: 4792171633365044966}
   m_Layer: 0
-  m_Name: Player1Bullet
+  m_Name: Player2Bullet 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

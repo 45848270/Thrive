@@ -12,6 +12,7 @@ public class InputAxes : MonoBehaviour
     public const string P1_bDirY = "Fire1";
     public const string P2_bDirX = "Fire2";
     public const string P2_bDirY = "Fire3";
+    public const string P2_Fire = "Fire4";
 
     /*public const string AFireUp = "AFireUp";
     public const string AFireDown = "AFireDown";

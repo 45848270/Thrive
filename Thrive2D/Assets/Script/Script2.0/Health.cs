@@ -8,18 +8,19 @@ public class Health : MonoBehaviour
     public Slider P1slider;
     public Slider P2slider;
     public static Health instance;
-    public int damagePerContact=30;
-    public int regainHealth=50;
-    public int player1_health;
-    public int player2_health;
+    public float player1DamagePerContact=30f;
+    public float player2DamagePerContact=30f;
+    public float regainHealth=50f;
+    public float player1_health;
+    public float player2_health;
     public GameObject p1;
     public GameObject p2;
     
     public void Awake()
     {
         instance = this;
-          player1_health = 100;
-            player2_health = 100;
+          player1_health = 100f;
+            player2_health = 100f;
     }
     
 
@@ -29,9 +30,21 @@ public class Health : MonoBehaviour
         P2slider.value=player2_health;
     }
 
-    public int Decrease_P1_Health()
+    public float IncreasePlayer1DamagePerCOntact()
     {
-        player1_health-=damagePerContact;
+        player1DamagePerContact=player1DamagePerContact+(0.5f * player1DamagePerContact);
+        return player1DamagePerContact;
+    } 
+
+    public float IncreasePlayer2DamagePerCOntact()
+    {
+        player2DamagePerContact=player2DamagePerContact+(0.5f * player2DamagePerContact);
+        return player1DamagePerContact;
+    }
+
+    public float Decrease_P1_Health()
+    {
+        player1_health-=player1DamagePerContact;
         P1slider.value=player1_health;
         if(player1_health<=0)
         {
@@ -39,9 +52,9 @@ public class Health : MonoBehaviour
         }
         return player1_health;
     }
-    public int Decrease_P2_Health()
+    public float Decrease_P2_Health()
     {
-        player2_health-=damagePerContact;
+        player2_health-=player2DamagePerContact;
         P2slider.value=player2_health;
         if(player2_health<=0)
         {
@@ -50,27 +63,39 @@ public class Health : MonoBehaviour
         return player2_health;
     }
 
-    public int Increase_P1_Health()
+    public float Increase_P1_Health()
     {
         player1_health+=regainHealth; 
         
         Debug.Log("Health Added");
-        if(player1_health >= 100)
+        if(player1_health >= 100f)
         {
-            player1_health = 100;
+            player1_health = 100f;
         }
          P1slider.value=player1_health; 
         return player1_health;
     }
 
-    public int Increase_P2_Health()
+    public float Increase_P2_Health()
         {
             player2_health+=regainHealth;
-            if(player2_health >= 100)
+            if(player2_health >= 100f)
             {
-                player2_health = 100;
+                player2_health = 100f;
             }
             P2slider.value=player2_health;
             return player2_health;
         }
+
+    public void Player1MaxHealth()
+    {
+        player1_health=100f;
+        P1slider.value=player1_health;
+    }
+
+    public void Player2MaxHealth()
+    {
+        player2_health=100f;
+        P1slider.value=player2_health;
+    }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Movement : MonoBehaviour
 {
+    public static Movement instance;
     public float accelerationFactor=10.0f;
     public float driftFactor=0.95f;
     public float turnFactor=3.5f;
@@ -19,6 +20,7 @@ public class Movement : MonoBehaviour
 
     void Awake()
     {
+        instance=this;
         playerRigidbody2D=GetComponent<Rigidbody2D>();
     }
     void Start()
@@ -59,9 +61,9 @@ public class Movement : MonoBehaviour
 
         playerRigidbody2D.velocity=forwardVelocity+rightVelocity*driftFactor;
     }
-   /* public void SetInputVector(Vector2 inputVector)
+    
+    public void Increase_P1_Speed()
     {
-        steeringInput=inputVector.x;
-        accelerationInput=inputVector.y;
-    }*/
+        accelerationFactor*=2;
+    }
 }

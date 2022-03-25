@@ -8,9 +8,9 @@ public class Health : MonoBehaviour
     public Slider P1slider;
     public Slider P2slider;
     public static Health instance;
-    public float player1DamagePerContact=30f;
-    public float player2DamagePerContact=30f;
-    public float regainHealth=50f;
+    public float player1DamagePerContact=10f;
+    public float player2DamagePerContact=10f;
+    public float regainHealth=20f;
     public float player1_health;
     public float player2_health;
     public GameObject p1;
@@ -20,7 +20,7 @@ public class Health : MonoBehaviour
     {
         instance = this;
           player1_health = 100f;
-            player2_health = 70f;
+            player2_health = 100f;
     }
     
 
@@ -32,13 +32,13 @@ public class Health : MonoBehaviour
 
     public float IncreasePlayer1DamagePerCOntact()
     {
-        player1DamagePerContact=player1DamagePerContact+(0.5f * player1DamagePerContact);
+        player1DamagePerContact=player1DamagePerContact+(0.9f * player1DamagePerContact);
         return player1DamagePerContact;
     } 
 
     public float IncreasePlayer2DamagePerCOntact()
     {
-        player2DamagePerContact=player2DamagePerContact+(0.5f * player2DamagePerContact);
+        player2DamagePerContact=player2DamagePerContact+(0.9f * player2DamagePerContact);
         return player1DamagePerContact;
     }
 

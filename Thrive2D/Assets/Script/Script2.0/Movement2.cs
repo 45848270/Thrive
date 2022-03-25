@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Movement2 : MonoBehaviour
 {
-    
+    public static Movement2 instance;
     public float accelerationFactor=10.0f;
     public float driftFactor=0.95f;
     public float turnFactor=3.5f;
@@ -20,6 +20,7 @@ public class Movement2 : MonoBehaviour
 
     void Awake()
     {
+        instance=this;
         playerRigidbody2D=GetComponent<Rigidbody2D>();
     }
     void Start()
@@ -59,5 +60,10 @@ public class Movement2 : MonoBehaviour
         Vector2 rightVelocity=transform.right*Vector2.Dot(playerRigidbody2D.velocity,transform.right);
 
         playerRigidbody2D.velocity=forwardVelocity+rightVelocity*driftFactor;
+    }
+
+    public void Increase_P2_Speed()
+    {
+        accelerationFactor*=2;
     }
 }

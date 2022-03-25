@@ -15,4 +15,19 @@ public class Player2Bullet : MonoBehaviour
     {
         Destroy(gameObject,3f);
     }
+    
+    void OnTriggerEnter2D(Collider2D damageGivenToP1)
+    {
+
+         if (damageGivenToP1.gameObject.tag.Equals("Player1"))                                            //condition if it comes in contact with enemy
+        {
+            Destroy(gameObject);
+            Health.instance.Decrease_P1_Health();                                                                    
+        }
+        if (damageGivenToP1.gameObject.tag.Equals("player1Bullet"))                                            //condition if it comes in contact with enemy
+        {
+            Destroy(damageGivenToP1.gameObject);                                                      
+            Destroy(gameObject);                                                                    
+        }
+    }
 }

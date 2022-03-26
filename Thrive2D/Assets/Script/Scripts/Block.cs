@@ -25,11 +25,18 @@ public class Block : MonoBehaviour
     /// </summary>
     public void OnHit()
     {
-        Destroy(gameObject);
         Instantiate(followObj, transform.position, Quaternion.identity);
         if (crash)
         {
             GetComponentInChildren <Animator>().SetTrigger("Crash");
+        }else
+        {
+
+            Destroy(gameObject);
         }
+    }
+    public void AniEnd()
+    {
+        Destroy(gameObject);
     }
 }

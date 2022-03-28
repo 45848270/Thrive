@@ -21,6 +21,8 @@ public class Health : MonoBehaviour
     public float player1_CurrentHealth;
     public float player2_CurrentHealth;
 
+    public AudioSource HurtSound;
+
     public float time1;
     public float time2;
 
@@ -50,6 +52,10 @@ public class Health : MonoBehaviour
     {
         P1slider.value=p1_Slidder_HealthValue;
         P2slider.value=p1_Slidder_HealthValue;
+
+       
+        HurtSound = GetComponent<AudioSource> ();
+        
     }
     void Update()
     {
@@ -90,6 +96,10 @@ public class Health : MonoBehaviour
     public float Decrease_P1_Health()
     {
         player1_CurrentHealth-=player1DamagePerContact;
+
+         Debug.Log("hurt");
+        HurtSound.Play ();
+        
         //SetPlayer1Health();
         if(player1_CurrentHealth<=0)
         {
@@ -100,6 +110,10 @@ public class Health : MonoBehaviour
     public float Decrease_P2_Health()
     {
         player2_CurrentHealth-=player2DamagePerContact;
+        
+        Debug.Log("hurt");
+        HurtSound.Play ();
+         
         //SetPlayer2Health();
         if(player2_CurrentHealth<=0)
         {

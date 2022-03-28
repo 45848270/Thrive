@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DamageIcon : MonoBehaviour
 {
+    public float destroyTime=5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,7 +14,7 @@ public class DamageIcon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Destroy(gameObject,destroyTime);
     }
 
     void OnTriggerEnter2D(Collider2D DamageIncrease)

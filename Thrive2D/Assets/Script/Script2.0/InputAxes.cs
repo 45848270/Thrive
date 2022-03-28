@@ -14,6 +14,9 @@ public class InputAxes : MonoBehaviour
     public const string P2_bDirY = "Fire3";
     public const string P2_Fire = "Fire4";
 
+    public const float screenWidth=18f;
+    public const float screenHeight=9f;
+
     /*public const string AFireUp = "AFireUp";
     public const string AFireDown = "AFireDown";
     public const string AFireLeft = "AFireLeft";

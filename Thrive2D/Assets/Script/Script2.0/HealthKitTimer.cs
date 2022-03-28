@@ -4,22 +4,16 @@ using UnityEngine;
 
 public class HealthKitTimer : MonoBehaviour
 {
-    public float healthkitLastFor=4f;
-    private float time1;
+    public float destroyTime=5f;
     // Start is called before the first frame update
     void Start()
-    {
-      time1=healthkitLastFor;  
+    {  
     }
 
     // Update is called once per frame
     void Update()
     {
-        time1-=Time.deltaTime;
-            if(time1<=0)
-            {
-                Destroy(gameObject);
-            }
+                Destroy(gameObject,destroyTime);
         
     }
     void OnTriggerEnter2D(Collider2D health)
@@ -32,7 +26,7 @@ public class HealthKitTimer : MonoBehaviour
                                                                  
                                                                                
         }
-        if (health.gameObject.tag.Equals("Player2Bullet"))                                            //condition if it comes in contact with enemy
+        if (health.gameObject.tag.Equals("player2Bullet"))                                            //condition if it comes in contact with enemy
         {
             Destroy(health.gameObject);  
             Destroy(gameObject); 

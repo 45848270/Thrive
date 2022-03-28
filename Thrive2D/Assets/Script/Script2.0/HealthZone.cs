@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class HealthZone : MonoBehaviour
 {
-    
-    public float healthkitLastFor=4f;
+    public float zoneActivation_Time=1f;
     public bool player1ZoneTime=false;
     public bool player2ZoneTime=false;
-    public float player1Time=0f;
-    public float player2Time=0f;
+    public float player1Time=2.0f;
+    public float player2Time=2.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,20 +20,20 @@ public class HealthZone : MonoBehaviour
     {
         if(player1ZoneTime)
         {
-            player1Time+=Time.deltaTime;
-            if(player1Time>=15f)
+            player1Time-=Time.deltaTime;
+            if(player1Time<=0)
             {
-                Health.instance.Player1MaxHealth();
-                player1Time=0f;
+                Health.instance.Player1MaxHealth(1);
+                player1Time=zoneActivation_Time;
             }
         }
         if(player2ZoneTime)
         {
-            player2Time+=Time.deltaTime;
-            if(player2Time>=15f)
+            player2Time-=Time.deltaTime;
+            if(player2Time<=0)
             {
-                Health.instance.Player2MaxHealth();
-                player2Time=0f;
+                Health.instance.Player2MaxHealth(1);
+                player2Time=zoneActivation_Time;
             }
         }
     }
@@ -42,13 +41,11 @@ public class HealthZone : MonoBehaviour
     {
          if (healthzone.gameObject.tag.Equals("Player1"))                                            //condition if it comes in contact with enemy
         {
-                player1Time=0f;
                 player1ZoneTime=true;  
 
         }
         if (healthzone.gameObject.tag.Equals("Player2"))                                            //condition if it comes in contact with enemy
         { 
-                player2Time=0f;
                 player2ZoneTime=true;                                                                      
         }
     }

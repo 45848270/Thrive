@@ -14,6 +14,8 @@ public class Boundary : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector2(Mathf.Clamp(transform.position.x, -8.5f, 8.5f), Mathf.Clamp(transform.position.y, -4.5f, 4.5f));
+        float y=InputAxes.screenHeight/2;
+        float x= InputAxes.screenWidth/2;
+        transform.position = new Vector2(Mathf.Clamp(transform.position.x, -x, x), Mathf.Clamp(transform.position.y, -y, y));
     }
 }

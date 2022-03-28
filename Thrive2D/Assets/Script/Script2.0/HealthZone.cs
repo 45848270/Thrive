@@ -25,6 +25,7 @@ public class HealthZone : MonoBehaviour
             {
                 Health.instance.Player1MaxHealth(1);
                 player1Time=zoneActivation_Time;
+               
             }
         }
         if(player2ZoneTime)
@@ -37,7 +38,7 @@ public class HealthZone : MonoBehaviour
             }
         }
     }
-    void OnTriggerEnter2D(Collider2D healthzone)
+    void OnTriggerStay2D(Collider2D healthzone)
     {
          if (healthzone.gameObject.tag.Equals("Player1"))                                            //condition if it comes in contact with enemy
         {
@@ -47,6 +48,19 @@ public class HealthZone : MonoBehaviour
         if (healthzone.gameObject.tag.Equals("Player2"))                                            //condition if it comes in contact with enemy
         { 
                 player2ZoneTime=true;                                                                      
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D healthzone)
+    {
+         if (healthzone.gameObject.tag.Equals("Player1"))                                            //condition if it comes in contact with enemy
+        {
+                player1ZoneTime=false;  
+
+        }
+        if (healthzone.gameObject.tag.Equals("Player2"))                                            //condition if it comes in contact with enemy
+        { 
+                player2ZoneTime=false;                                                                      
         }
     }
 }

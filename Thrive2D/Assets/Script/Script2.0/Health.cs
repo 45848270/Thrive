@@ -21,6 +21,14 @@ public class Health : MonoBehaviour
     public float player1_CurrentHealth;
     public float player2_CurrentHealth;
 
+    public float time1;
+    public float time2;
+
+    public float x;
+    public float y;
+
+
+
     
     public void Awake()
     {
@@ -50,6 +58,7 @@ public class Health : MonoBehaviour
 
         P2slider.maxValue=player2_health;
         P2slider.value=player2_CurrentHealth;
+    
     }
 
     /*public void SetPlayer1Health()

@@ -21,11 +21,13 @@ public class DualGunIcon : MonoBehaviour
         
          if (DualGun.gameObject.tag.Equals("player1Bullet"))                                            //condition if it comes in contact with enemy
         {
+            Destroy(DualGun.gameObject);
             Destroy(gameObject);
             Activate_and_Deactivate.instance.Activate_Player1_Second_Gun();                                                                   
         }
         if (DualGun.gameObject.tag.Equals("player2Bullet"))                                            //condition if it comes in contact with enemy
         {
+            Destroy(DualGun.gameObject);
             Destroy(gameObject);
             Activate_and_Deactivate.instance.Activate_Player2_Second_Gun();                                                                     
         }

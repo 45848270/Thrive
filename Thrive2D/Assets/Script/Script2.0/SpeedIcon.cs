@@ -24,11 +24,13 @@ public class SpeedIcon : MonoBehaviour
         
          if (SpeedIncrease.gameObject.tag.Equals("player1Bullet"))                                            //condition if it comes in contact with enemy
         {
+            Destroy(SpeedIncrease.gameObject);
             Destroy(gameObject);
             Movement.instance.Increase_P1_Speed();                                                                   
         }
         if (SpeedIncrease.gameObject.tag.Equals("player2Bullet"))                                            //condition if it comes in contact with enemy
         {
+            Destroy(SpeedIncrease.gameObject);
             Destroy(gameObject);
             Movement2.instance.Increase_P2_Speed();                                                                   
         }

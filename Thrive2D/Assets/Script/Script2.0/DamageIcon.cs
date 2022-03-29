@@ -22,11 +22,13 @@ public class DamageIcon : MonoBehaviour
         
          if (DamageIncrease.gameObject.tag.Equals("player1Bullet"))                                            //condition if it comes in contact with enemy
         {
+            Destroy(DamageIncrease.gameObject);
             Destroy(gameObject);
             Health.instance.IncreasePlayer2DamagePerCOntact();                                                                    
         }
         if (DamageIncrease.gameObject.tag.Equals("player2Bullet"))                                            //condition if it comes in contact with enemy
         {
+            Destroy(DamageIncrease.gameObject);
             Destroy(gameObject);
             Health.instance.IncreasePlayer1DamagePerCOntact();                                                                    
         }

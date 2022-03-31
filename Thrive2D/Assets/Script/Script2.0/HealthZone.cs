@@ -9,10 +9,13 @@ public class HealthZone : MonoBehaviour
     public bool player2ZoneTime=false;
     public float player1Time=2.0f;
     public float player2Time=2.0f;
+    
+
     // Start is called before the first frame update
     void Start()
     {
-      
+    
+        
     }
 
     // Update is called once per frame
@@ -42,11 +45,15 @@ public class HealthZone : MonoBehaviour
          if (healthzone.gameObject.tag.Equals("Player1"))                                            //condition if it comes in contact with enemy
         {
                 player1ZoneTime=true;  
+            
+
 
         }
         if (healthzone.gameObject.tag.Equals("Player2"))                                            //condition if it comes in contact with enemy
         { 
-                player2ZoneTime=true;                                                                      
+                player2ZoneTime=true;   
+               
+                                                                   
         }
     }
 }

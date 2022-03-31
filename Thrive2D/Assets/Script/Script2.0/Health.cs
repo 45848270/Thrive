@@ -20,8 +20,8 @@ public class Health : MonoBehaviour
     public float p2_Slidder_HealthValue;
     public float player1_CurrentHealth;
     public float player2_CurrentHealth;
-    public AudioSource audioSource;
-    public static AudioClip firstSound, secondSound, thirdSound, fourthSound, fifthSound, sixthSound; 
+     AudioSource audioSource;
+    public static AudioClip damage1, damage2, damage3, damage4, heartBeat, death; 
 
    
 
@@ -62,12 +62,12 @@ public class Health : MonoBehaviour
 
         audioSource = GetComponent<AudioSource> ();
         
-        firstSound = Resources.Load<AudioClip> ("first");
-       secondSound = Resources.Load<AudioClip> ("second");
-        thirdSound = Resources.Load<AudioClip> ("third");
-        fourthSound = Resources.Load<AudioClip> ("fourth");
-       fifthSound = Resources.Load<AudioClip> ("fifth");
-        sixthSound = Resources.Load<AudioClip> ("sixth");
+       damage1 = Resources.Load<AudioClip> ("damage1");
+       damage2 = Resources.Load<AudioClip> ("damage2");
+       damage3 = Resources.Load<AudioClip> ("damage3");
+       damage4 = Resources.Load<AudioClip> ("damage4");
+       heartBeat = Resources.Load<AudioClip> ("heartbeat");
+        death = Resources.Load<AudioClip> ("death");
 
 
 
@@ -111,8 +111,22 @@ public class Health : MonoBehaviour
 
     public float Decrease_P1_Health()
     {
-        player1_CurrentHealth-=player1DamagePerContact;
-        audioSource.PlayOneShot(firstSound); // play sound effect    
+        player1_CurrentHealth-=player1DamagePerContact;       
+         //audioSource.PlayOneShot(damage1);
+
+         if(player1_CurrentHealth == 70)  // play sound effect   
+        {       
+            audioSource.PlayOneShot(damage1);            
+        }
+        else if(player1_CurrentHealth == 40)
+        {
+            audioSource.PlayOneShot(damage2); 
+        }
+        else if(player1_CurrentHealth == 10)
+        {        
+            audioSource.PlayOneShot(heartBeat);
+        }
+    
       
       
         
@@ -120,24 +134,33 @@ public class Health : MonoBehaviour
         if(player1_CurrentHealth<=0)
         {
             Destroy(p1);
+            audioSource.PlayOneShot(death); 
         }
         return player1_CurrentHealth;
     }
     public float Decrease_P2_Health()
     {
         player2_CurrentHealth-=player2DamagePerContact;
-        //audioSource.PlayOneShot(secondSound); // play sound effect    
         
-        if( player2_CurrentHealth == 10)
+        if(player2_CurrentHealth == 70)  // play sound effect   
         {
-            audioSource.PlayOneShot(fifthSound);
+            audioSource.PlayOneShot(damage3);       
+        }        
+        else if(player2_CurrentHealth == 40)
+        {
+            audioSource.PlayOneShot(damage4);
         }
+         else if(player2_CurrentHealth == 10)
+        {
+            audioSource.PlayOneShot(heartBeat);  
+        }
+      
          
         //SetPlayer2Health();
         if(player2_CurrentHealth<=0)
         {
             Destroy(p2);
-            audioSource.PlayOneShot(secondSound); // play sound effect   
+            audioSource.PlayOneShot(death);  
 
         }
         return player2_CurrentHealth;

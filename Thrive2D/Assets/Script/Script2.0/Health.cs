@@ -20,8 +20,8 @@ public class Health : MonoBehaviour
     public float p2_Slidder_HealthValue;
     public float player1_CurrentHealth;
     public float player2_CurrentHealth;
-    public AudioSource HurtSound;
-    public static AudioClip firstSound, secondSound; 
+    public AudioSource audioSource;
+    public static AudioClip firstSound, secondSound, thirdSound, fourthSound, fifthSound, sixthSound; 
 
    
 
@@ -60,10 +60,17 @@ public class Health : MonoBehaviour
         P1slider.value=p1_Slidder_HealthValue;
         P2slider.value=p1_Slidder_HealthValue;  
 
-        HurtSound = GetComponent<AudioSource> ();
+        audioSource = GetComponent<AudioSource> ();
         
         firstSound = Resources.Load<AudioClip> ("first");
        secondSound = Resources.Load<AudioClip> ("second");
+        thirdSound = Resources.Load<AudioClip> ("third");
+        fourthSound = Resources.Load<AudioClip> ("fourth");
+       fifthSound = Resources.Load<AudioClip> ("fifth");
+        sixthSound = Resources.Load<AudioClip> ("sixth");
+
+
+
         
     }
     void Update()
@@ -105,7 +112,7 @@ public class Health : MonoBehaviour
     public float Decrease_P1_Health()
     {
         player1_CurrentHealth-=player1DamagePerContact;
-        HurtSound.PlayOneShot(firstSound); // play sound effect    
+        audioSource.PlayOneShot(firstSound); // play sound effect    
       
       
         
@@ -119,15 +126,19 @@ public class Health : MonoBehaviour
     public float Decrease_P2_Health()
     {
         player2_CurrentHealth-=player2DamagePerContact;
-        HurtSound.PlayOneShot(secondSound); // play sound effect   
-       
+        //audioSource.PlayOneShot(secondSound); // play sound effect    
         
-       
+        if( player2_CurrentHealth == 10)
+        {
+            audioSource.PlayOneShot(fifthSound);
+        }
          
         //SetPlayer2Health();
         if(player2_CurrentHealth<=0)
         {
             Destroy(p2);
+            audioSource.PlayOneShot(secondSound); // play sound effect   
+
         }
         return player2_CurrentHealth;
     }

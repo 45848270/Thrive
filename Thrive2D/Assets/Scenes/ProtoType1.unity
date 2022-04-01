@@ -880,7 +880,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1287847000981598674, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
       propertyPath: accelerationFactor
-      value: 30
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 2287024955499315617, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
       propertyPath: m_RootOrder
@@ -1218,10 +1218,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d104d0a8e2069e7418ea125341a3ef4c, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 0.87
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

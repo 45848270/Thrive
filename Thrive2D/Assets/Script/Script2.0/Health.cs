@@ -192,20 +192,24 @@ public class Health : MonoBehaviour
 
     public void Player1MaxHealth(int value)
     { 
-        while(player1_CurrentHealth<player1_health)
+        player1_CurrentHealth+=value;
+
+        if (player1_CurrentHealth>=player1_health)
         {
-                player1_CurrentHealth=player1_CurrentHealth+value;
+            player1_CurrentHealth=player1_health;
         }
         
-       //SetPlayer1Health();
     }
 
     public void Player2MaxHealth(int value)
     {
-        while(player2_CurrentHealth<player2_health)
+        player2_CurrentHealth+=value;
+        
+        if (player2_CurrentHealth>=player2_health)
         {
-                player2_CurrentHealth=player2_CurrentHealth+value;
+            player2_CurrentHealth=player2_health;
         }
-        //SetPlayer1Health();
+
+        
     }
 }

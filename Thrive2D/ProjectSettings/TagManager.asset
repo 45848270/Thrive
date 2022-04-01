@@ -9,6 +9,7 @@ TagManager:
   - player1Bullet
   - Player2Bullet
   - Health
+  - Block
   layers:
   - Default
   - TransparentFX
@@ -16,9 +17,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Player1
+  - Player2
+  - map
   - 
   - 
   - 

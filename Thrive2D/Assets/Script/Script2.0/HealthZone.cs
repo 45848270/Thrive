@@ -9,12 +9,17 @@ public class HealthZone : MonoBehaviour
     public bool player2ZoneTime=false;
     public float player1Time=2.0f;
     public float player2Time=2.0f;
+     //public static AudioClip charging;
+
+    public AudioSource HealthSound;
     
 
     // Start is called before the first frame update
     void Start()
     {
-    
+        HealthSound =  GetComponent<AudioSource> ();
+         //charging = Resources.Load<AudioClip> ("charging");        
+         
         
     }
 
@@ -40,19 +45,23 @@ public class HealthZone : MonoBehaviour
                 player2Time=zoneActivation_Time;
             }
         }
+      
     }
     void OnTriggerStay2D(Collider2D healthzone)
     {
          if (healthzone.gameObject.tag.Equals("Player1"))                                            //condition if it comes in contact with enemy
         {
                 player1ZoneTime=true;  
-            
+                 HealthSound.Play();
 
 
-        }
+        }      
         if (healthzone.gameObject.tag.Equals("Player2"))                                            //condition if it comes in contact with enemy
         { 
+                HealthSound.Play();
                 player2ZoneTime=true;   
+                //Debug.Log("charging");
+
                
                                                                    
         }
@@ -62,12 +71,16 @@ public class HealthZone : MonoBehaviour
     {
          if (healthzone.gameObject.tag.Equals("Player1"))                                            //condition if it comes in contact with enemy
         {
-                player1ZoneTime=false;  
+                player1ZoneTime=false;                  
+            Debug.Log("Not charging");
+
 
         }
         if (healthzone.gameObject.tag.Equals("Player2"))                                            //condition if it comes in contact with enemy
         { 
-                player2ZoneTime=false;                                                                      
+                player2ZoneTime=false;      
+             Debug.Log("Not charging");
+                                                                
         }
     }
 }

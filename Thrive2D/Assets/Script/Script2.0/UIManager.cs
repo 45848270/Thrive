@@ -70,8 +70,8 @@ public class UIManager : MonoBehaviour
         if (dialoguePanel != null)
         {
             dialogueTextList.Add("Some background story we may or may not add in future");
-            dialogueTextList.Add("Player A uses w a s d keys to move, uses i j k l keys to shoot");
-            dialogueTextList.Add("Player B uses arrow keys to move, uses num 8 5 4 6 keys to shoot");
+            dialogueTextList.Add("Player A uses w a s d keys to move, uses space key to shoot");
+            dialogueTextList.Add("Player B uses arrow keys to move, uses num Pad 5 keys to shoot");
             string tempDia = dialogueTextList[0];
             dialogueText.GetComponent<TMPro.TextMeshProUGUI>().text = tempDia;
             curDiaInx = 0;
@@ -157,12 +157,14 @@ public class UIManager : MonoBehaviour
     {
         //active pause panel after clicking pause button
         pausePanel.gameObject.SetActive(true);
+        Time.timeScale = 0;
     }
 
     public void CallResume()
     {
         //disactive pause panel after clicking resume button on pause panel
         pausePanel.gameObject.SetActive(false);
+        Time.timeScale = 1;
     }
 
     public void CallBackToMain()

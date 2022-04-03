@@ -775,7 +775,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6048941856162690919, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
       propertyPath: accelerationFactor
-      value: 30
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 6445624249100522855, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
+      propertyPath: reloadTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6532764984498949550, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
       propertyPath: m_IsTrigger
@@ -788,6 +792,10 @@ PrefabInstance:
     - target: {fileID: 7062758016601054950, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
       propertyPath: m_LinearDrag
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580638160365780720, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
+      propertyPath: reloadTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8753642854719118244, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
       propertyPath: m_RootOrder
@@ -878,9 +886,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 742001683779687894, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
+      propertyPath: reloadTime
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1287847000981598674, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
       propertyPath: accelerationFactor
-      value: 30
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 2287024955499315617, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
       propertyPath: m_RootOrder
@@ -933,6 +945,10 @@ PrefabInstance:
     - target: {fileID: 3083623964986268023, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739635608207784946, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
+      propertyPath: reloadTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3985000881189965391, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1058,6 +1074,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

@@ -7,31 +7,31 @@ public class Player2FirstGun : MonoBehaviour
     public static Player2FirstGun instance;
     public Transform initialPos;
     public GameObject bulletPrefab;
-    public float bulletForce=20f;
-    public float reloadTime=5f;
+    public float bulletForce = 20f;
+    public float reloadTime = 2f;
 
     public float timeKeeper;
 
     void Awake()
     {
-        instance=this;
+        instance = this;
     }
 
     void Start()
     {
-        timeKeeper=reloadTime;
+        timeKeeper = reloadTime;
     }
 
     // Update is called once per frame
     void Update()
     {
-    timeKeeper-=Time.deltaTime;
-        if (timeKeeper<=0)
+        timeKeeper -= Time.deltaTime;
+        if (timeKeeper <= 0)
         {
-            if (Input.GetKeyDown(KeyCode.Keypad5)) 
+            if (Input.GetKeyDown(KeyCode.Keypad5))
             {
-            shoot();
-            timeKeeper=reloadTime;
+                shoot();
+                timeKeeper = reloadTime;
             }
         }
     }
@@ -39,12 +39,12 @@ public class Player2FirstGun : MonoBehaviour
     void shoot()
     {
         //shooting method
-       GameObject bullet = Instantiate(bulletPrefab, initialPos.position, initialPos.rotation);
-       Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-       rb.AddForce(initialPos.up*bulletForce, ForceMode2D.Impulse);
+        GameObject bullet = Instantiate(bulletPrefab, initialPos.position, initialPos.rotation);
+        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+        rb.AddForce(initialPos.up * bulletForce, ForceMode2D.Impulse);
     }
-     public void Decrease_P2_ReloadTime()
+    public void Decrease_P2_ReloadTime()
     {
-        reloadTime-=(0.15f*reloadTime);
+        reloadTime -= (0.15f * reloadTime);
     }
 }

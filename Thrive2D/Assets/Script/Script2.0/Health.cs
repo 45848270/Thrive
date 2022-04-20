@@ -19,16 +19,15 @@ public class Health : MonoBehaviour
     public float p1_Slidder_HealthValue;
     public float p2_Slidder_HealthValue;
     public float player1_CurrentHealth;
-    public float player2_CurrentHealth;
-
+    public float player2_CurrentHealth;         
     public float time1;
     public float time2;
-
     public float x;
     public float y;
+    public static AudioClip damage1, damage2, damage3, damage4, heartBeat, alive, death; 
 
-
-
+    private AudioSource audioSource;
+    
     
     public void Awake()
     {
@@ -41,6 +40,7 @@ public class Health : MonoBehaviour
 
             p1_Slidder_HealthValue=player1_CurrentHealth;
             p2_Slidder_HealthValue=player2_CurrentHealth;
+            
 
          
     }
@@ -49,7 +49,24 @@ public class Health : MonoBehaviour
     void Start()
     {
         P1slider.value=p1_Slidder_HealthValue;
-        P2slider.value=p1_Slidder_HealthValue;
+        P2slider.value=p1_Slidder_HealthValue;  
+
+        audioSource = GetComponent<AudioSource> ();
+        audioSource.Play();             
+                              
+       damage1 = Resources.Load<AudioClip> ("damage1");
+       damage2 = Resources.Load<AudioClip> ("damage2");
+       damage3 = Resources.Load<AudioClip> ("damage3");
+       damage4 = Resources.Load<AudioClip> ("damage4");
+       heartBeat = Resources.Load<AudioClip> ("heartbeat");
+       alive = Resources.Load<AudioClip> ("alive");
+        death = Resources.Load<AudioClip> ("death");
+
+        
+
+
+
+        
     }
     void Update()
     {
@@ -58,6 +75,8 @@ public class Health : MonoBehaviour
 
         P2slider.maxValue=player2_health;
         P2slider.value=player2_CurrentHealth;
+
+
     
     }
 
@@ -89,21 +108,64 @@ public class Health : MonoBehaviour
 
     public float Decrease_P1_Health()
     {
-        player1_CurrentHealth-=player1DamagePerContact;
+        player1_CurrentHealth-=player1DamagePerContact;       
+         
+
+         if(player1_CurrentHealth == 70)  // play sound effect   
+        {       
+            audioSource.PlayOneShot(damage1);             
+        }
+        else if(player1_CurrentHealth == 40)
+        {
+            audioSource.PlayOneShot(damage2); 
+        }
+        else if(player1_CurrentHealth == 10)
+        {        
+            audioSource.PlayOneShot(heartBeat);
+        }        
+        else if(player1_CurrentHealth <=0)
+        {
+         audioSource.Stop();
+        }        
+        
         //SetPlayer1Health();
         if(player1_CurrentHealth<=0)
         {
             Destroy(p1);
+            audioSource.PlayOneShot(death); 
+                     
+
         }
         return player1_CurrentHealth;
     }
     public float Decrease_P2_Health()
     {
         player2_CurrentHealth-=player2DamagePerContact;
+        
+        if(player2_CurrentHealth == 70)  // play sound effect   
+        {
+            audioSource.PlayOneShot(damage3);       
+        }        
+        else if(player2_CurrentHealth == 40)
+        {
+            audioSource.PlayOneShot(damage4);
+        }
+         else if(player2_CurrentHealth == 10)
+        {
+            audioSource.PlayOneShot(heartBeat);  
+        }
+         else if(player2_CurrentHealth <=0)
+        {
+         audioSource.Stop();
+        }  
+      
+         
         //SetPlayer2Health();
         if(player2_CurrentHealth<=0)
         {
             Destroy(p2);
+            audioSource.PlayOneShot(death);          
+                
         }
         return player2_CurrentHealth;
     }

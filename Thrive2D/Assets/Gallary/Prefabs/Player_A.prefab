@@ -96,8 +96,8 @@ GameObject:
   - component: {fileID: 9001428975049791055}
   - component: {fileID: 7359801837447229738}
   - component: {fileID: 3739635608207784946}
+  - component: {fileID: 5210268366118886051}
   - component: {fileID: 742001683779687894}
-  - component: {fileID: 1287847000981598674}
   m_Layer: 0
   m_Name: Player_A
   m_TagString: Untagged
@@ -187,6 +187,21 @@ MonoBehaviour:
   bulletForce: 20
   reloadTime: 5
   timeKeeper: 0
+--- !u!114 &5210268366118886051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6290255593786137045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3573ab59c2f3cf4498e7c3e26a287269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  accelerationFactor: 300
+  driftFactor: 0.95
+  turnFactor: 3.5
 --- !u!114 &742001683779687894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,21 +219,6 @@ MonoBehaviour:
   bulletForce: 20
   reloadTime: 5
   timeKeeper: 0
---- !u!114 &1287847000981598674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6290255593786137045}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3573ab59c2f3cf4498e7c3e26a287269, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  accelerationFactor: 30
-  driftFactor: 0.95
-  turnFactor: 3.5
 --- !u!1 &6313877504258536566
 GameObject:
   m_ObjectHideFlags: 0

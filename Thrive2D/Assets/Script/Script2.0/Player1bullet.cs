@@ -4,30 +4,32 @@ using UnityEngine;
 
 public class Player1bullet : MonoBehaviour
 {
+    public float speed = 10;
     // Start is called before the first frame update
     void Start()
     {
-        
+        Destroy(gameObject, 3f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        Destroy(gameObject,3f);
+        transform.Translate(Vector2.up * Time.deltaTime * speed);
     }
     
     void OnTriggerEnter2D(Collider2D damageGivenToP2)
     {
+        if (damageGivenToP2.gameObject.tag.Equals("Player1"))
+            return;
+        Destroy(gameObject);
 
-         if (damageGivenToP2.gameObject.tag.Equals("Player2"))                                            //condition if it comes in contact with enemy
+        if (damageGivenToP2.gameObject.tag.Equals("Player2"))                                            //condition if it comes in contact with enemy
         {
-            Destroy(gameObject);
             Health.instance.Decrease_P2_Health();                                                                    
         }
         if (damageGivenToP2.gameObject.tag.Equals("player2Bullet"))                                            //condition if it comes in contact with enemy
         {
-            Destroy(damageGivenToP2.gameObject);                                                      
-            Destroy(gameObject);                                                                    
+            Destroy(damageGivenToP2.gameObject);                                                                  
         }
     }
 }

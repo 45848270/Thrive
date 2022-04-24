@@ -25,7 +25,6 @@ public class Player2FirstGun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timeKeeper -= Time.deltaTime;
         if (timeKeeper <= 0)
         {
             if (Input.GetKeyDown(KeyCode.Keypad5))
@@ -33,6 +32,10 @@ public class Player2FirstGun : MonoBehaviour
                 shoot();
                 timeKeeper = reloadTime;
             }
+        }else
+        {
+            timeKeeper -= Time.deltaTime;
+
         }
     }
 
@@ -40,8 +43,7 @@ public class Player2FirstGun : MonoBehaviour
     {
         //shooting method
         GameObject bullet = Instantiate(bulletPrefab, initialPos.position, initialPos.rotation);
-        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-        rb.AddForce(initialPos.up * bulletForce, ForceMode2D.Impulse);
+       
     }
     public void Decrease_P2_ReloadTime()
     {

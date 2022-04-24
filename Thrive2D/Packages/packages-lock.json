@@ -147,7 +147,10 @@
       },
       "url": "https://packages.unity.cn"
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
     },
     "com.unity.sysroot": {
       "version": "1.0.0",
@@ -164,6 +167,9 @@
         "com.unity.sysroot": "1.0.0"
       },
       "url": "https://packages.unity.cn"
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     },
     "com.unity.test-framework": {
@@ -198,7 +204,10 @@
       },
       "url": "https://packages.unity.cn"
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
     },
     "com.unity.toolchain.win-x86_64-linux-x86_64": {
       "version": "1.0.0",
@@ -209,6 +218,9 @@
         "com.unity.sysroot.linux-x86_64": "1.0.0"
       },
       "url": "https://packages.unity.cn"
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     },
     "com.unity.ugui": {

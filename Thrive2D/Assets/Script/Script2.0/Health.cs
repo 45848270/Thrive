@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
+
     public Slider P1slider;
     public Slider P2slider;
     public static Health instance;
@@ -31,7 +32,7 @@ public class Health : MonoBehaviour
     
     public void Awake()
     {
-        instance = this;
+         instance = this;
           player1_health = 100f;
           player2_health = 100f;
 

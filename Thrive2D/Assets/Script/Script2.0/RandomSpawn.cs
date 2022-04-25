@@ -13,8 +13,6 @@ public class RandomSpawn : MonoBehaviour
     //public float screenHeight=10f;
     //public float screenWidth=20f;
     public int ID;
-    public float y;
-    public float x;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,12 +27,10 @@ public class RandomSpawn : MonoBehaviour
         timer2-=Time.deltaTime;
         if (timer1<=0)
         {
-            ID=(int)Random.Range(0,prefabs.Length-1);
-            y=Random.Range((-1)*InputAxes.screenHeight/2,InputAxes.screenHeight/2-1); 
-            x=Random.Range((-1)*InputAxes.screenWidth/2,InputAxes.screenWidth/2); 
-            Vector3 pos =new Vector3(x,y,1);
-
-            Instantiate(prefabs[ID], pos, Quaternion.identity);
+            Transform  pos = CreatePos.instance.GetPos();
+          
+            ID =(int)Random.Range(0,prefabs.Length-1);
+            Instantiate(prefabs[ID],pos ).transform .localPosition =Vector3 .zero;
             timer1=SpawnTime;
         }
 
@@ -42,11 +38,9 @@ public class RandomSpawn : MonoBehaviour
         {
             for(int i=0; i<prefabs.Length;i++)
             {
-            y=Random.Range((-1)*(InputAxes.screenHeight/2), (InputAxes.screenHeight/2-1)); 
-            x=Random.Range((-1)*(InputAxes.screenWidth/2), (InputAxes.screenWidth/2)); 
-            Vector3 pos =new Vector3(x,y,1);
-
-            Instantiate(prefabs[i], pos, Quaternion.identity);
+                Transform  pos = CreatePos.instance.GetPos();
+           
+                Instantiate(prefabs[i], pos).transform.localPosition = Vector3.zero;
             }
 
             timer2=JackpotTime;

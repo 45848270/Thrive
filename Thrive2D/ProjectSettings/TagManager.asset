@@ -10,6 +10,8 @@ TagManager:
   - Player2Bullet
   - Health
   - Block
+  - player2Bullet
+  - map1
   layers:
   - Default
   - TransparentFX
@@ -52,4 +54,7 @@ TagManager:
     locked: 0
   - name: dropDown
     uniqueID: 1799820549
+    locked: 0
+  - name: player
+    uniqueID: 3614708873
     locked: 0

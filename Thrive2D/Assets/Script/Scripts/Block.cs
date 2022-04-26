@@ -20,12 +20,21 @@ public class Block : MonoBehaviour
     {
         
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag .Contains("Bullet"))
+        {
+            Destroy (collision.gameObject); 
+            OnHit();
+        }
+    }
     /// <summary>
     /// Be hit
     /// </summary>
     public void OnHit()
     {
-        Instantiate(followObj, transform.position, Quaternion.identity);
+        if (followObj != null)
+            Instantiate(followObj, transform.position, Quaternion.identity);
         if (crash)
         {
             GetComponentInChildren <Animator>().SetTrigger("Crash");

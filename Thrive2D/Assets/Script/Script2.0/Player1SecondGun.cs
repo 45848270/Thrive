@@ -7,44 +7,45 @@ public class Player1SecondGun : MonoBehaviour
     public static Player1SecondGun instance;
     public Transform initialPos;
     public GameObject bulletPrefab;
-    public float bulletForce=20f;
-    public float reloadTime=5f;
+    public float bulletForce = 20f;
+    public float reloadTime = 2f;
 
     public float timeKeeper;
 
     void Awake()
     {
-        instance=this;
+        instance = this;
     }
 
     void Start()
     {
-        timeKeeper=reloadTime;
+        timeKeeper = reloadTime;
     }
 
     // Update is called once per frame
     void Update()
     {
-    timeKeeper-=Time.deltaTime;
-        if (timeKeeper<=0)
+        if (timeKeeper <= 0)
         {
-            if (Input.GetKeyDown(KeyCode.Space)) 
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-            shoot();
-            timeKeeper=reloadTime;
+                shoot();
+                timeKeeper = reloadTime;
             }
+        }else
+        {
+            timeKeeper -= Time.deltaTime;
         }
     }
 
     void shoot()
     {
         //shooting method
-       GameObject bullet = Instantiate(bulletPrefab, initialPos.position, initialPos.rotation);
-       Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-       rb.AddForce(initialPos.up*bulletForce, ForceMode2D.Impulse);
+        GameObject bullet = Instantiate(bulletPrefab, initialPos.position, initialPos.rotation);
+        
     }
-     public void Decrease_P1_ReloadTime()
+    public void Decrease_P1_ReloadTime()
     {
-        reloadTime-=(0.15f*reloadTime);
+        reloadTime -= (0.15f * reloadTime);
     }
 }

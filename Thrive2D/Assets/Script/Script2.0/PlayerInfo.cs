@@ -9,6 +9,8 @@ public class PlayerInfo : MonoBehaviour
     public float CurrentSpeedA;
     public float UpdatedDamageA;
     public float CurrentDamageA;
+    public float UpdatedHealthA;
+    public float CurrentHealthA;
 
 
 
@@ -17,6 +19,8 @@ public class PlayerInfo : MonoBehaviour
     public float CurrentSpeedB;
     public float UpdatedDamageB;
     public float CurrentDamageB;
+    public float UpdatedHealthB;
+    public float CurrentHealthB;
 
 
 
@@ -26,11 +30,13 @@ public class PlayerInfo : MonoBehaviour
     public GameObject PlayerAText1;
     public GameObject PlayerAText2;
     public GameObject PlayerAText3;
+    public GameObject PlayerAText4;
 
 
     public GameObject PlayerBText1;
     public GameObject PlayerBText2;
     public GameObject PlayerBText3;
+    public GameObject PlayerBText4;
 
 
 
@@ -44,6 +50,13 @@ public class PlayerInfo : MonoBehaviour
         CurrentDamageA = Health.instance.player1DamagePerContact;
         CurrentDamageB = Health.instance.player2DamagePerContact;
 
+        CurrentHealthA = Health.instance.player1_health;
+        CurrentHealthB = Health.instance.player1_health;
+
+
+
+
+
 
         PanelA.SetActive(false);
         PanelB.SetActive(false);
@@ -51,11 +64,13 @@ public class PlayerInfo : MonoBehaviour
         PlayerAText1.SetActive(false);
         PlayerAText2.SetActive(false);
         PlayerAText3.SetActive(false);
+        PlayerAText4.SetActive(false);
 
 
         PlayerBText1.SetActive(false);
         PlayerBText2.SetActive(false);
         PlayerBText3.SetActive(false);
+        PlayerBText4.SetActive(false);
 
 
 
@@ -82,12 +97,16 @@ public class PlayerInfo : MonoBehaviour
         UpdatedDamageA = Health.instance.player1DamagePerContact;
         UpdatedDamageB = Health.instance.player2DamagePerContact;
 
+        UpdatedHealthA = Health.instance.player1_health;
+        UpdatedHealthB = Health.instance.player2_health;
+
+
 
 
         Player1Info();
         Player2Info();
 
-        // Debug.Log(Health.instance.player1DamagePerContact);
+        //  Debug.Log(Health.instance.player1_health);
 
 
     }
@@ -107,6 +126,10 @@ public class PlayerInfo : MonoBehaviour
         {
             PlayerAText3.SetActive(true);
         }
+        if (UpdatedHealthA > CurrentHealthA)
+        {
+            PlayerAText4.SetActive(true);
+        }
 
 
 
@@ -122,9 +145,13 @@ public class PlayerInfo : MonoBehaviour
         {
             PlayerBText2.SetActive(true);
         }
-         if (UpdatedDamageB > CurrentDamageB)
+        if (UpdatedDamageB > CurrentDamageB)
         {
             PlayerBText3.SetActive(true);
+        }
+         if (UpdatedHealthB > CurrentHealthB)
+        {
+            PlayerBText4.SetActive(true);
         }
 
     }

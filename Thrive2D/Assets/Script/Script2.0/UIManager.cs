@@ -12,6 +12,7 @@ public class UIManager : MonoBehaviour
     public GameObject dialoguePanel;
     public GameObject dialogueText;
     public GameObject pausePanel;
+    public GameObject GameOverPanel;
 
     public GameObject levelOneDiaguePanel;
     public GameObject levelOneDiagueText;
@@ -91,6 +92,11 @@ public class UIManager : MonoBehaviour
         if (pausePanel != null)
         {
             pausePanel.gameObject.SetActive(false);
+        }
+
+        if (GameOverPanel != null)
+        {
+            GameOverPanel.gameObject.SetActive(false);
         }
     }
 
@@ -310,7 +316,14 @@ public class UIManager : MonoBehaviour
     public void ChooseLevel()
     {
         //after Npc talks, active level panel
-        dialoguePanel.gameObject.SetActive(false);
+        if (dialoguePanel != null)
+        {
+            dialoguePanel.gameObject.SetActive(false);
+        }
+        if (GameOverPanel != null)
+        {
+            GameOverPanel.gameObject.SetActive(false);
+        }
         levelPanel.gameObject.SetActive(true);
     }
 
@@ -338,18 +351,21 @@ public class UIManager : MonoBehaviour
     public void LoadFirstLevel()
     {
         //load scene based on oreder of building settings
+        Time.timeScale = 1;
         SceneManager.LoadScene(FirstlevelOrder);
     }
 
     public void LoadSecondLevel()
     {
         //load scene based on oreder of building settings
+        Time.timeScale = 1;
         SceneManager.LoadScene(SecondlevelOrder);
     }
 
     public void LoadThirdLevel()
     {
         //load scene based on oreder of building settings
+        Time.timeScale = 1;
         SceneManager.LoadScene(ThirdLevelOrder);
     }
 
@@ -370,8 +386,15 @@ public class UIManager : MonoBehaviour
     public void CallBackToMain()
     {
         //back to main scene after clicking Back to main button on pause panel
+        Time.timeScale = 1;
         pausePanel.gameObject.SetActive(false);
         SceneManager.LoadScene(MainSceneOrder);
+    }
+
+    public void ActivateGameOverPanel()
+    {
+        Time.timeScale = 0;
+        GameOverPanel.gameObject.SetActive(true);
     }
 
     public void ExitGame()

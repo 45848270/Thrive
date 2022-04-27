@@ -8,7 +8,7 @@ public class PlayerInfo : MonoBehaviour
 
     public GameObject Panel1;
     public GameObject Panel2;
-    // public Text Textfield;
+
     public GameObject Text1;
     public GameObject Text2;
 
@@ -38,14 +38,12 @@ public class PlayerInfo : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Tab)) // Show Player 1 information when Tab key pressed
         {
-            Debug.Log("Show Panel1");
             bool isActive = Panel1.activeSelf;
             Panel1.SetActive(!isActive);
         }
 
         if (Input.GetKeyDown(KeyCode.KeypadEnter)) // Show Player 2 information when KeypadEnter key pressed
         {
-            Debug.Log("Show Panel2");
             bool isActive = Panel2.activeSelf;
             Panel2.SetActive(!isActive);
         }
@@ -55,21 +53,32 @@ public class PlayerInfo : MonoBehaviour
 
     }
 
-    public void Player1Info()
+    // public void Player1Info()
+    // {
+    //     if ((runOnce1 == false) && (Activate_and_Deactivate.instance.script1.enabled))
+    //     {
+    //         Text1.SetActive(true);
+    //         Debug.Log("got gun");
+    //        // runOnce1 = true;
+
+
+    //     }
+    // }
+
+     public void Player1Info()
     {
-        if ((runOnce1 == false) && (Activate_and_Deactivate.instance.script1.enabled))
+        if (Activate_and_Deactivate.instance.script1.enabled)
         {
             Text1.SetActive(true);
-            runOnce1 = true;
+           // runOnce1 = true;
 
 
         }
     }
 
-    public void Player2Info()
+      public void Player2Info()
     {
-        if ((runOnce2 == false) && (Activate_and_Deactivate.instance.script2.enabled))
-        {
+        if ((Activate_and_Deactivate.instance.script2.enabled)        {
             Text2.SetActive(true);
 
             runOnce2 = true;
@@ -77,6 +86,18 @@ public class PlayerInfo : MonoBehaviour
 
         }
     }
+
+    // public void Player2Info()
+    // {
+    //     if ((runOnce2 == false) && (Activate_and_Deactivate.instance.script2.enabled))
+    //     {
+    //         Text2.SetActive(true);
+
+    //         runOnce2 = true;
+
+
+    //     }
+    // }
 
 
 

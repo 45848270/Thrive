@@ -17,13 +17,13 @@ public class DamageIcon : Item
         {
             Destroy(DamageIncrease.gameObject);
             Destroy(gameObject);
-            Health.instance.IncreasePlayer2DamagePerCOntact();                                                                    
+            Health.instance.IncreasePlayer1DamagePerCOntact();                                                                    
         }
         if (DamageIncrease.gameObject.tag.Equals("player2Bullet"))                                            //condition if it comes in contact with enemy
         {
             Destroy(DamageIncrease.gameObject);
             Destroy(gameObject);
-            Health.instance.IncreasePlayer1DamagePerCOntact();                                                                    
+            Health.instance.IncreasePlayer2DamagePerCOntact();                                                                    
         }
     }
 }

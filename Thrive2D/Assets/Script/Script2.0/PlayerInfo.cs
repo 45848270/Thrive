@@ -5,30 +5,42 @@ using UnityEngine.UI;
 
 public class PlayerInfo : MonoBehaviour
 {
-
-    public GameObject Panel1;
-    public GameObject Panel2;
-
-    public GameObject Text1;
-    public GameObject Text2;
+    public float UpdatedSpeedA;
+    public float UpdatedSpeedB;
+    public float CurrentSpeedA;
+    public float CurrentSpeedB;
 
 
-    bool runOnce1;
-    bool runOnce2;
+
+    public GameObject PanelA;
+    public GameObject PanelB;
+
+    public GameObject PlayerAText1;
+    public GameObject PlayerAText2;
+
+    public GameObject PlayerBText1;
+    public GameObject PlayerBText2;
 
 
 
 
     void Start()
     {
-        runOnce1 = false;
-        runOnce2 = false;
 
-        Panel1.SetActive(false);
-        Panel2.SetActive(false);
+        CurrentSpeedA = Movement.instance.accelerationFactor;
+        CurrentSpeedB = Movement2.instance.accelerationFactor;
 
-        Text1.SetActive(false);
-        Text2.SetActive(false);
+        PanelA.SetActive(false);
+        PanelB.SetActive(false);
+
+        PlayerAText1.SetActive(false);
+        PlayerAText2.SetActive(false);
+
+
+        PlayerBText1.SetActive(false);
+        PlayerBText2.SetActive(false);
+
+                Debug.Log(Health.instance.player1DamagePerContact);
 
 
     }
@@ -38,66 +50,57 @@ public class PlayerInfo : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Tab)) // Show Player 1 information when Tab key pressed
         {
-            bool isActive = Panel1.activeSelf;
-            Panel1.SetActive(!isActive);
+            bool isActive = PanelA.activeSelf;
+            PanelA.SetActive(!isActive);
         }
 
         if (Input.GetKeyDown(KeyCode.KeypadEnter)) // Show Player 2 information when KeypadEnter key pressed
         {
-            bool isActive = Panel2.activeSelf;
-            Panel2.SetActive(!isActive);
+            bool isActive = PanelB.activeSelf;
+            PanelB.SetActive(!isActive);
         }
+
+        UpdatedSpeedA = Movement.instance.accelerationFactor;
+        UpdatedSpeedB = Movement2.instance.accelerationFactor;
+
 
         Player1Info();
         Player2Info();
 
+
+
     }
 
-    // public void Player1Info()
-    // {
-    //     if ((runOnce1 == false) && (Activate_and_Deactivate.instance.script1.enabled))
-    //     {
-    //         Text1.SetActive(true);
-    //         Debug.Log("got gun");
-    //        // runOnce1 = true;
 
-
-    //     }
-    // }
-
-     public void Player1Info()
+    public void Player1Info()
     {
         if (Activate_and_Deactivate.instance.script1.enabled)
         {
-            Text1.SetActive(true);
-           // runOnce1 = true;
-
-
+            PlayerAText1.SetActive(true);
         }
+        if (UpdatedSpeedA > CurrentSpeedA)
+        {
+            PlayerAText2.SetActive(true);
+        }
+
+
+
     }
 
-      public void Player2Info()
+    public void Player2Info()
     {
-        if ((Activate_and_Deactivate.instance.script2.enabled)        {
-            Text2.SetActive(true);
-
-            runOnce2 = true;
-
-
+        if (Activate_and_Deactivate.instance.script2.enabled)
+        {
+            PlayerBText1.SetActive(true);
         }
+        if (UpdatedSpeedB > CurrentSpeedB)
+        {
+            PlayerBText2.SetActive(true);
+        }
+
     }
 
-    // public void Player2Info()
-    // {
-    //     if ((runOnce2 == false) && (Activate_and_Deactivate.instance.script2.enabled))
-    //     {
-    //         Text2.SetActive(true);
 
-    //         runOnce2 = true;
-
-
-    //     }
-    // }
 
 
 

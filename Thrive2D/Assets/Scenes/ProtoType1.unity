@@ -1813,7 +1813,7 @@ GameObject:
   - component: {fileID: 660977100}
   - component: {fileID: 660977099}
   m_Layer: 5
-  m_Name: Reload Faster (1)
+  m_Name: Reload Faster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1836,7 +1836,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -781.5001, y: -55}
+  m_AnchoredPosition: {x: 5, y: -55}
   m_SizeDelta: {x: 200, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &660977099
@@ -3613,12 +3613,12 @@ MonoBehaviour:
   PlayerAText2: {fileID: 1932932259}
   PlayerAText3: {fileID: 515613914}
   PlayerAText4: {fileID: 1393341036}
-  PlayerAText5: {fileID: 0}
+  PlayerAText5: {fileID: 202968908}
   PlayerBText1: {fileID: 882223688}
   PlayerBText2: {fileID: 2002418198}
   PlayerBText3: {fileID: 2069858680}
   PlayerBText4: {fileID: 1821449153}
-  PlayerBText5: {fileID: 0}
+  PlayerBText5: {fileID: 660977097}
 --- !u!1 &1313899656 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4985080079944414459, guid: a8b98bd88cf2b8542ae95cf3027996a2, type: 3}

@@ -117,8 +117,7 @@ public class PlayerInfo : MonoBehaviour
         Player1Info();
         Player2Info();
 
-        Debug.Log("updated" + UpdatedReloadA);
-        Debug.Log("current" + CurrentReloadA);
+
 
 
 

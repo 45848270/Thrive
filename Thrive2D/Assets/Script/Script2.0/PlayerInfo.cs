@@ -5,22 +5,24 @@ using UnityEngine.UI;
 
 public class PlayerInfo : MonoBehaviour
 {
-    public float UpdatedSpeedA;
-    public float CurrentSpeedA;
-    public float UpdatedDamageA;
-    public float CurrentDamageA;
-    public float UpdatedHealthA;
-    public float CurrentHealthA;
+    private float UpdatedSpeedA;
+    private float CurrentSpeedA;
+    private float UpdatedDamageA;
+    private float CurrentDamageA;
+    private float UpdatedHealthA;
+    private float CurrentHealthA;
+    private float UpdatedReloadA;
+    private float CurrentReloadA;
 
 
-
-
-    public float UpdatedSpeedB;
-    public float CurrentSpeedB;
-    public float UpdatedDamageB;
-    public float CurrentDamageB;
-    public float UpdatedHealthB;
-    public float CurrentHealthB;
+    private float UpdatedSpeedB;
+    private float CurrentSpeedB;
+    private float UpdatedDamageB;
+    private float CurrentDamageB;
+    private float UpdatedHealthB;
+    private float CurrentHealthB;
+    private float UpdatedReloadB;
+    private float CurrentReloadB;
 
 
 
@@ -31,13 +33,14 @@ public class PlayerInfo : MonoBehaviour
     public GameObject PlayerAText2;
     public GameObject PlayerAText3;
     public GameObject PlayerAText4;
+    public GameObject PlayerAText5;
 
 
     public GameObject PlayerBText1;
     public GameObject PlayerBText2;
     public GameObject PlayerBText3;
     public GameObject PlayerBText4;
-
+    public GameObject PlayerBText5;
 
 
 
@@ -53,6 +56,9 @@ public class PlayerInfo : MonoBehaviour
         CurrentHealthA = Health.instance.player1_health;
         CurrentHealthB = Health.instance.player1_health;
 
+        CurrentReloadA = Player1FirstGun.instance.reloadTime;
+        CurrentReloadB = Player2FirstGun.instance.reloadTime;
+
 
 
 
@@ -65,12 +71,14 @@ public class PlayerInfo : MonoBehaviour
         PlayerAText2.SetActive(false);
         PlayerAText3.SetActive(false);
         PlayerAText4.SetActive(false);
+        PlayerAText5.SetActive(false);
 
 
         PlayerBText1.SetActive(false);
         PlayerBText2.SetActive(false);
         PlayerBText3.SetActive(false);
         PlayerBText4.SetActive(false);
+        PlayerBText5.SetActive(false);
 
 
 
@@ -100,13 +108,20 @@ public class PlayerInfo : MonoBehaviour
         UpdatedHealthA = Health.instance.player1_health;
         UpdatedHealthB = Health.instance.player2_health;
 
+        UpdatedReloadA = Player1FirstGun.instance.reloadTime;
+        UpdatedReloadB = Player2FirstGun.instance.reloadTime;
+
 
 
 
         Player1Info();
         Player2Info();
 
-        //  Debug.Log(Health.instance.player1_health);
+        Debug.Log("updated" + UpdatedReloadA);
+        Debug.Log("current" + CurrentReloadA);
+
+
+
 
 
     }
@@ -130,6 +145,10 @@ public class PlayerInfo : MonoBehaviour
         {
             PlayerAText4.SetActive(true);
         }
+        if (UpdatedReloadA < CurrentReloadA)
+        {
+            PlayerAText5.SetActive(true);
+        }
 
 
 
@@ -149,9 +168,13 @@ public class PlayerInfo : MonoBehaviour
         {
             PlayerBText3.SetActive(true);
         }
-         if (UpdatedHealthB > CurrentHealthB)
+        if (UpdatedHealthB > CurrentHealthB)
         {
             PlayerBText4.SetActive(true);
+        }
+        if (UpdatedReloadB < CurrentReloadB)
+        {
+            PlayerBText5.SetActive(true);
         }
 
     }

@@ -56,10 +56,10 @@ public class Health : MonoBehaviour
         audioSource.Play();
 
         damage1 = Resources.Load<AudioClip>("damage1");
-        damage2 = Resources.Load<AudioClip>("damage2");
-        damage3 = Resources.Load<AudioClip>("damage3");
-        damage4 = Resources.Load<AudioClip>("damage4");
-        heartBeat = Resources.Load<AudioClip>("heartbeat");
+        // damage2 = Resources.Load<AudioClip>("damage2");
+         damage3 = Resources.Load<AudioClip>("damage3");
+        // damage4 = Resources.Load<AudioClip>("damage4");
+        // heartBeat = Resources.Load<AudioClip>("heartbeat");
         alive = Resources.Load<AudioClip>("alive");
         death = Resources.Load<AudioClip>("death");
 
@@ -112,27 +112,28 @@ public class Health : MonoBehaviour
         player1_CurrentHealth -= player1DamagePerContact;
 
 
-        if (player1_CurrentHealth == 70)  // play sound effect   
-        {
-            audioSource.PlayOneShot(damage1);
-        }
-        else if (player1_CurrentHealth == 40)
-        {
-            audioSource.PlayOneShot(damage2);
-        }
-        else if (player1_CurrentHealth == 10)
-        {
-            audioSource.PlayOneShot(heartBeat);
-        }
-        else if (player1_CurrentHealth <= 0)
-        {
-            audioSource.Stop();
-        }
+        // if (player1_CurrentHealth == 70)  // play sound effect   
+        // {
+        audioSource.PlayOneShot(damage1);
+        // }
+        // else if (player1_CurrentHealth == 40)
+        // {
+        //     audioSource.PlayOneShot(damage2);
+        // }
+        // else if (player1_CurrentHealth == 10)
+        // {
+        //     audioSource.PlayOneShot(heartBeat);
+        // }
+        //  if (player1_CurrentHealth <= 0)
+        // {
+        //     audioSource.Stop();
+        // }
 
         //SetPlayer1Health();
         if (player1_CurrentHealth <= 0)
         {
             Destroy(p1);
+            audioSource.Stop();
             audioSource.PlayOneShot(death);
 
 
@@ -143,28 +144,29 @@ public class Health : MonoBehaviour
     {
         player2_CurrentHealth -= player2DamagePerContact;
 
-        if (player2_CurrentHealth == 70)  // play sound effect   
-        {
-            audioSource.PlayOneShot(damage3);
-        }
-        else if (player2_CurrentHealth == 40)
-        {
-            audioSource.PlayOneShot(damage4);
-        }
-        else if (player2_CurrentHealth == 10)
-        {
-            audioSource.PlayOneShot(heartBeat);
-        }
-        else if (player2_CurrentHealth <= 0)
-        {
-            audioSource.Stop();
-        }
+        // if (player2_CurrentHealth == 70)  // play sound effect   
+        // {
+        audioSource.PlayOneShot(damage3);
+        // }
+        // else if (player2_CurrentHealth == 40)
+        // {
+        //     audioSource.PlayOneShot(damage4);
+        // }
+        // else if (player2_CurrentHealth == 10)
+        // {
+        //     audioSource.PlayOneShot(heartBeat);
+        // }
+        // else if (player2_CurrentHealth <= 0)
+        // {
+        //     audioSource.Stop();
+        // }
 
 
         //SetPlayer2Health();
         if (player2_CurrentHealth <= 0)
         {
             Destroy(p2);
+            audioSource.Stop();
             audioSource.PlayOneShot(death);
 
         }

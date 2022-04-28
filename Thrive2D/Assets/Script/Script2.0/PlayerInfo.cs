@@ -46,6 +46,7 @@ public class PlayerInfo : MonoBehaviour
 
     void Start()
     {
+        
 
         CurrentSpeedA = Movement.instance.accelerationFactor;
         CurrentSpeedB = Movement2.instance.accelerationFactor;

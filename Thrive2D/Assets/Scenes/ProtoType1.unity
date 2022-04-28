@@ -806,7 +806,6 @@ MonoBehaviour:
   PlayerBText1: {fileID: 0}
   PlayerBText2: {fileID: 0}
   PlayerBText3: {fileID: 0}
-  PlayerBText4: {fileID: 0}
   PlayerBText5: {fileID: 0}
 --- !u!1 &293937246 stripped
 GameObject:
@@ -3510,8 +3509,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d104d0a8e2069e7418ea125341a3ef4c, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.45
+  m_Pitch: 0.89
   Loop: 1
   Mute: 0
   Spatialize: 0
@@ -3615,7 +3614,6 @@ MonoBehaviour:
   PlayerBText1: {fileID: 882223688}
   PlayerBText2: {fileID: 2002418198}
   PlayerBText3: {fileID: 2069858680}
-  PlayerBText4: {fileID: 1821449153}
   PlayerBText5: {fileID: 660977097}
 --- !u!1 &1313899656 stripped
 GameObject:

@@ -13,6 +13,7 @@ public class PlayerInfo : MonoBehaviour
   //  private float CurrentHealthA;
     private float UpdatedReloadA;
     private float CurrentReloadA;
+
     private float UpdatedSpeedB;
     private float CurrentSpeedB;
     private float UpdatedDamageB;
@@ -32,6 +33,7 @@ public class PlayerInfo : MonoBehaviour
     public GameObject PlayerAText3;
    // public GameObject PlayerAText4;
     public GameObject PlayerAText5;
+    
     public GameObject PlayerBText1;
     public GameObject PlayerBText2;
     public GameObject PlayerBText3;

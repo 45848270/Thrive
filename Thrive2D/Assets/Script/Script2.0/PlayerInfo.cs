@@ -9,18 +9,16 @@ public class PlayerInfo : MonoBehaviour
     private float CurrentSpeedA;
     private float UpdatedDamageA;
     private float CurrentDamageA;
-    private float UpdatedHealthA;
-    private float CurrentHealthA;
+   // private float UpdatedHealthA;
+  //  private float CurrentHealthA;
     private float UpdatedReloadA;
     private float CurrentReloadA;
-
-
     private float UpdatedSpeedB;
     private float CurrentSpeedB;
     private float UpdatedDamageB;
     private float CurrentDamageB;
-    private float UpdatedHealthB;
-    private float CurrentHealthB;
+  //  private float UpdatedHealthB;
+  //  private float CurrentHealthB;
     private float UpdatedReloadB;
     private float CurrentReloadB;
 
@@ -32,14 +30,12 @@ public class PlayerInfo : MonoBehaviour
     public GameObject PlayerAText1;
     public GameObject PlayerAText2;
     public GameObject PlayerAText3;
-    public GameObject PlayerAText4;
+   // public GameObject PlayerAText4;
     public GameObject PlayerAText5;
-
-
     public GameObject PlayerBText1;
     public GameObject PlayerBText2;
     public GameObject PlayerBText3;
-    public GameObject PlayerBText4;
+   // public GameObject PlayerBText4;
     public GameObject PlayerBText5;
 
 
@@ -54,8 +50,8 @@ public class PlayerInfo : MonoBehaviour
         CurrentDamageA = Health.instance.player1DamagePerContact;
         CurrentDamageB = Health.instance.player2DamagePerContact;
 
-        CurrentHealthA = Health.instance.player1_health;
-        CurrentHealthB = Health.instance.player1_health;
+        // CurrentHealthA = Health.instance.player1_health;
+        // CurrentHealthB = Health.instance.player1_health;
 
         CurrentReloadA = Player1FirstGun.instance.reloadTime;
         CurrentReloadB = Player2FirstGun.instance.reloadTime;
@@ -71,14 +67,14 @@ public class PlayerInfo : MonoBehaviour
         PlayerAText1.SetActive(false);
         PlayerAText2.SetActive(false);
         PlayerAText3.SetActive(false);
-        PlayerAText4.SetActive(false);
+      //  PlayerAText4.SetActive(false);
         PlayerAText5.SetActive(false);
 
 
         PlayerBText1.SetActive(false);
         PlayerBText2.SetActive(false);
         PlayerBText3.SetActive(false);
-        PlayerBText4.SetActive(false);
+      //  PlayerBText4.SetActive(false);
         PlayerBText5.SetActive(false);
 
 
@@ -106,8 +102,8 @@ public class PlayerInfo : MonoBehaviour
         UpdatedDamageA = Health.instance.player1DamagePerContact;
         UpdatedDamageB = Health.instance.player2DamagePerContact;
 
-        UpdatedHealthA = Health.instance.player1_health;
-        UpdatedHealthB = Health.instance.player2_health;
+        // UpdatedHealthA = Health.instance.player1_health;
+        // UpdatedHealthB = Health.instance.player2_health;
 
         UpdatedReloadA = Player1FirstGun.instance.reloadTime;
         UpdatedReloadB = Player2FirstGun.instance.reloadTime;
@@ -141,10 +137,10 @@ public class PlayerInfo : MonoBehaviour
         {
             PlayerAText3.SetActive(true);
         }
-        if (UpdatedHealthA > CurrentHealthA)
-        {
-            PlayerAText4.SetActive(true);
-        }
+        // if (UpdatedHealthA > CurrentHealthA)
+        // {
+        //     PlayerAText4.SetActive(true);
+        // }
         if (UpdatedReloadA < CurrentReloadA)
         {
             PlayerAText5.SetActive(true);
@@ -168,10 +164,10 @@ public class PlayerInfo : MonoBehaviour
         {
             PlayerBText3.SetActive(true);
         }
-        if (UpdatedHealthB > CurrentHealthB)
-        {
-            PlayerBText4.SetActive(true);
-        }
+        // if (UpdatedHealthB > CurrentHealthB)
+        // {
+        //     PlayerBText4.SetActive(true);
+        // }
         if (UpdatedReloadB < CurrentReloadB)
         {
             PlayerBText5.SetActive(true);

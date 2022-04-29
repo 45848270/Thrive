@@ -4220,7 +4220,7 @@ GameObject:
   - component: {fileID: 1312713490}
   - component: {fileID: 1312713491}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: SystemsManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5151,7 +5151,7 @@ GameObject:
   - component: {fileID: 1418713308}
   - component: {fileID: 1418713307}
   m_Layer: 0
-  m_Name: GameObject (1)
+  m_Name: DropItemsPositions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

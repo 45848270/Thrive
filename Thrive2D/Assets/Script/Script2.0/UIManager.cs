@@ -154,7 +154,10 @@ public class UIManager : MonoBehaviour
     public void InitDia()
     {
         //after click play button, init npc and dialogue panel
-        menuPanel.gameObject.SetActive(false);
+        if (menuPanel != null)
+        {
+            menuPanel.gameObject.SetActive(false);
+        }
         dialoguePanel.gameObject.SetActive(true);
     }
 

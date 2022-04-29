@@ -34,6 +34,7 @@ public class Movement : MonoBehaviour
     {
         steeringInput = Input.GetAxis(InputAxes.Player1_xDir);
         accelerationInput = Input.GetAxis(InputAxes.Player1_yDir);
+
     }
 
     void FixedUpdate()

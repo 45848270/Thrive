@@ -316,6 +316,32 @@ public class UIManager : MonoBehaviour
     }
 
 
+    public void SkipDia() //What happens after clicking skip button on dialogue panel
+    {
+        if (!IsMainDiaFinished) //clicked skip button on main dia
+        {
+            curDiaInx = dialogueTextList.Count - 1;
+            IsMainDiaFinished = true;
+            ChooseLevel();
+        }
+        else if (SelectedLevelOne) //clicked skip button on level one dia
+        {
+            curLevOneDiaInx = levelOneDiagueTextList.Count - 1;
+            LoadFirstLevel();
+        }
+        else if (SelectedLevelTwo) //clicked skip button on level two dia
+        {
+            curLevTwoDiaInx = levelTwoDiagueTextList.Count - 1;
+            LoadSecondLevel();
+        }
+        else //clicked skip button on level three dia
+        {
+            curLevThreeDiaInx = levelThreeDiagueTextList.Count - 1;
+            LoadThirdLevel();
+        }
+    }
+
+
     public void ChooseLevel()
     {
         //after Npc talks, active level panel

@@ -29,7 +29,7 @@ public class Health : MonoBehaviour
     public float y;
     public static AudioClip damage1, damage2, damage3, damage4, heartBeat, alive, death;
 
-    public AudioSource audioSource;
+    private AudioSource audioSource;
 
     public UIManager uIManager;
     private bool gameOver;

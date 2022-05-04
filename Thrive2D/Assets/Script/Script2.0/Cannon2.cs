@@ -9,8 +9,12 @@ public class Cannon2 : MonoBehaviour
     public GameObject cannonShotPrefab2;
     public float bulletForce = 20f;
     public float reloadTime = 2f;
-
     public float timeKeeper;
+    public static AudioClip cannonSound;
+
+    private AudioSource audioSource;
+
+
 
     void Awake()
     {
@@ -20,6 +24,10 @@ public class Cannon2 : MonoBehaviour
     void Start()
     {
         timeKeeper = reloadTime;
+
+        audioSource = GetComponent<AudioSource>();
+        cannonSound = Resources.Load<AudioClip>("Cannon");
+
     }
     // Update is called once per frame
     void Update()
@@ -44,6 +52,8 @@ public class Cannon2 : MonoBehaviour
     {
         //shooting method
         GameObject cannon = Instantiate(cannonShotPrefab2, initialPos.position, initialPos.rotation);
+        audioSource.PlayOneShot(cannonSound);
+
         // bullet.GetComponent <Player1bullet >().
     }
 

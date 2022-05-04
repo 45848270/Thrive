@@ -4370,6 +4370,7 @@ MonoBehaviour:
   - {fileID: 3391139322547660005, guid: d9ca9ed7ad2097843931945b0750f19a, type: 3}
   - {fileID: 5991279277887358836, guid: b9ccf2c73e9c061488d81b348ba84a20, type: 3}
   - {fileID: 2867125770176760565, guid: 96f42ce9278dad146a3c31be6df0b1d1, type: 3}
+  - {fileID: 2726781215923131742, guid: 225a0d0b9e7612e45a178912e9d667b5, type: 3}
   timer1: 0
   timer2: 0
   ID: 0
@@ -4387,8 +4388,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Object1: {fileID: 1882452461}
   Object2: {fileID: 888688491}
+  Object3: {fileID: 1882452461}
+  Object4: {fileID: 888688491}
   script1: {fileID: 1882452462}
   script2: {fileID: 888688492}
+  script3: {fileID: 1775000242}
+  script4: {fileID: 2044891951}
 --- !u!82 &1312713490
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7329,7 +7334,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a7a8a1fd67f6adf408aab514ce20a523, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.3
   m_Pitch: 1
   Loop: 0

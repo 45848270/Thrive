@@ -12,6 +12,8 @@ TagManager:
   - Block
   - player2Bullet
   - map1
+  - player1Cannon
+  - player2Cannon
   layers:
   - Default
   - TransparentFX

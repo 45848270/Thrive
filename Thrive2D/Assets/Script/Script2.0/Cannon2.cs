@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cannon1 : MonoBehaviour
+public class Cannon2 : MonoBehaviour
 {
-    public static Cannon1 instance;
+    public static Cannon2 instance;
     public Transform initialPos;
-    public GameObject cannonShotPrefab1;
+    public GameObject cannonShotPrefab2;
     public float bulletForce = 20f;
     public float reloadTime = 2f;
 
@@ -26,7 +26,7 @@ public class Cannon1 : MonoBehaviour
     {
         if (timeKeeper <= 0)
         {
-            if (Input.GetKeyDown(KeyCode.LeftShift))
+            if (Input.GetKeyDown(KeyCode.Keypad2))
             {
                 shoot();
                 timeKeeper = reloadTime;
@@ -43,7 +43,7 @@ public class Cannon1 : MonoBehaviour
     void shoot()
     {
         //shooting method
-        GameObject cannon = Instantiate(cannonShotPrefab1, initialPos.position, initialPos.rotation);
+        GameObject cannon = Instantiate(cannonShotPrefab2, initialPos.position, initialPos.rotation);
         // bullet.GetComponent <Player1bullet >().
     }
 

@@ -10,7 +10,9 @@ public class Health : MonoBehaviour
     public Slider P2slider;
     public static Health instance;
     public float player1DamagePerContact = 10f;
+    public float player1DamagePerContactFromCannon = 20f;
     public float player2DamagePerContact = 10f;
+    public float player2DamagePerContactFromCannon = 20f;
     public float player1_regainHealth = 20f;
     public float player2_regainHealth = 20f;
     public float player1_health;
@@ -128,11 +130,30 @@ public class Health : MonoBehaviour
         }
         return player1_CurrentHealth;
     }
+
+    public float Decrease_P1_Health_Cannon()
+    {
+        player1_CurrentHealth -= player1DamagePerContactFromCannon;
+
+        audioSource.PlayOneShot(damage1);
+
+
+        //SetPlayer1Health();
+        if (player1_CurrentHealth <= 0)
+        {
+            Destroy(p1);
+            audioSource.Stop();
+            audioSource.PlayOneShot(death);
+
+
+        }
+        return player1_CurrentHealth;
+    }
     public float Decrease_P2_Health()
     {
         player2_CurrentHealth -= player2DamagePerContact;
 
-        audioSource.PlayOneShot(damage3);
+        audioSource.PlayOneShot(damage4);
 
         //SetPlayer2Health();
         if (player2_CurrentHealth <= 0)
@@ -145,6 +166,23 @@ public class Health : MonoBehaviour
         return player2_CurrentHealth;
     }
 
+    public float Decrease_P2_Health_Cannon()
+    {
+        player2_CurrentHealth -= player2DamagePerContactFromCannon;
+
+
+        audioSource.PlayOneShot(damage2);
+
+        //SetPlayer2Health();
+        if (player2_CurrentHealth <= 0)
+        {
+            Destroy(p2);
+            audioSource.Stop();
+            audioSource.PlayOneShot(death);
+
+        }
+        return player2_CurrentHealth;
+    }
     public float Increase_P1_Health()
     {
         player1_health += player1_regainHealth;

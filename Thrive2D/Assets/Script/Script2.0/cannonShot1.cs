@@ -30,7 +30,7 @@ public class cannonShot1 : MonoBehaviour
 
         if (damageGivenToP2.gameObject.tag.Equals("Player2"))                                            //condition if it comes in contact with enemy
         {
-            Health.instance.Decrease_P2_Health();
+            Health.instance.Decrease_P2_Health_Cannon();
 
         }
         if (damageGivenToP2.gameObject.tag.Equals("player2Cannon"))                                            //condition if it comes in contact with enemy

@@ -408,6 +408,7 @@ public class UIManager : MonoBehaviour
         }
         pausePanel.gameObject.SetActive(true);
         Time.timeScale = 0;
+        AudioListener.pause = true;
     }
 
     public void CallResume()
@@ -419,6 +420,7 @@ public class UIManager : MonoBehaviour
         }
         pausePanel.gameObject.SetActive(false);
         Time.timeScale = 1;
+        AudioListener.pause = false;
     }
 
     public void CallBackToMain()

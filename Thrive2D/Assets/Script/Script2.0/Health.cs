@@ -27,7 +27,7 @@ public class Health : MonoBehaviour
     public float y;
     public static AudioClip damage1, damage2, damage3, damage4, heartBeat, alive, death;
 
-    private AudioSource audioSource;
+    public AudioSource audioSource;
 
     public UIManager uIManager;
     private bool gameOver;
@@ -114,28 +114,14 @@ public class Health : MonoBehaviour
     {
         player1_CurrentHealth -= player1DamagePerContact;
 
+        audioSource.PlayOneShot(damage1);
 
-        if (player1_CurrentHealth == 70)  // play sound effect   
-        {
-            audioSource.PlayOneShot(damage1);
-        }
-        else if (player1_CurrentHealth == 40)
-        {
-            audioSource.PlayOneShot(damage2);
-        }
-        else if (player1_CurrentHealth == 10)
-        {
-            audioSource.PlayOneShot(heartBeat);
-        }
-        else if (player1_CurrentHealth <= 0)
-        {
-            audioSource.Stop();
-        }
 
         //SetPlayer1Health();
         if (player1_CurrentHealth <= 0)
         {
             Destroy(p1);
+            audioSource.Stop();
             audioSource.PlayOneShot(death);
 
 
@@ -146,28 +132,13 @@ public class Health : MonoBehaviour
     {
         player2_CurrentHealth -= player2DamagePerContact;
 
-        if (player2_CurrentHealth == 70)  // play sound effect   
-        {
-            audioSource.PlayOneShot(damage3);
-        }
-        else if (player2_CurrentHealth == 40)
-        {
-            audioSource.PlayOneShot(damage4);
-        }
-        else if (player2_CurrentHealth == 10)
-        {
-            audioSource.PlayOneShot(heartBeat);
-        }
-        else if (player2_CurrentHealth <= 0)
-        {
-            audioSource.Stop();
-        }
-
+        audioSource.PlayOneShot(damage3);
 
         //SetPlayer2Health();
         if (player2_CurrentHealth <= 0)
         {
             Destroy(p2);
+            audioSource.Stop();
             audioSource.PlayOneShot(death);
 
         }

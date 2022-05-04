@@ -20,6 +20,7 @@ public class UIManager : MonoBehaviour
     public GameObject levelTwoDiagueText;
     public GameObject levelThreeDiaguePanel;
     public GameObject levelThreeDiagueText;
+    public GameObject pauseButton;
 
     public List<string> dialogueTextList;
     public List<string> levelOneDiagueTextList;
@@ -401,6 +402,10 @@ public class UIManager : MonoBehaviour
     public void CallPause()
     {
         //active pause panel after clicking pause button
+        if (pauseButton != null)
+        {
+            pauseButton.gameObject.SetActive(false);
+        }
         pausePanel.gameObject.SetActive(true);
         Time.timeScale = 0;
     }
@@ -408,6 +413,10 @@ public class UIManager : MonoBehaviour
     public void CallResume()
     {
         //disactive pause panel after clicking resume button on pause panel
+        if (pauseButton != null)
+        {
+            pauseButton.gameObject.SetActive(true);
+        }
         pausePanel.gameObject.SetActive(false);
         Time.timeScale = 1;
     }
@@ -423,6 +432,10 @@ public class UIManager : MonoBehaviour
     public void ActivateGameOverPanel()
     {
         Time.timeScale = 0;
+        if (pauseButton != null)
+        {
+            pauseButton.gameObject.SetActive(false);
+        }
         GameOverPanel.gameObject.SetActive(true);
     }
 

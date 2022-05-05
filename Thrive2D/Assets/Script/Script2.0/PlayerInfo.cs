@@ -118,17 +118,8 @@ public class PlayerInfo : MonoBehaviour
         UpdatedReloadA = Player1FirstGun.instance.reloadTime;
         UpdatedReloadB = Player2FirstGun.instance.reloadTime;
 
-
-
-
         Player1Info();
         Player2Info();
-
-
-
-
-
-
 
     }
 
@@ -155,9 +146,14 @@ public class PlayerInfo : MonoBehaviour
         {
             PlayerAText4.SetActive(true);
         }
-        if (Activate_and_Deactivate.instance.script3.enabled)
+        if (Cannon1.instance.CannonShootOnce == true)
         {
             PlayerAText5.SetActive(true);
+        }
+        else
+        {
+            PlayerAText5.SetActive(false);
+
         }
 
 
@@ -186,9 +182,14 @@ public class PlayerInfo : MonoBehaviour
         {
             PlayerBText4.SetActive(true);
         }
-        if (Activate_and_Deactivate.instance.script4.enabled)
+        if (Cannon2.instance.CannonShootOnce == true)
         {
             PlayerBText5.SetActive(true);
+        }
+        else
+        {
+            PlayerBText5.SetActive(false);
+
         }
 
     }

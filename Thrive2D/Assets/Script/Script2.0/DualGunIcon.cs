@@ -20,7 +20,7 @@ public class DualGunIcon : Item
             Destroy(gameObject);
             Activate_and_Deactivate.instance.Activate_Player2_Second_Gun();   
       
-
+ 
         }
     }
 }

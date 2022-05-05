@@ -25,5 +25,5 @@ public class DamageIcon : Item
             Destroy(gameObject);
             Health.instance.IncreasePlayer2DamagePerCOntact();
         }
-    }
+    } 
 }

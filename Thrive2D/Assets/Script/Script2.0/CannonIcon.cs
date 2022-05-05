@@ -22,7 +22,7 @@ public class CannonIcon : Item
             Activate_and_Deactivate.instance.Activate_Player2_Cannon();
             Cannon2.instance.CannonShootOnce = true;
 
-
+ 
         }
     }
 }

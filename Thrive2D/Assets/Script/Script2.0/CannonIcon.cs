@@ -13,12 +13,14 @@ public class CannonIcon : Item
             Destroy(Cannon.gameObject);
             Destroy(gameObject);
             Activate_and_Deactivate.instance.Activate_Player1_Cannon();
+            Cannon1.instance.CannonShootOnce = true;
         }
         if (Cannon.gameObject.tag.Equals("player2Bullet"))                                            //condition if it comes in contact with enemy
         {
             Destroy(Cannon.gameObject);
             Destroy(gameObject);
             Activate_and_Deactivate.instance.Activate_Player2_Cannon();
+            Cannon2.instance.CannonShootOnce = true;
 
 
         }

@@ -11,6 +11,8 @@ public class Cannon1 : MonoBehaviour
     public float reloadTime = 2f;
     public float timeKeeper;
     public static AudioClip cannonSound;
+    public bool CannonShootOnce = false;
+
 
     private AudioSource audioSource;
 
@@ -32,9 +34,10 @@ public class Cannon1 : MonoBehaviour
     {
         if (timeKeeper <= 0)
         {
-            if (Input.GetKeyDown(KeyCode.LeftShift))
+            if (Input.GetKeyDown(KeyCode.LeftShift) && CannonShootOnce == true)
             {
                 shoot();
+                CannonShootOnce = false;
                 timeKeeper = reloadTime;
             }
         }

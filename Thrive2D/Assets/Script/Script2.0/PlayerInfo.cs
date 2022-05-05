@@ -9,8 +9,8 @@ public class PlayerInfo : MonoBehaviour
     private float CurrentSpeedA;
     private float UpdatedDamageA;
     private float CurrentDamageA;
-   // private float UpdatedHealthA;
-  //  private float CurrentHealthA;
+    // private float UpdatedHealthA;
+    //  private float CurrentHealthA;
     private float UpdatedReloadA;
     private float CurrentReloadA;
 
@@ -18,8 +18,8 @@ public class PlayerInfo : MonoBehaviour
     private float CurrentSpeedB;
     private float UpdatedDamageB;
     private float CurrentDamageB;
-  //  private float UpdatedHealthB;
-  //  private float CurrentHealthB;
+    //  private float UpdatedHealthB;
+    //  private float CurrentHealthB;
     private float UpdatedReloadB;
     private float CurrentReloadB;
 
@@ -31,20 +31,24 @@ public class PlayerInfo : MonoBehaviour
     public GameObject PlayerAText1;
     public GameObject PlayerAText2;
     public GameObject PlayerAText3;
-   // public GameObject PlayerAText4;
+    // public GameObject PlayerAText4;
+    public GameObject PlayerAText4;
     public GameObject PlayerAText5;
-    
+
+
     public GameObject PlayerBText1;
     public GameObject PlayerBText2;
     public GameObject PlayerBText3;
-   // public GameObject PlayerBText4;
+    // public GameObject PlayerBText4;
+    public GameObject PlayerBText4;
     public GameObject PlayerBText5;
+
 
 
 
     void Start()
     {
-        
+
 
         CurrentSpeedA = Movement.instance.accelerationFactor;
         CurrentSpeedB = Movement2.instance.accelerationFactor;
@@ -69,15 +73,19 @@ public class PlayerInfo : MonoBehaviour
         PlayerAText1.SetActive(false);
         PlayerAText2.SetActive(false);
         PlayerAText3.SetActive(false);
-      //  PlayerAText4.SetActive(false);
+        //  PlayerAText4.SetActive(false);
+        PlayerAText4.SetActive(false);
         PlayerAText5.SetActive(false);
+
 
 
         PlayerBText1.SetActive(false);
         PlayerBText2.SetActive(false);
         PlayerBText3.SetActive(false);
-      //  PlayerBText4.SetActive(false);
+        //  PlayerBText4.SetActive(false);
+        PlayerBText4.SetActive(false);
         PlayerBText5.SetActive(false);
+
 
 
 
@@ -145,6 +153,10 @@ public class PlayerInfo : MonoBehaviour
         // }
         if (UpdatedReloadA < CurrentReloadA)
         {
+            PlayerAText4.SetActive(true);
+        }
+        if (Activate_and_Deactivate.instance.script3.enabled)
+        {
             PlayerAText5.SetActive(true);
         }
 
@@ -171,6 +183,10 @@ public class PlayerInfo : MonoBehaviour
         //     PlayerBText4.SetActive(true);
         // }
         if (UpdatedReloadB < CurrentReloadB)
+        {
+            PlayerBText4.SetActive(true);
+        }
+        if (Activate_and_Deactivate.instance.script4.enabled)
         {
             PlayerBText5.SetActive(true);
         }

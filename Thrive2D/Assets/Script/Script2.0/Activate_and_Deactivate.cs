@@ -15,7 +15,7 @@ public class Activate_and_Deactivate : MonoBehaviour
     public Cannon2 script4;
 
 
-    private bool script1Activated = false;
+    private bool script1Activated = false; 
     private bool script2Activated = false;
     private bool script3Activated = false;
     private bool script4Activated = false;

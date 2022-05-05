@@ -22,7 +22,7 @@ public class Block : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag .Contains("Bullet"))
+        if(collision.tag .Contains("Bullet") || collision.tag .Contains("Cannon"))
         {
             Destroy (collision.gameObject); 
             OnHit();

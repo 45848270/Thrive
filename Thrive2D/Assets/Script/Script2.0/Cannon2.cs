@@ -7,6 +7,8 @@ public class Cannon2 : MonoBehaviour
     public static Cannon2 instance;
     public Transform initialPos;
     public GameObject cannonShotPrefab2;
+    ParticleSystem cannonEffect;
+
     public float bulletForce = 20f;
     public float reloadTime = 2f;
     public float timeKeeper;
@@ -29,6 +31,9 @@ public class Cannon2 : MonoBehaviour
 
         audioSource = GetComponent<AudioSource>();
         cannonSound = Resources.Load<AudioClip>("Cannon");
+
+        cannonEffect = GetComponent<ParticleSystem>();
+
 
     }
     // Update is called once per frame 
@@ -56,6 +61,8 @@ public class Cannon2 : MonoBehaviour
         //shooting method
         GameObject cannon = Instantiate(cannonShotPrefab2, initialPos.position, initialPos.rotation);
         audioSource.PlayOneShot(cannonSound);
+        cannonEffect.Play();
+
 
         // bullet.GetComponent <Player1bullet >().
     }

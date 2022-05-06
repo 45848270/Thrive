@@ -12,24 +12,25 @@ public class Block : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag .Contains("Bullet") || collision.tag .Contains("Cannon"))
+        if (collision.tag.Contains("Bullet") || collision.tag.Contains("Cannon"))
         {
-            Destroy (collision.gameObject); 
+            Destroy(collision.gameObject);
             OnHit();
+
         }
     }
     /// <summary>
-    /// Be hit
+    /// Be hit 
     /// </summary>
     public void OnHit()
     {
@@ -37,8 +38,9 @@ public class Block : MonoBehaviour
             Instantiate(followObj, transform.position, Quaternion.identity);
         if (crash)
         {
-            GetComponentInChildren <Animator>().SetTrigger("Crash");
-        }else
+            GetComponentInChildren<Animator>().SetTrigger("Crash");
+        }
+        else
         {
 
             Destroy(gameObject);

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -4915967227961000975}
   - component: {fileID: 9002063191600789110}
   - component: {fileID: 7114375473368005344}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: cannonShot2
   m_TagString: player2Cannon
   m_Icon: {fileID: 0}

@@ -24,15 +24,15 @@ TagManager:
   - Player1
   - Player2
   - map
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - CannonShot1
+  - CannonShot2
+  - DualGun
+  - HealthIcon
+  - Damageicon
+  - ReloadIcon
+  - SpeedIcon
+  - CannonIcon
+  - Zone
   - 
   - 
   - 

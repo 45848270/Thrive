@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3391139322547660000}
   - component: {fileID: 3391139322547660003}
   - component: {fileID: 3391139322547660002}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: ReloadIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,7 +83,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3391139323689268178}
   - component: {fileID: 3391139323689268179}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}

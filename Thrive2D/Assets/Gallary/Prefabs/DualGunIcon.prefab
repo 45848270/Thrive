@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4619632063138990580}
   - component: {fileID: 4619632063138990539}
   - component: {fileID: 4619632063138990538}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: DualGunIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,7 +83,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4619632063947857604}
   - component: {fileID: 4619632063947857605}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}

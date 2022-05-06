@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2533871431569417386}
   - component: {fileID: 2346006047809280592}
   - component: {fileID: 5997668634902008033}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: SpeedIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,7 +83,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7969433036499933493}
   - component: {fileID: 7102282461966010974}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}

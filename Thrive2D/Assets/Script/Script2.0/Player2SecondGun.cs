@@ -27,7 +27,7 @@ public class Player2SecondGun : MonoBehaviour
     {
         if (timeKeeper <= 0)
         {
-            if (Input.GetKeyDown(KeyCode.Keypad5))
+            if (Input.GetKeyDown(KeyCode.Keypad5) || Input.GetKeyDown(KeyCode.Alpha5))
             {
                 shoot();
                 timeKeeper = reloadTime;

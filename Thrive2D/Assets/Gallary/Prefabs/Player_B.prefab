@@ -262,6 +262,8 @@ MonoBehaviour:
   initialPos: {fileID: 3964618267942214403}
   bulletPrefab: {fileID: 7808918900144710277, guid: b3bd8469c7e7cc04b9424f378ca6fccb, type: 3}
   bulletForce: 20
+  reloadTime: 5
+  timeKeeper: 0
 --- !u!114 &7580638160365780720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,3 +279,5 @@ MonoBehaviour:
   initialPos: {fileID: 5771221391367947781}
   bulletPrefab: {fileID: 7808918900144710277, guid: b3bd8469c7e7cc04b9424f378ca6fccb, type: 3}
   bulletForce: 20
+  reloadTime: 5
+  timeKeeper: 0

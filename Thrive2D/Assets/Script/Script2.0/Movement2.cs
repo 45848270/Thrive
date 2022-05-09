@@ -32,8 +32,8 @@ public class Movement2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        steeringInput = Input.GetAxis(InputAxes.Player2_xDir);
-        accelerationInput = Input.GetAxis(InputAxes.Player2_yDir);
+        steeringInput = 0;
+        accelerationInput = 0;
     }
 
     void FixedUpdate()

@@ -10,8 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6580903766972013088}
   - component: {fileID: 6460258075494247758}
-  - component: {fileID: 1768196088293153106}
   - component: {fileID: -3685209956641275679}
+  - component: {fileID: 7943029313305848210}
+  - component: {fileID: -2544841816222297092}
+  - component: {fileID: 7018914426786332624}
   m_Layer: 0
   m_Name: P1
   m_TagString: Untagged
@@ -75,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 25fb06a2f3d4ca04c8ba116f3d4f2a21, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -86,18 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1768196088293153106
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5862953056291694496}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e353b2f3d12193846be04e6829ee34ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &-3685209956641275679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,7 +115,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1768196088293153106}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Player1Controller, Assembly-CSharp
         m_MethodName: Move
         m_Mode: 0
@@ -141,10 +131,58 @@ MonoBehaviour:
     m_ActionName: Player/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: aa0604a6-c4fc-46f3-a32b-ebcfb6e59849
-    m_ActionName: Player/Fire[/Keyboard/space]
+    m_ActionId: 5a19f5b5-498e-4da0-afb3-36973ec7d324
+    m_ActionName: Player/Direction[/Keyboard/a,/Keyboard/d]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &7943029313305848210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5862953056291694496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3573ab59c2f3cf4498e7c3e26a287269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  accelerationFactor: 300
+  driftFactor: 0.95
+  turnFactor: 3.5
+--- !u!114 &-2544841816222297092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5862953056291694496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 341f891e6c6941d43bfa9507911201e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &7018914426786332624
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5862953056291694496}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

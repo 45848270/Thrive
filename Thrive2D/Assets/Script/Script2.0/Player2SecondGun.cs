@@ -27,14 +27,14 @@ public class Player2SecondGun : MonoBehaviour
     {
         if (timeKeeper <= 0)
         {
-            if (Input.GetKeyDown(KeyCode.Keypad5))
-            {
+            //if (Input.GetKeyDown(KeyCode.Keypad5))
+           // {
                 shoot();
                 timeKeeper = reloadTime;
-            }
-        }else
-        {
-            timeKeeper -= Time.deltaTime;
+           // }
+       // }else
+       // {
+           // timeKeeper -= Time.deltaTime;
 
         }
     }

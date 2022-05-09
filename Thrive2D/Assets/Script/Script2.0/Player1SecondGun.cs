@@ -5,7 +5,25 @@ using UnityEngine;
 public class Player1SecondGun : MonoBehaviour
 {
     public static Player1SecondGun instance;
-    public Transform initialPos;
+
+    private NewInputSystem input;
+
+public float reloadTime = 2f;
+     void Awake()
+    {
+        instance = this;
+    }
+    void start()
+    {
+        input.setSecondGun();
+    }
+     public void Decrease_P1_ReloadTime()
+    {
+        reloadTime -= (0.15f * reloadTime);
+    }
+  
+    
+    /*public Transform initialPos;
     public GameObject bulletPrefab;
     public float bulletForce = 20f;
     public float reloadTime = 2f;
@@ -47,5 +65,5 @@ public class Player1SecondGun : MonoBehaviour
     public void Decrease_P1_ReloadTime()
     {
         reloadTime -= (0.15f * reloadTime);
-    }
+    }*/
 }

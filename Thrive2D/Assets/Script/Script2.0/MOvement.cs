@@ -10,6 +10,7 @@ public class Movement : MonoBehaviour
     public float driftFactor = 0.95f;
     public float turnFactor = 3.5f;
 
+   // private CharacterController controller;
 
     float accelerationInput = 0;
     float steeringInput = 0;
@@ -17,23 +18,31 @@ public class Movement : MonoBehaviour
     // Start is called before the first frame update
 
     private Rigidbody2D playerRigidbody2D;
+    private float xDir=0;
+    private float yDir=0;
 
 
     void Awake()
     {
+        //controller=GetComponent<CharacterController>();
         instance = this;
+        
         playerRigidbody2D = GetComponent<Rigidbody2D>();
     }
-    void Start()
+    public void SetVerticalMovement(float f)
     {
-
+        yDir=f;
+    }
+    public void SetHorizontalMovement(float f)
+    {
+        xDir=f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        steeringInput = Input.GetAxis(InputAxes.Player1_xDir);
-        accelerationInput = Input.GetAxis(InputAxes.Player1_yDir);
+        steeringInput =xDir;
+        accelerationInput = yDir;
 
     }
 

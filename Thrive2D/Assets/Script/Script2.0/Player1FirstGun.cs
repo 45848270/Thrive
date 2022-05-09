@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Player1FirstGun : MonoBehaviour
 {
@@ -10,7 +11,11 @@ public class Player1FirstGun : MonoBehaviour
     public float bulletForce = 20f;
     public float reloadTime = 2f;
 
+    public bool fire=false;
+
     public float timeKeeper;
+
+    private PlayerControlls input;
 
     void Awake()
     {
@@ -26,12 +31,12 @@ public class Player1FirstGun : MonoBehaviour
     {
         if (timeKeeper <= 0)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (fire)
             {
                 shoot();
                 timeKeeper = reloadTime;
             }
-        }else
+        }else 
         {
             timeKeeper -= Time.deltaTime;
 
@@ -39,7 +44,7 @@ public class Player1FirstGun : MonoBehaviour
 
     }
 
-    void shoot()
+    public void shoot()
     {
         //shooting method
         GameObject bullet = Instantiate(bulletPrefab, initialPos.position, initialPos.rotation);

@@ -97,8 +97,9 @@ GameObject:
   - component: {fileID: 7359801837447229738}
   - component: {fileID: 3739635608207784946}
   - component: {fileID: 5210268366118886051}
+  - component: {fileID: 1443316305032020321}
   - component: {fileID: 742001683779687894}
-  - component: {fileID: 3195471717357545932}
+  - component: {fileID: 5788847868098322582}
   m_Layer: 0
   m_Name: Player_A
   m_TagString: Untagged
@@ -178,7 +179,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6290255593786137045}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0bb9909fb12b4d149ba58fa72b691900, type: 3}
   m_Name: 
@@ -187,6 +188,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 6883185369413308729, guid: 2337fbd222b66a34cb29c108a378c6da, type: 3}
   bulletForce: 20
   reloadTime: 5
+  fire: 0
   timeKeeper: 0
 --- !u!114 &5210268366118886051
 MonoBehaviour:
@@ -195,7 +197,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6290255593786137045}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3573ab59c2f3cf4498e7c3e26a287269, type: 3}
   m_Name: 
@@ -203,6 +205,25 @@ MonoBehaviour:
   accelerationFactor: 300
   driftFactor: 0.95
   turnFactor: 3.5
+--- !u!114 &1443316305032020321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6290255593786137045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e259a8c5bbee3684f915c738380e8ff8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mover: {fileID: 5210268366118886051}
+  firstGunPos: {fileID: 0}
+  secondGunPos: {fileID: 0}
+  bulletPrefab: {fileID: 6883185369413308729, guid: 2337fbd222b66a34cb29c108a378c6da, type: 3}
+  bulletForce: 20
+  reloadTime: 2
+  timeKeeper: 0
 --- !u!114 &742001683779687894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,17 +231,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6290255593786137045}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af86ab8d1b2265e499ddfded204f8031, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialPos: {fileID: 3985000881189965391}
-  bulletPrefab: {fileID: 6883185369413308729, guid: 2337fbd222b66a34cb29c108a378c6da, type: 3}
-  bulletForce: 20
   reloadTime: 5
-  timeKeeper: 0
---- !u!114 &3195471717357545932
+--- !u!114 &5788847868098322582
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -229,9 +246,39 @@ MonoBehaviour:
   m_GameObject: {fileID: 6290255593786137045}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e353b2f3d12193846be04e6829ee34ea, type: 3}
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 87b7c3d3838e906468a8f64c085260f0, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f97deb9f-bd87-4c12-8db8-f2daeb8ca13f
+    m_ActionName: Player/Movement[/Keyboard/s,/Keyboard/w]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5a19f5b5-498e-4da0-afb3-36973ec7d324
+    m_ActionName: Player/Direction[/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 77d0fdee-6f57-4112-84de-9dc5cb3ac43a
+    m_ActionName: Player/Fire[/Keyboard/space]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &6313877504258536566
 GameObject:
   m_ObjectHideFlags: 0

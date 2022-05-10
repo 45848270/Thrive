@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+
 
 public class Cannon1 : MonoBehaviour
 {
@@ -13,6 +15,8 @@ public class Cannon1 : MonoBehaviour
     public float timeKeeper;
     public static AudioClip cannonSound;
     public bool CannonShootOnce = false;
+    public PlayerAction cont;
+
 
 
     private AudioSource audioSource;
@@ -21,6 +25,8 @@ public class Cannon1 : MonoBehaviour
     void Awake()
     {
         instance = this;
+        cont = new PlayerAction();
+
     }
 
     void Start()
@@ -35,29 +41,46 @@ public class Cannon1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timeKeeper <= 0)
-        {
-            if (Input.GetKeyDown(KeyCode.LeftShift) && CannonShootOnce == true)
-            {
-                shoot();
-                CannonShootOnce = false;
-                timeKeeper = reloadTime;
-            }
-        }
-        else
-        {
-            timeKeeper -= Time.deltaTime;
+        // if (timeKeeper <= 0)
+        // {
+        //     if ((Input.GetKeyDown(KeyCode.LeftShift) || Input.GetMouseButton(1)  ) && CannonShootOnce == true)
+        //     {
+        //         shoot();
+        //         CannonShootOnce = false;
+        //         timeKeeper = reloadTime;
+        //     }
+        // }
+        // else
+        // {
+        //     timeKeeper -= Time.deltaTime;
 
-        }
+        // }
 
     }
 
     void shoot()
     {
-        //shooting method
+        // shooting method
         GameObject cannon = Instantiate(cannonShotPrefab1, initialPos.position, initialPos.rotation);
         audioSource.PlayOneShot(cannonSound);
         cannonEffect.Play();
+    }
+
+    public void Fire2(InputAction.CallbackContext context)
+    {
+        if (CannonShootOnce == true)
+        {
+            if (context.performed)
+            {
+
+                Debug.Log("Cannon!");
+                shoot();
+                CannonShootOnce = false;
+                // Update();
+
+
+            }
+        }
     }
 
 

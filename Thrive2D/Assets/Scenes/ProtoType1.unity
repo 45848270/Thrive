@@ -2314,7 +2314,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6048941856162690919, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
       propertyPath: accelerationFactor
-      value: 300
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6445624249100522855, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
       propertyPath: bulletForce
@@ -12131,6 +12131,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3573ab59c2f3cf4498e7c3e26a287269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  accelerationFactor: 50
+  driftFactor: 0.95
+  turnFactor: 3.5
 --- !u!4 &1882452475 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2287024955499315617, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}

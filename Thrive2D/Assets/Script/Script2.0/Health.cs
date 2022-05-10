@@ -29,7 +29,7 @@ public class Health : MonoBehaviour
     public float y;
     public static AudioClip damage1, damage2, damage3, damage4, heartBeat, alive, death;
 
-    private AudioSource audioSource;
+    public AudioSource audioSource;
 
     public UIManager uIManager;
     private bool gameOver;
@@ -127,7 +127,7 @@ public class Health : MonoBehaviour
             audioSource.PlayOneShot(death);
 
 
-        }
+        } 
         return player1_CurrentHealth;
     }
 

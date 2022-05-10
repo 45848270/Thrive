@@ -12,7 +12,7 @@ public class UIManager : MonoBehaviour
     public GameObject dialoguePanel;
     public GameObject dialogueText;
     public GameObject pausePanel;
-      public GameObject optionPanel;
+    public GameObject optionPanel;
     public GameObject GameOverPanel;
 
     public GameObject levelOneDiaguePanel;
@@ -170,7 +170,7 @@ public class UIManager : MonoBehaviour
         //after click play button, init npc and dialogue panel
         if (menuPanel != null)
         {
-            menuPanel.gameObject.SetActive(false);
+            menuPanel.SetActive(false);
         }
         optionPanel.SetActive(true);
     }
@@ -441,6 +441,12 @@ public class UIManager : MonoBehaviour
         //back to main scene after clicking Back to main button on pause panel
         Time.timeScale = 1;
         pausePanel.gameObject.SetActive(false);
+        SceneManager.LoadScene(MainSceneOrder);
+    }
+
+    public void CallBackToMenu()
+    {
+        //back to menu scene for menu button
         SceneManager.LoadScene(MainSceneOrder);
     }
 

@@ -167,12 +167,25 @@ public class UIManager : MonoBehaviour
 
     public void Option()
     {
-        //after click play button, init npc and dialogue panel
-        if (menuPanel != null)
+        //disable menu panel after clicking option button
+        if (pausePanel != null)
         {
-            menuPanel.SetActive(false);
+            pausePanel.SetActive(false);
+
         }
         optionPanel.SetActive(true);
+    }
+
+    public void CallBack()
+    {
+        //disactive option panel after clicking back button on option panel
+        if (optionPanel != null)
+        {
+            optionPanel.gameObject.SetActive(false);
+        }
+        pausePanel.gameObject.SetActive(true);
+        Time.timeScale = 0;
+        AudioListener.pause = true;
     }
 
 
@@ -435,6 +448,8 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 1;
         AudioListener.pause = false;
     }
+
+
 
     public void CallBackToMain()
     {

@@ -12,6 +12,7 @@ public class UIManager : MonoBehaviour
     public GameObject dialoguePanel;
     public GameObject dialogueText;
     public GameObject pausePanel;
+      public GameObject optionPanel;
     public GameObject GameOverPanel;
 
     public GameObject levelOneDiaguePanel;
@@ -52,6 +53,8 @@ public class UIManager : MonoBehaviour
         SelectedLevelOne = false;
         SelectedLevelTwo = false;
         SelectedLevelThree = false;
+
+        optionPanel.gameObject.SetActive(false);
     }
 
     void Update()
@@ -160,6 +163,16 @@ public class UIManager : MonoBehaviour
             menuPanel.gameObject.SetActive(false);
         }
         dialoguePanel.gameObject.SetActive(true);
+    }
+
+    public void Option()
+    {
+        //after click play button, init npc and dialogue panel
+        if (menuPanel != null)
+        {
+            menuPanel.gameObject.SetActive(false);
+        }
+        optionPanel.SetActive(true);
     }
 
 

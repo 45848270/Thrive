@@ -13,6 +13,7 @@ public class DualGunIcon : Item
             Destroy(DualGun.gameObject);
             Destroy(gameObject);
             Activate_and_Deactivate.instance.Activate_Player1_Second_Gun();
+            Player1SecondGun.instance.dualGunOn = true;
         }
         if (DualGun.gameObject.tag.Equals("player2Bullet"))                                            //condition if it comes in contact with enemy
         {

@@ -13565,6 +13565,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1882452462}
+        m_TargetAssemblyTypeName: Player1SecondGun, Assembly-CSharp
+        m_MethodName: Fire
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 335cf639-1359-4a97-b1b3-62dd95225abb
     m_ActionName: Player/Fire[/Mouse/leftButton,/Keyboard/space,/XInputControllerWindows/buttonWest]
   - m_PersistentCalls:

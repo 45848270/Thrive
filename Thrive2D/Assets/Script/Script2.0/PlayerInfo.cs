@@ -67,8 +67,8 @@ public class PlayerInfo : MonoBehaviour
 
 
 
-        PanelA.SetActive(false);
-        PanelB.SetActive(false);
+        PanelA.SetActive(true);
+        PanelB.SetActive(true);
 
         PlayerAText1.SetActive(false);
         PlayerAText2.SetActive(false);

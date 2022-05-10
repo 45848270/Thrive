@@ -79,17 +79,10 @@ public class Player1FirstGun : MonoBehaviour
 
             Debug.Log("Fire!");
             shoot();
-            
+
 
         }
     }
-
-
-
-
-
-
-
 
 
 

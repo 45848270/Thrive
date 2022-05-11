@@ -294,6 +294,17 @@ public partial class @PlayerAction : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""9c272d39-6fc4-4a1e-905b-413b84d788c4"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""c01ce716-dab3-40e5-bf03-15adb1049008"",
                     ""path"": ""<Gamepad>/select"",
                     ""interactions"": """",

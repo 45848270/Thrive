@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
 
 
 public class UIManager : MonoBehaviour
@@ -34,6 +35,9 @@ public class UIManager : MonoBehaviour
     private int curLevTwoDiaInx;
     private int curLevThreeDiaInx;
     private bool IsMainDiaFinished;
+
+    // for UI buttons with gamepad
+    public GameObject pauseFirstButton, optionFirstButton, optionClosedButton;
 
 
     //Scene orders:
@@ -170,11 +174,11 @@ public class UIManager : MonoBehaviour
     public void Option()
     {
         //disable menu panel after clicking option button
-        if (pausePanel != null)
-        {
-            pausePanel.SetActive(false);
+        // if (pausePanel != null)
+        // {
+        //     pausePanel.SetActive(false);
 
-        }
+        // }
         optionPanel.SetActive(true);
     }
 

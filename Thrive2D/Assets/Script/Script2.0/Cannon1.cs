@@ -73,7 +73,6 @@ public class Cannon1 : MonoBehaviour
             if (context.performed)
             {
 
-                Debug.Log("Cannon!");
                 shoot();
                 CannonShootOnce = false;
                 // Update();

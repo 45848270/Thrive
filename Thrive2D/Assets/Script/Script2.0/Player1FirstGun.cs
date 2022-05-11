@@ -67,7 +67,6 @@ public class Player1FirstGun : MonoBehaviour
         if (context.performed && (timeKeeper<=0))
         {
 
-            Debug.Log("Fire!");
             shoot();
             timeKeeper=reloadTime;
 

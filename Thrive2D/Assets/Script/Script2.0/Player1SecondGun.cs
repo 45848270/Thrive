@@ -43,7 +43,7 @@ public class Player1SecondGun : MonoBehaviour
         // }
         // else
         // {
-        //     timeKeeper -= Time.deltaTime;
+             timeKeeper -= Time.deltaTime;
         // }
     }
 
@@ -58,11 +58,12 @@ public class Player1SecondGun : MonoBehaviour
     {
         if (dualGunOn == true)
         {
-            if (context.performed)
+            if (context.performed && (timeKeeper<=0))
             {
 
-                Debug.Log("Fire!");
-                shoot();
+             Debug.Log("Fire!");
+            shoot();
+            timeKeeper=reloadTime;
             }
         }
     }

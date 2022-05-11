@@ -30,20 +30,10 @@ public class Player1FirstGun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // if (timeKeeper <= 0)
-        // {
+    
+         timeKeeper -= Time.deltaTime;
 
-        //     if (Input.GetKeyDown(KeyCode.Space))
-        //     {
-        //         shoot();
-        //         timeKeeper = reloadTime;
-        //     }
-        // }
-        // else
-        // {
-        //     timeKeeper -= Time.deltaTime;
-
-        // }
+       
 
 
 
@@ -74,11 +64,12 @@ public class Player1FirstGun : MonoBehaviour
 
     public void Fire(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (context.performed && (timeKeeper<=0))
         {
 
             Debug.Log("Fire!");
             shoot();
+            timeKeeper=reloadTime;
 
 
         }

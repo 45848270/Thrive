@@ -11,8 +11,8 @@ public class Player2SecondGun : MonoBehaviour
     public GameObject bulletPrefab;
     public float bulletForce = 20f;
     public float reloadTime = 2f;
-        public bool dualGunOn = false;
- public PlayerBaction controls;
+    public bool dualGunOn = false;      
+    public PlayerBaction controls;
 
 
     public float timeKeeper;

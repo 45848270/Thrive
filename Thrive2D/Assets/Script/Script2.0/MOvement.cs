@@ -29,14 +29,12 @@ public class Movement : MonoBehaviour
         
         playerRigidbody2D = GetComponent<Rigidbody2D>();
     }
-    public void SetVerticalMovement(float f)
+    public void SetVerticalMovement(Vector2 values)
     {
-        yDir=f;
+        yDir=values.y;
+        xDir=values.x;
     }
-    public void SetHorizontalMovement(float f)
-    {
-        xDir=f;
-    }
+   
 
     // Update is called once per frame
     void Update()

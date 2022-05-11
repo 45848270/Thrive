@@ -8,7 +8,7 @@ public class P1InputValues : MonoBehaviour
 {
     private PlayerControlls input;
     private InputAction movement;
-    private InputAction direction;
+    //private InputAction direction;
     public Movement mover;
 
 
@@ -21,9 +21,9 @@ public class P1InputValues : MonoBehaviour
     private void OnEnable()
     {
         movement=input.Player.Movement;
-        direction=input.Player.Direction;
+        //direction=input.Player.Direction;
         movement.Enable();
-        direction.Enable();
+        //direction.Enable();
 
         input.Player.Fire.performed += OnFire;
         input.Player.Fire.Enable();
@@ -38,7 +38,7 @@ public class P1InputValues : MonoBehaviour
     private void OnDisable()
     {
         movement.Disable();
-        direction.Disable();
+        //direction.Disable();
         input.Player.Fire.Disable();
     }
 
@@ -48,7 +48,7 @@ public class P1InputValues : MonoBehaviour
     private void FixedUpdate()
     {
         //Debug.Log("Movement  "+ movement.ReadValue<float>());
-        mover.SetVerticalMovement(movement.ReadValue<float>());
-        mover.SetHorizontalMovement(direction.ReadValue<float>());
+        mover.SetVerticalMovement(movement.ReadValue<Vector2>());
+        //mover.SetHorizontalMovement(direction.ReadValue<float>());
     }
 }

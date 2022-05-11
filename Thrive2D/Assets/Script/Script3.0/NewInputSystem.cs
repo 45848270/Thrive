@@ -7,7 +7,7 @@ public class NewInputSystem : MonoBehaviour
 {
     private PlayerControlls input;
     private InputAction movement;
-    private InputAction direction;
+   // private InputAction direction;
     public Movement mover;
     
     
@@ -36,9 +36,9 @@ public class NewInputSystem : MonoBehaviour
     private void OnEnable()
     {
         movement=input.Player.Movement;
-        direction=input.Player.Direction;
+        //direction=input.Player.Direction;
         movement.Enable();
-        direction.Enable();
+       // direction.Enable();
 
         
         input.Player.Fire.Enable();
@@ -56,7 +56,7 @@ public class NewInputSystem : MonoBehaviour
     private void OnDisable()
     {
         movement.Disable();
-        direction.Disable();
+      //  direction.Disable();
         input.Player.Fire.Disable();
     }
 
@@ -66,8 +66,8 @@ public class NewInputSystem : MonoBehaviour
     }
    private void FixedUpdate()
     {
-        mover.SetVerticalMovement(movement.ReadValue<float>());
-        mover.SetHorizontalMovement(direction.ReadValue<float>());
+        mover.SetVerticalMovement(movement.ReadValue<Vector2>());
+        //mover.SetHorizontalMovement(direction.ReadValue<float>());
     }
      public void shoot()
     {

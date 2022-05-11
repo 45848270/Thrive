@@ -15,21 +15,12 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Direction",
-                    "type": "Value",
-                    "id": "5a19f5b5-498e-4da0-afb3-36973ec7d324",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
-                },
-                {
                     "name": "Fire",
                     "type": "Button",
                     "id": "77d0fdee-6f57-4112-84de-9dc5cb3ac43a",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press",
+                    "interactions": "Press(behavior=2)",
                     "initialStateCheck": false
                 }
             ],
@@ -37,7 +28,7 @@
                 {
                     "name": "WASD",
                     "id": "a7b1fff5-bda4-40a0-8a18-15546796f8d0",
-                    "path": "1DAxis",
+                    "path": "2DVector",
                     "interactions": "Press(behavior=2)",
                     "processors": "",
                     "groups": "",
@@ -46,7 +37,7 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "Negative",
+                    "name": "Up",
                     "id": "3a3de8a4-9ddd-4d5a-9c89-439e6479b426",
                     "path": "<Keyboard>/s",
                     "interactions": "",
@@ -57,9 +48,31 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "Positive",
+                    "name": "Down",
                     "id": "5555a92c-d6a9-4263-a53e-a903e8f058a1",
                     "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Left",
+                    "id": "25ff7a84-3d70-45ba-af38-49def1ffd73a",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Right",
+                    "id": "9a686a8e-e4a3-4e96-8bb1-f27a36a7bfe8",
+                    "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -77,50 +90,6 @@
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "5a843c3a-95d4-43ea-87ad-9e2d4444faec",
-                    "path": "<Gamepad>/rightStick/left",
-                    "interactions": "Hold",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Direction",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "1D Axis",
-                    "id": "f19f9c88-229a-44b8-abcb-aeabbb8732b6",
-                    "path": "1DAxis",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Direction",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "negative",
-                    "id": "254d5c41-b1af-4455-a009-5f905334f169",
-                    "path": "<Keyboard>/a",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Direction",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "759b8839-7063-4461-9a07-ce22d8ebe525",
-                    "path": "<Keyboard>/d",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Direction",
-                    "isComposite": false,
-                    "isPartOfComposite": true
                 },
                 {
                     "name": "",

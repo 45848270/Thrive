@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.InputSystem;
+
 
 public class UIManager : MonoBehaviour
 {
@@ -437,9 +439,36 @@ public class UIManager : MonoBehaviour
         AudioListener.pause = true;
     }
 
+    public void CallPause2(InputAction.CallbackContext context)
+    {
+        //active pause panel after pressing pause button with gamepad
+         if (context.performed)
+         {
+        if (pauseButton != null)
+        {
+            pauseButton.gameObject.SetActive(false);
+        }
+        pausePanel.gameObject.SetActive(true);
+        Time.timeScale = 0;
+        AudioListener.pause = true;
+         }
+    }
+
     public void CallResume()
     {
         //disactive pause panel after clicking resume button on pause panel
+        if (pauseButton != null)
+        {
+            pauseButton.gameObject.SetActive(true);
+        }
+        pausePanel.gameObject.SetActive(false);
+        Time.timeScale = 1;
+        AudioListener.pause = false;
+    }
+
+   public void CallResume2(InputAction.CallbackContext context)
+    {
+        //diactive pause panel after pressing resume button with gamepad
         if (pauseButton != null)
         {
             pauseButton.gameObject.SetActive(true);

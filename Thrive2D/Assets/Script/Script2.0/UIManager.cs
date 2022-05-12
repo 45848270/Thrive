@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
 
 
 public class UIManager : MonoBehaviour
@@ -15,6 +16,10 @@ public class UIManager : MonoBehaviour
     public GameObject dialogueText;
     public GameObject pausePanel;
     public GameObject optionPanel;
+    public GameObject audioPanel;
+    public GameObject controllerPanel;
+    public GameObject keyboardPanel;
+
     public GameObject GameOverPanel;
 
     public GameObject levelOneDiaguePanel;
@@ -34,6 +39,9 @@ public class UIManager : MonoBehaviour
     private int curLevTwoDiaInx;
     private int curLevThreeDiaInx;
     private bool IsMainDiaFinished;
+
+    // for UI buttons with gamepad
+    public GameObject pauseFirstButton, optionFirstButton, optionClosedButton, audioFirstButton, audioClosedButton, controllerFirstButton, controllerClosedButton, keyboardFirstButton, keyboardClosedButton, gameoverFirstButton, gameoverClosedButton, chooseLevelFirstButton;
 
 
     //Scene orders:
@@ -57,6 +65,13 @@ public class UIManager : MonoBehaviour
         SelectedLevelThree = false;
 
         optionPanel.gameObject.SetActive(false);
+        audioPanel.gameObject.SetActive(false);
+        controllerPanel.gameObject.SetActive(false);
+        keyboardPanel.gameObject.SetActive(false);
+
+
+
+
     }
 
     void Update()
@@ -168,28 +183,115 @@ public class UIManager : MonoBehaviour
     }
 
     public void Option()
-    {
-        //disable menu panel after clicking option button
-        if (pausePanel != null)
-        {
-            pausePanel.SetActive(false);
-
-        }
+    {        
         optionPanel.SetActive(true);
+        pausePanel.SetActive(false);
+
+         //clear selected object
+        EventSystem.current.SetSelectedGameObject(null);
+        //set new selected object
+        EventSystem.current.SetSelectedGameObject(optionFirstButton);
     }
 
-    public void CallBack()
+    public void CloseOption()
     {
         //disactive option panel after clicking back button on option panel
         if (optionPanel != null)
         {
             optionPanel.gameObject.SetActive(false);
         }
-        pausePanel.gameObject.SetActive(true);
-        Time.timeScale = 0;
-        AudioListener.pause = true;
+                pausePanel.SetActive(true);
+
+         //clear selected object
+        EventSystem.current.SetSelectedGameObject(null);
+        //set new selected object
+        EventSystem.current.SetSelectedGameObject(optionClosedButton);
+        
+    }   
+
+    public void ControllerPanelOption()
+    {
+        
+        optionPanel.SetActive(false);
+        controllerPanel.SetActive(true);
+
+
+         //clear selected object
+        EventSystem.current.SetSelectedGameObject(null);
+        //set new selected object
+        EventSystem.current.SetSelectedGameObject(controllerFirstButton);
+        
     }
 
+     public void ControllerPanelOptionBack()
+    {
+        
+        optionPanel.SetActive(true);
+        controllerPanel.SetActive(false);
+
+
+         //clear selected object
+        EventSystem.current.SetSelectedGameObject(null);
+        //set new selected object
+        EventSystem.current.SetSelectedGameObject(controllerClosedButton);
+        
+    }
+
+     public void KeyboardPanelOption()
+    {
+        
+        optionPanel.SetActive(false);
+        keyboardPanel.SetActive(true);
+
+
+         //clear selected object
+        EventSystem.current.SetSelectedGameObject(null);
+        //set new selected object
+        EventSystem.current.SetSelectedGameObject(keyboardFirstButton);
+        
+    }
+
+     public void KeyboardPanelOptionBack()
+    {
+        
+        optionPanel.SetActive(true);
+        keyboardPanel.SetActive(false);
+
+
+         //clear selected object
+        EventSystem.current.SetSelectedGameObject(null);
+        //set new selected object
+        EventSystem.current.SetSelectedGameObject(keyboardClosedButton);
+        
+    }
+
+  public void AudioOption()
+    {
+        
+        audioPanel.SetActive(true);
+        optionPanel.SetActive(false);
+        pausePanel.SetActive(false);
+
+
+         //clear selected object
+        EventSystem.current.SetSelectedGameObject(null);
+        //set new selected object
+        EventSystem.current.SetSelectedGameObject(audioFirstButton);
+        
+    }
+
+    public void AudioBackToOption()
+    {
+        
+        audioPanel.SetActive(false);
+        optionPanel.SetActive(true);
+         //clear selected object
+        EventSystem.current.SetSelectedGameObject(null);
+        //set new selected object
+        EventSystem.current.SetSelectedGameObject(audioClosedButton);
+        
+    }
+    
 
     public void TurnPages()
     {
@@ -383,6 +485,12 @@ public class UIManager : MonoBehaviour
             GameOverPanel.gameObject.SetActive(false);
         }
         levelPanel.gameObject.SetActive(true);
+
+        
+        //clear selected object
+        EventSystem.current.SetSelectedGameObject(null);
+        //set new selected object
+        EventSystem.current.SetSelectedGameObject(chooseLevelFirstButton);
     }
 
     public void ChoosedLevelOne()
@@ -451,6 +559,12 @@ public class UIManager : MonoBehaviour
         pausePanel.gameObject.SetActive(true);
         Time.timeScale = 0;
         AudioListener.pause = true;
+
+        //clear selected object
+        EventSystem.current.SetSelectedGameObject(null);
+        //set new selected object
+        EventSystem.current.SetSelectedGameObject(pauseFirstButton);
+
          }
     }
 
@@ -465,20 +579,6 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 1;
         AudioListener.pause = false;
     }
-
-   public void CallResume2(InputAction.CallbackContext context)
-    {
-        //diactive pause panel after pressing resume button with gamepad
-        if (pauseButton != null)
-        {
-            pauseButton.gameObject.SetActive(true);
-        }
-        pausePanel.gameObject.SetActive(false);
-        Time.timeScale = 1;
-        AudioListener.pause = false;
-    }
-
-
 
     public void CallBackToMain()
     {
@@ -502,6 +602,11 @@ public class UIManager : MonoBehaviour
             pauseButton.gameObject.SetActive(false);
         }
         GameOverPanel.gameObject.SetActive(true);
+
+        //clear selected object
+        EventSystem.current.SetSelectedGameObject(null);
+        //set new selected object
+        EventSystem.current.SetSelectedGameObject(gameoverFirstButton);
     }
 
     public void ExitGame()

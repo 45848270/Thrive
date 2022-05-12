@@ -71,15 +71,6 @@ public partial class @PlayerBaction : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Resume"",
-                    ""type"": ""Button"",
-                    ""id"": ""77fab6fa-4225-47f3-be36-eaf60698815e"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -229,7 +220,7 @@ public partial class @PlayerBaction : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""71ece37f-0f43-4916-a1a5-fb3150237b5b"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""path"": ""<Gamepad>/buttonWest"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -240,7 +231,7 @@ public partial class @PlayerBaction : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""11d82533-984f-4299-ab90-0b6e8f35c1fb"",
-                    ""path"": ""<XInputController>/buttonSouth"",
+                    ""path"": ""<XInputController>/buttonWest"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -294,34 +285,12 @@ public partial class @PlayerBaction : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""c4568c83-68fd-41be-92e5-0c0934697092"",
-                    ""path"": ""<Keyboard>/p"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""Pause"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""c49de219-0d0e-4458-b93a-ca8e2b3f74bf"",
-                    ""path"": ""<Gamepad>/select"",
+                    ""id"": ""ec2c4b86-1d91-477c-ad5e-bd9afe00a4e7"",
+                    ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Resume"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""5827e0b4-3ebe-4219-8d64-8ce8ff2a2721"",
-                    ""path"": ""<Keyboard>/r"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""Resume"",
+                    ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -914,7 +883,6 @@ public partial class @PlayerBaction : IInputActionCollection2, IDisposable
         m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
         m_Player_Fire2 = m_Player.FindAction("Fire2", throwIfNotFound: true);
         m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
-        m_Player_Resume = m_Player.FindAction("Resume", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -991,7 +959,6 @@ public partial class @PlayerBaction : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Fire;
     private readonly InputAction m_Player_Fire2;
     private readonly InputAction m_Player_Pause;
-    private readonly InputAction m_Player_Resume;
     public struct PlayerActions
     {
         private @PlayerBaction m_Wrapper;
@@ -1001,7 +968,6 @@ public partial class @PlayerBaction : IInputActionCollection2, IDisposable
         public InputAction @Fire => m_Wrapper.m_Player_Fire;
         public InputAction @Fire2 => m_Wrapper.m_Player_Fire2;
         public InputAction @Pause => m_Wrapper.m_Player_Pause;
-        public InputAction @Resume => m_Wrapper.m_Player_Resume;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1026,9 +992,6 @@ public partial class @PlayerBaction : IInputActionCollection2, IDisposable
                 @Pause.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
                 @Pause.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
                 @Pause.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
-                @Resume.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnResume;
-                @Resume.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnResume;
-                @Resume.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnResume;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -1048,9 +1011,6 @@ public partial class @PlayerBaction : IInputActionCollection2, IDisposable
                 @Pause.started += instance.OnPause;
                 @Pause.performed += instance.OnPause;
                 @Pause.canceled += instance.OnPause;
-                @Resume.started += instance.OnResume;
-                @Resume.performed += instance.OnResume;
-                @Resume.canceled += instance.OnResume;
             }
         }
     }
@@ -1212,7 +1172,6 @@ public partial class @PlayerBaction : IInputActionCollection2, IDisposable
         void OnFire(InputAction.CallbackContext context);
         void OnFire2(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
-        void OnResume(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

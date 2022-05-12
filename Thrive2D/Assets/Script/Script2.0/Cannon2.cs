@@ -79,13 +79,9 @@ public class Cannon2 : MonoBehaviour
         {
             if (context.performed)
             {
-
-                Debug.Log("Cannon!");
                 shoot();
                 CannonShootOnce = false;
                 // Update();
-
-
             }
         }
     }

@@ -4533,17 +4533,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8753642854719118244, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
   m_PrefabInstance: {fileID: 754824821}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &888688500 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6445624249100522855, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
-  m_PrefabInstance: {fileID: 754824821}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 888688491}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c907f8f7166dddf4b886d9c4d1c2e918, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &888688504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4556,12 +4545,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 86ab8279ccbc84747a35669449a368af, type: 3}
+  m_Actions: {fileID: -944628639613478452, guid: 1c50ce9fb7f18c142814581d5eb1dd93, type: 3}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_DeviceRegainedEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -4571,16 +4572,16 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 724af023-c84f-498f-a641-91983a48845e
-    m_ActionName: Player/Move[/XInputControllerWindows/leftStick,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
+    m_ActionId: 319113c3-36cc-4b01-b7cd-5c3bad37a7d2
+    m_ActionName: Player/Move[/XInputControllerWindows/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: a130cc08-7035-452c-b2cd-75c27dbe0876
+    m_ActionId: 5977e2ca-a273-4b89-bba6-51cf84678ae0
     m_ActionName: Player/Look[/XInputControllerWindows/rightStick,/Mouse/delta]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 888688500}
-        m_TargetAssemblyTypeName: Player2FirstGun, Assembly-CSharp
+      - m_Target: {fileID: 1882452481}
+        m_TargetAssemblyTypeName: Player1FirstGun, Assembly-CSharp
         m_MethodName: Fire
         m_Mode: 0
         m_Arguments:
@@ -4591,8 +4592,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 888688492}
-        m_TargetAssemblyTypeName: Player2SecondGun, Assembly-CSharp
+      - m_Target: {fileID: 1882452462}
+        m_TargetAssemblyTypeName: Player1SecondGun, Assembly-CSharp
         m_MethodName: Fire
         m_Mode: 0
         m_Arguments:
@@ -4603,53 +4604,53 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 11ca8f01-d56e-48c9-a968-702ac3de986f
-    m_ActionName: Player/Fire[/Keyboard/numpad5,/Keyboard/5,/XInputControllerWindows/buttonSouth]
+    m_ActionId: 1c1d0b61-496d-4dae-bea8-0d8575f81a88
+    m_ActionName: Player/Fire[/XInputControllerWindows/rightTrigger,/Mouse/leftButton]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: d5689131-54ad-4564-a93b-2066b4f7dd23
+    m_ActionId: 74fdbdd8-f991-447e-87df-d44c13a96b49
     m_ActionName: UI/Navigate[/XInputControllerWindows/leftStick/up,/XInputControllerWindows/rightStick/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows/rightStick/down,/XInputControllerWindows/leftStick/left,/XInputControllerWindows/rightStick/left,/XInputControllerWindows/leftStick/right,/XInputControllerWindows/rightStick/right,/XInputControllerWindows/dpad,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 564f5d9c-5351-43f2-958e-c5f9d2da02f0
+    m_ActionId: 901f9bfe-c32c-4ee9-83ba-3f350890b66b
     m_ActionName: UI/Submit[/Keyboard/enter,/XInputControllerWindows/buttonSouth]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 956ce27d-97b6-4d58-9d82-b30ca54ef999
+    m_ActionId: e8488e7d-5b34-4128-a034-9d3be16579a3
     m_ActionName: UI/Cancel[/Keyboard/escape,/XInputControllerWindows/buttonEast]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 9b930f0b-a093-48b2-a00a-bf2da27479e5
+    m_ActionId: c7a38127-b66f-472d-a655-a3e083fcf572
     m_ActionName: UI/Point[/Mouse/position]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: c167a5db-79dd-4057-b329-02bc4103f22b
+    m_ActionId: da2914fe-e410-4dd8-ad77-7075ed09fd01
     m_ActionName: UI/Click[/Mouse/leftButton]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 5ae0aa05-734e-46c0-9fee-ecdba1e8f6e1
+    m_ActionId: 85e8161e-74c8-4afa-9550-9ffc00aad51f
     m_ActionName: UI/ScrollWheel[/Mouse/scroll]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 7c6de709-43cd-4319-aa0a-0da5e0bb29b8
+    m_ActionId: c824dcba-6d21-4615-b149-4cf8c5f06fd9
     m_ActionName: UI/MiddleClick[/Mouse/middleButton]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: eb1eb4b3-f4e2-42ac-a139-190db9d2e30d
+    m_ActionId: b4b6c54b-7c70-4399-855a-8ec0dd08c88f
     m_ActionName: UI/RightClick[/Mouse/rightButton]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: af4d6148-89e0-4edf-84e1-87bce441f4e0
+    m_ActionId: c00c5991-000d-469a-85df-ddb0ac4e2caf
     m_ActionName: UI/TrackedDevicePosition
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 5343af92-38c0-4b03-83d9-185644389c05
+    m_ActionId: 17a48176-6b79-4e09-b675-2aacc96f9f44
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1123061563}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: CallPause2
+      - m_Target: {fileID: 2044891951}
+        m_TargetAssemblyTypeName: Cannon2, Assembly-CSharp
+        m_MethodName: Fire2
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4659,13 +4660,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 6fa3c07b-724d-4522-ab74-bd3b70b8a58c
+    m_ActionId: d73adfc6-80a5-49fa-8ff0-53c3c01126c0
     m_ActionName: Player/Fire2[/Keyboard/numpad2,/XInputControllerWindows/buttonEast]
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1123061563}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: CallPause2
+        m_MethodName: CallPause
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4675,8 +4676,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: ed0cce74-bdd6-43a7-bdc8-9ca8605ba954
-    m_ActionName: Player/Pause[/XInputControllerWindows/start,/Keyboard/p]
+    m_ActionId: 5872d4ef-3c81-4833-8914-4131f94708b0
+    m_ActionName: Player/Pause[/Keyboard/escape,/XInputControllerWindows/start]
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1312713491}
@@ -4691,8 +4692,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 10010bb1-8df5-4bc6-a1df-ad69fbb63d80
-    m_ActionName: Player/PlayerInfo[/XInputControllerWindows/buttonNorth,/Keyboard/numpadEnter]
+    m_ActionId: ca82a009-3528-4f69-abb2-20392b5ff93e
+    m_ActionName: Player/PlayerInfo[/Keyboard/numpadEnter,/XInputControllerWindows/buttonNorth]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -15634,7 +15635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 57895f3a49203c64e858e6f7cb232ab4, type: 3}
+  m_Actions: {fileID: -944628639613478452, guid: f15aa8427e5cc5d449c59588cbb2c650, type: 3}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -15649,11 +15650,11 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 53eaaca9-30de-41bc-b2ac-86d5eed42e1a
+    m_ActionId: 282dc029-2b6f-4c07-984c-f94ba1b6b153
     m_ActionName: Player/Move[/XInputControllerWindows/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: b50c1fc5-4ddd-4201-bca5-9277d5679c62
+    m_ActionId: 592642ec-f490-4caf-8b76-439f5eed67ce
     m_ActionName: Player/Look[/XInputControllerWindows/rightStick,/Mouse/delta]
   - m_PersistentCalls:
       m_Calls:
@@ -15681,47 +15682,47 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 335cf639-1359-4a97-b1b3-62dd95225abb
-    m_ActionName: Player/Fire[/Mouse/leftButton,/Keyboard/space,/XInputControllerWindows/buttonWest]
+    m_ActionId: 69074bff-82df-49a2-ace8-52d65b346e1d
+    m_ActionName: Player/Fire[/XInputControllerWindows/rightTrigger,/Mouse/leftButton]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: b8682a9b-dbef-4d8e-bf06-566486832fe2
+    m_ActionId: 22506fd5-5124-4326-912b-075c4b37e9e4
     m_ActionName: UI/Navigate[/XInputControllerWindows/leftStick/up,/XInputControllerWindows/rightStick/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows/rightStick/down,/XInputControllerWindows/leftStick/left,/XInputControllerWindows/rightStick/left,/XInputControllerWindows/leftStick/right,/XInputControllerWindows/rightStick/right,/XInputControllerWindows/dpad,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 103142b2-28b9-4b74-9e57-2835e1b124d0
+    m_ActionId: 8334ee99-9afc-4cc0-bdad-0c845894db33
     m_ActionName: UI/Submit[/Keyboard/enter,/XInputControllerWindows/buttonSouth]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 8e00f906-4fa7-47c1-af3b-6a8d0e98b647
+    m_ActionId: 7aa462db-ddc4-4587-a96b-cf47cddb99ad
     m_ActionName: UI/Cancel[/Keyboard/escape,/XInputControllerWindows/buttonEast]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 373e2ca8-628e-4a1c-9735-4cf4a16e1c34
+    m_ActionId: 2b2af2ce-49e4-4dde-8e6e-94e19f219c66
     m_ActionName: UI/Point[/Mouse/position]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: a6029571-49e9-4f24-9b36-f2487d1001b3
+    m_ActionId: 6d6f701e-32d1-40e4-9a4c-c9dbe072c49f
     m_ActionName: UI/Click[/Mouse/leftButton]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 8637c1b8-b6d0-4b84-89ef-2afd579ed2c4
+    m_ActionId: 1a879531-7c78-414f-be59-3655fba4a297
     m_ActionName: UI/ScrollWheel[/Mouse/scroll]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 22070441-4f2c-444d-9f95-4951440f4955
+    m_ActionId: b670413f-fee5-4254-b858-0df9ed9b328a
     m_ActionName: UI/MiddleClick[/Mouse/middleButton]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 5ca9401e-399b-42a8-a5f4-129c93598e44
+    m_ActionId: 0cb6ff90-2d36-42a9-b73f-b7a7580ef1f6
     m_ActionName: UI/RightClick[/Mouse/rightButton]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 2b8499de-8c2f-4eb4-a7a1-44bdedd7f495
+    m_ActionId: 3344d14b-56e5-406c-b5ed-2fd5ecccae67
     m_ActionName: UI/TrackedDevicePosition
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 7845a982-2e15-40a3-8ce9-0a3790d24e7b
+    m_ActionId: 72b58cf5-c993-4d98-9587-2b325daeb9c8
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
       m_Calls:
@@ -15737,8 +15738,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 6658541f-3a36-48aa-ab05-fffd0d6563c2
-    m_ActionName: Player/Fire2[/Mouse/rightButton,/Keyboard/leftShift,/XInputControllerWindows/buttonEast]
+    m_ActionId: 5563a72f-a05b-46e8-86c8-634dd987e7fd
+    m_ActionName: Player/Fire2[/Keyboard/shift,/XInputControllerWindows/buttonEast]
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1123061563}
@@ -15753,8 +15754,24 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: b4895114-a82b-423f-9187-8b0ad7794d4c
-    m_ActionName: Player/Pause[/Keyboard/escape]
+    m_ActionId: a23dcaf7-1996-4fdd-bc0e-7fea8c5abad7
+    m_ActionName: Player/Pause[/Keyboard/escape,/XInputControllerWindows/start]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1312713491}
+        m_TargetAssemblyTypeName: PlayerInfo, Assembly-CSharp
+        m_MethodName: TogglePlayerInfoA
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: f1463754-ee5d-48b9-81af-e0cf9029db8d
+    m_ActionName: Player/PlayerInfo[/Keyboard/tab,/XInputControllerWindows/buttonNorth]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

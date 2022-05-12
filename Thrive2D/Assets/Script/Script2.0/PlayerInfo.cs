@@ -30,7 +30,7 @@ public class PlayerInfo : MonoBehaviour
     public GameObject PanelA;
     public GameObject PanelB;
 
-    public GameObject PlayerAText1;
+    public GameObject PlayerAText1; 
     public GameObject PlayerAText2;
     public GameObject PlayerAText3;
     // public GameObject PlayerAText4;
@@ -93,17 +93,17 @@ void Awake()
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Tab)) // Show Player 1 information when Tab key pressed
-        {
-            bool isActive = PanelA.activeSelf;
-            PanelA.SetActive(!isActive);
-        }
+        // if (Input.GetKeyDown(KeyCode.Tab)) // Show Player 1 information when Tab key pressed
+        // {
+        //     bool isActive = PanelA.activeSelf;
+        //     PanelA.SetActive(!isActive);
+        // }
 
-        if (Input.GetKeyDown(KeyCode.KeypadEnter)) // Show Player 2 information when KeypadEnter key pressed
-        {
-            bool isActive = PanelB.activeSelf;
-            PanelB.SetActive(!isActive);
-        }
+        // if (Input.GetKeyDown(KeyCode.KeypadEnter)) // Show Player 2 information when KeypadEnter key pressed
+        // {
+        //     bool isActive = PanelB.activeSelf;
+        //     PanelB.SetActive(!isActive);
+        // }
 
         UpdatedSpeedA = Movement.instance.accelerationFactor;
         UpdatedSpeedB = Movement2.instance.accelerationFactor;
@@ -122,27 +122,25 @@ void Awake()
 
     }
 
-    // public void TogglePlayerInfoA(InputAction.CallbackContext context)
-    // {
-    //      bool isActive = PanelA.activeSelf;
-    //     if (context.performed)
-    //     if (Input.GetKeyDown(KeyCode.Tab)) 
-    //     {           
-    //         PanelA.SetActive(!isActive);
-    //     }        
-    //         PanelA.SetActive(!isActive);          
-    // }
+    public void TogglePlayerInfoA(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {         
+             bool isActive = PanelA.activeSelf;      
+            PanelA.SetActive(!isActive);
+        }        
+                      
+    }
 
-    // public void TogglePlayerInfoB(InputAction.CallbackContext context)
-    // {
-    //      bool isActive = PanelB.activeSelf;
-    //     if (context.performed)
-    //      if (Input.GetKeyDown(KeyCode.KeypadEnter)) 
-    //     {
-    //         PanelB.SetActive(!isActive);
-    //     }        
-    //         PanelB.SetActive(!isActive);          
-    // }
+    public void TogglePlayerInfoB(InputAction.CallbackContext context)
+    {
+        if (context.performed)        
+        {
+            bool isActive = PanelB.activeSelf;                           
+            PanelB.SetActive(!isActive);
+        }        
+                     
+    }
 
 
     public void Player1Info()

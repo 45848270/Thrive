@@ -535,19 +535,7 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene(ThirdLevelOrder);
     }
 
-    public void CallPause()
-    {
-        //active pause panel after clicking pause button
-        if (pauseButton != null)
-        {
-            pauseButton.gameObject.SetActive(false);
-        }
-        pausePanel.gameObject.SetActive(true);
-        Time.timeScale = 0;
-        AudioListener.pause = true;
-    }
-
-    public void CallPause2(InputAction.CallbackContext context)
+    public void CallPause(InputAction.CallbackContext context)
     {
         //active pause panel after pressing pause button with gamepad
          if (context.performed)
@@ -560,14 +548,14 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 0;
         AudioListener.pause = true;
 
-        //clear selected object
+        // clear selected object
         EventSystem.current.SetSelectedGameObject(null);
         //set new selected object
         EventSystem.current.SetSelectedGameObject(pauseFirstButton);
-
          }
     }
 
+    
     public void CallResume()
     {
         //disactive pause panel after clicking resume button on pause panel

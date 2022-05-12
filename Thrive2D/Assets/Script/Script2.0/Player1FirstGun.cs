@@ -32,11 +32,6 @@ public class Player1FirstGun : MonoBehaviour
     {
     
          timeKeeper -= Time.deltaTime;
-
-       
-
-
-
     }
 
     void shoot()

@@ -16,6 +16,7 @@ public class UIManager : MonoBehaviour
     public GameObject dialogueText;
     public GameObject pausePanel;
     public GameObject optionPanel;
+    public GameObject audioPanel;
     public GameObject GameOverPanel;
 
     public GameObject levelOneDiaguePanel;
@@ -61,6 +62,8 @@ public class UIManager : MonoBehaviour
         SelectedLevelThree = false;
 
         optionPanel.gameObject.SetActive(false);
+        audioPanel.gameObject.SetActive(false);
+
     }
 
     void Update()
@@ -172,28 +175,71 @@ public class UIManager : MonoBehaviour
     }
 
     public void Option()
-    {
-        //disable menu panel after clicking option button
-        // if (pausePanel != null)
-        // {
-        //     pausePanel.SetActive(false);
-
-        // }
+    {        
         optionPanel.SetActive(true);
+        pausePanel.SetActive(false);
+
+         //clear selected object
+        EventSystem.current.SetSelectedGameObject(null);
+        //set new selected object
+        EventSystem.current.SetSelectedGameObject(optionFirstButton);
     }
 
-    public void CallBack()
+    public void CloseOption()
     {
         //disactive option panel after clicking back button on option panel
         if (optionPanel != null)
         {
             optionPanel.gameObject.SetActive(false);
         }
-        pausePanel.gameObject.SetActive(true);
-        Time.timeScale = 0;
-        AudioListener.pause = true;
+                pausePanel.SetActive(true);
+
+         //clear selected object
+        EventSystem.current.SetSelectedGameObject(null);
+        //set new selected object
+        EventSystem.current.SetSelectedGameObject(optionClosedButton);
+        
     }
 
+
+    // public void CallBack()
+    // {
+    //     //disactive option panel after clicking back button on option panel
+    //     if (optionPanel != null)
+    //     {
+    //         optionPanel.gameObject.SetActive(false);
+    //     }
+    //     pausePanel.gameObject.SetActive(true);
+    //     Time.timeScale = 0;
+    //     AudioListener.pause = true;
+    // }
+
+  public void AudioOption()
+    {
+        
+        audioPanel.SetActive(true);
+        optionPanel.SetActive(false);
+        pausePanel.SetActive(false);
+
+
+         //clear selected object
+        EventSystem.current.SetSelectedGameObject(null);
+        //set new selected object
+        EventSystem.current.SetSelectedGameObject(optionClosedButton);
+        
+    }
+    public void AudioBackToOption()
+    {
+        
+        audioPanel.SetActive(false);
+        optionPanel.SetActive(true);
+         //clear selected object
+        EventSystem.current.SetSelectedGameObject(null);
+        //set new selected object
+        EventSystem.current.SetSelectedGameObject(optionClosedButton);
+        
+    }
+    
 
     public void TurnPages()
     {
@@ -455,6 +501,12 @@ public class UIManager : MonoBehaviour
         pausePanel.gameObject.SetActive(true);
         Time.timeScale = 0;
         AudioListener.pause = true;
+
+        //clear selected object
+        EventSystem.current.SetSelectedGameObject(null);
+        //set new selected object
+        EventSystem.current.SetSelectedGameObject(pauseFirstButton);
+
          }
     }
 
@@ -469,20 +521,6 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 1;
         AudioListener.pause = false;
     }
-
-   public void CallResume2(InputAction.CallbackContext context)
-    {
-        //diactive pause panel after pressing resume button with gamepad
-        if (pauseButton != null)
-        {
-            pauseButton.gameObject.SetActive(true);
-        }
-        pausePanel.gameObject.SetActive(false);
-        Time.timeScale = 1;
-        AudioListener.pause = false;
-    }
-
-
 
     public void CallBackToMain()
     {

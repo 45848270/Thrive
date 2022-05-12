@@ -17,6 +17,9 @@ public class UIManager : MonoBehaviour
     public GameObject pausePanel;
     public GameObject optionPanel;
     public GameObject audioPanel;
+    public GameObject controllerPanel;
+    public GameObject keyboardPanel;
+
     public GameObject GameOverPanel;
 
     public GameObject levelOneDiaguePanel;
@@ -38,7 +41,7 @@ public class UIManager : MonoBehaviour
     private bool IsMainDiaFinished;
 
     // for UI buttons with gamepad
-    public GameObject pauseFirstButton, optionFirstButton, optionClosedButton;
+    public GameObject pauseFirstButton, optionFirstButton, optionClosedButton, audioFirstButton, audioClosedButton, controllerFirstButton, controllerClosedButton, keyboardFirstButton, keyboardClosedButton;
 
 
     //Scene orders:
@@ -63,6 +66,11 @@ public class UIManager : MonoBehaviour
 
         optionPanel.gameObject.SetActive(false);
         audioPanel.gameObject.SetActive(false);
+        controllerPanel.gameObject.SetActive(false);
+        keyboardPanel.gameObject.SetActive(false);
+
+
+
 
     }
 
@@ -199,20 +207,63 @@ public class UIManager : MonoBehaviour
         //set new selected object
         EventSystem.current.SetSelectedGameObject(optionClosedButton);
         
+    }   
+
+    public void ControllerPanelOption()
+    {
+        
+        optionPanel.SetActive(false);
+        controllerPanel.SetActive(true);
+
+
+         //clear selected object
+        EventSystem.current.SetSelectedGameObject(null);
+        //set new selected object
+        EventSystem.current.SetSelectedGameObject(controllerFirstButton);
+        
     }
 
+     public void ControllerPanelOptionBack()
+    {
+        
+        optionPanel.SetActive(true);
+        controllerPanel.SetActive(false);
 
-    // public void CallBack()
-    // {
-    //     //disactive option panel after clicking back button on option panel
-    //     if (optionPanel != null)
-    //     {
-    //         optionPanel.gameObject.SetActive(false);
-    //     }
-    //     pausePanel.gameObject.SetActive(true);
-    //     Time.timeScale = 0;
-    //     AudioListener.pause = true;
-    // }
+
+         //clear selected object
+        EventSystem.current.SetSelectedGameObject(null);
+        //set new selected object
+        EventSystem.current.SetSelectedGameObject(controllerClosedButton);
+        
+    }
+
+     public void KeyboardPanelOption()
+    {
+        
+        optionPanel.SetActive(false);
+        keyboardPanel.SetActive(true);
+
+
+         //clear selected object
+        EventSystem.current.SetSelectedGameObject(null);
+        //set new selected object
+        EventSystem.current.SetSelectedGameObject(keyboardFirstButton);
+        
+    }
+
+     public void KeyboardPanelOptionBack()
+    {
+        
+        optionPanel.SetActive(true);
+        keyboardPanel.SetActive(false);
+
+
+         //clear selected object
+        EventSystem.current.SetSelectedGameObject(null);
+        //set new selected object
+        EventSystem.current.SetSelectedGameObject(keyboardClosedButton);
+        
+    }
 
   public void AudioOption()
     {
@@ -225,9 +276,10 @@ public class UIManager : MonoBehaviour
          //clear selected object
         EventSystem.current.SetSelectedGameObject(null);
         //set new selected object
-        EventSystem.current.SetSelectedGameObject(optionClosedButton);
+        EventSystem.current.SetSelectedGameObject(audioFirstButton);
         
     }
+
     public void AudioBackToOption()
     {
         
@@ -236,7 +288,7 @@ public class UIManager : MonoBehaviour
          //clear selected object
         EventSystem.current.SetSelectedGameObject(null);
         //set new selected object
-        EventSystem.current.SetSelectedGameObject(optionClosedButton);
+        EventSystem.current.SetSelectedGameObject(audioClosedButton);
         
     }
     

@@ -4580,8 +4580,8 @@ MonoBehaviour:
     m_ActionName: Player/Look[/XInputControllerWindows/rightStick,/Mouse/delta]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1882452481}
-        m_TargetAssemblyTypeName: Player1FirstGun, Assembly-CSharp
+      - m_Target: {fileID: 888688505}
+        m_TargetAssemblyTypeName: Player2FirstGun, Assembly-CSharp
         m_MethodName: Fire
         m_Mode: 0
         m_Arguments:
@@ -4592,8 +4592,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1882452462}
-        m_TargetAssemblyTypeName: Player1SecondGun, Assembly-CSharp
+      - m_Target: {fileID: 888688492}
+        m_TargetAssemblyTypeName: Player2SecondGun, Assembly-CSharp
         m_MethodName: Fire
         m_Mode: 0
         m_Arguments:
@@ -4699,6 +4699,17 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &888688505 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6445624249100522855, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
+  m_PrefabInstance: {fileID: 754824821}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888688491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c907f8f7166dddf4b886d9c4d1c2e918, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &904384386
 GameObject:
   m_ObjectHideFlags: 0

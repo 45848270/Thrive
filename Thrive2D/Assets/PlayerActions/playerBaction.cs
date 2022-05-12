@@ -64,9 +64,9 @@ public partial class @PlayerBaction : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Pause"",
+                    ""name"": ""PlayerInfo"",
                     ""type"": ""Button"",
-                    ""id"": ""ed0cce74-bdd6-43a7-bdc8-9ca8605ba954"",
+                    ""id"": ""10010bb1-8df5-4bc6-a1df-ad69fbb63d80"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -223,7 +223,7 @@ public partial class @PlayerBaction : IInputActionCollection2, IDisposable
                     ""path"": ""<Gamepad>/buttonWest"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""Fire"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -234,7 +234,7 @@ public partial class @PlayerBaction : IInputActionCollection2, IDisposable
                     ""path"": ""<XInputController>/buttonWest"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""Fire"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -245,7 +245,7 @@ public partial class @PlayerBaction : IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/numpad2"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Keyboard&Mouse"",
+                    ""groups"": """",
                     ""action"": ""Fire2"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -256,7 +256,7 @@ public partial class @PlayerBaction : IInputActionCollection2, IDisposable
                     ""path"": ""<Gamepad>/buttonEast"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""Fire2"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -267,30 +267,30 @@ public partial class @PlayerBaction : IInputActionCollection2, IDisposable
                     ""path"": ""<XInputController>/buttonEast"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""Fire2"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""c4aa3b14-1437-457c-8dc1-967da4b3bdc2"",
-                    ""path"": ""<Gamepad>/start"",
+                    ""id"": ""828c9d51-54bf-42cc-908b-e669f11528dd"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Pause"",
+                    ""action"": ""PlayerInfo"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""ec2c4b86-1d91-477c-ad5e-bd9afe00a4e7"",
-                    ""path"": ""<Keyboard>/escape"",
+                    ""id"": ""639addbe-9daf-47bd-926f-db62c4c2bf83"",
+                    ""path"": ""<Keyboard>/numpadEnter"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Pause"",
+                    ""action"": ""PlayerInfo"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -882,7 +882,7 @@ public partial class @PlayerBaction : IInputActionCollection2, IDisposable
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
         m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
         m_Player_Fire2 = m_Player.FindAction("Fire2", throwIfNotFound: true);
-        m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
+        m_Player_PlayerInfo = m_Player.FindAction("PlayerInfo", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -958,7 +958,7 @@ public partial class @PlayerBaction : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Look;
     private readonly InputAction m_Player_Fire;
     private readonly InputAction m_Player_Fire2;
-    private readonly InputAction m_Player_Pause;
+    private readonly InputAction m_Player_PlayerInfo;
     public struct PlayerActions
     {
         private @PlayerBaction m_Wrapper;
@@ -967,7 +967,7 @@ public partial class @PlayerBaction : IInputActionCollection2, IDisposable
         public InputAction @Look => m_Wrapper.m_Player_Look;
         public InputAction @Fire => m_Wrapper.m_Player_Fire;
         public InputAction @Fire2 => m_Wrapper.m_Player_Fire2;
-        public InputAction @Pause => m_Wrapper.m_Player_Pause;
+        public InputAction @PlayerInfo => m_Wrapper.m_Player_PlayerInfo;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -989,9 +989,9 @@ public partial class @PlayerBaction : IInputActionCollection2, IDisposable
                 @Fire2.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire2;
                 @Fire2.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire2;
                 @Fire2.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire2;
-                @Pause.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
-                @Pause.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
-                @Pause.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
+                @PlayerInfo.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPlayerInfo;
+                @PlayerInfo.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPlayerInfo;
+                @PlayerInfo.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPlayerInfo;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -1008,9 +1008,9 @@ public partial class @PlayerBaction : IInputActionCollection2, IDisposable
                 @Fire2.started += instance.OnFire2;
                 @Fire2.performed += instance.OnFire2;
                 @Fire2.canceled += instance.OnFire2;
-                @Pause.started += instance.OnPause;
-                @Pause.performed += instance.OnPause;
-                @Pause.canceled += instance.OnPause;
+                @PlayerInfo.started += instance.OnPlayerInfo;
+                @PlayerInfo.performed += instance.OnPlayerInfo;
+                @PlayerInfo.canceled += instance.OnPlayerInfo;
             }
         }
     }
@@ -1171,7 +1171,7 @@ public partial class @PlayerBaction : IInputActionCollection2, IDisposable
         void OnLook(InputAction.CallbackContext context);
         void OnFire(InputAction.CallbackContext context);
         void OnFire2(InputAction.CallbackContext context);
-        void OnPause(InputAction.CallbackContext context);
+        void OnPlayerInfo(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

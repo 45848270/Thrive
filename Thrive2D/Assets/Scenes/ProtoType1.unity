@@ -4678,9 +4678,21 @@ MonoBehaviour:
     m_ActionId: ed0cce74-bdd6-43a7-bdc8-9ca8605ba954
     m_ActionName: Player/Pause[/XInputControllerWindows/start,/Keyboard/p]
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 77fab6fa-4225-47f3-be36-eaf60698815e
-    m_ActionName: Player/Resume[/XInputControllerWindows/select,/Keyboard/r]
+      m_Calls:
+      - m_Target: {fileID: 1312713491}
+        m_TargetAssemblyTypeName: PlayerInfo, Assembly-CSharp
+        m_MethodName: TogglePlayerInfoB
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 10010bb1-8df5-4bc6-a1df-ad69fbb63d80
+    m_ActionName: Player/PlayerInfo[/XInputControllerWindows/buttonNorth,/Keyboard/numpadEnter]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -6627,7 +6639,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1294350697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7828,9 +7840,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1123061563}
+      - m_Target: {fileID: 1123061562}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: CallPause
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15731,7 +15743,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1123061563}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: CallPause2
+        m_MethodName: CallPause
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15741,12 +15753,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 785d82b5-45f3-4c18-8f8b-a632fcae974e
-    m_ActionName: Player/Pause[/XInputControllerWindows/start,/Keyboard/p]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 3b114d73-efd0-452f-b2cc-1c8889de1cf4
-    m_ActionName: Player/Resume[/XInputControllerWindows/start,/Keyboard/p]
+    m_ActionId: b4895114-a82b-423f-9187-8b0ad7794d4c
+    m_ActionName: Player/Pause[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

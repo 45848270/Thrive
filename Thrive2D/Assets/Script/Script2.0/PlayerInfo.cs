@@ -45,6 +45,12 @@ public class PlayerInfo : MonoBehaviour
     public GameObject PlayerBText4;
     public GameObject PlayerBText5;
 
+    public PlayerAction controls;
+
+void Awake()
+{
+    controls = new PlayerAction();
+}
 
 
 
@@ -64,11 +70,6 @@ public class PlayerInfo : MonoBehaviour
         CurrentReloadA = Player1FirstGun.instance.reloadTime;
         CurrentReloadB = Player2FirstGun.instance.reloadTime;
 
-
-
-
-
-
         PanelA.SetActive(true);
         PanelB.SetActive(true);
 
@@ -80,16 +81,12 @@ public class PlayerInfo : MonoBehaviour
         PlayerAText5.SetActive(false);
 
 
-
         PlayerBText1.SetActive(false);
         PlayerBText2.SetActive(false);
         PlayerBText3.SetActive(false);
         //  PlayerBText4.SetActive(false);
         PlayerBText4.SetActive(false);
         PlayerBText5.SetActive(false);
-
-
-
 
     }
 
@@ -124,6 +121,28 @@ public class PlayerInfo : MonoBehaviour
         Player2Info();
 
     }
+
+    // public void TogglePlayerInfoA(InputAction.CallbackContext context)
+    // {
+    //      bool isActive = PanelA.activeSelf;
+    //     if (context.performed)
+    //     if (Input.GetKeyDown(KeyCode.Tab)) 
+    //     {           
+    //         PanelA.SetActive(!isActive);
+    //     }        
+    //         PanelA.SetActive(!isActive);          
+    // }
+
+    // public void TogglePlayerInfoB(InputAction.CallbackContext context)
+    // {
+    //      bool isActive = PanelB.activeSelf;
+    //     if (context.performed)
+    //      if (Input.GetKeyDown(KeyCode.KeypadEnter)) 
+    //     {
+    //         PanelB.SetActive(!isActive);
+    //     }        
+    //         PanelB.SetActive(!isActive);          
+    // }
 
 
     public void Player1Info()

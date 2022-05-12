@@ -42,7 +42,7 @@ public class UIManager : MonoBehaviour
 
     // for UI buttons with gamepad
     public GameObject pauseFirstButton, optionFirstButton, optionClosedButton, audioFirstButton, audioClosedButton, controllerFirstButton, controllerClosedButton, keyboardFirstButton, keyboardClosedButton, gameoverFirstButton, gameoverClosedButton, chooseLevelFirstButton;
-
+    public GameObject menuPlayButton, menuAfterPlayButton, level1FirstDialogueButton;
 
     //Scene orders:
     private int MainSceneOrder = 0;
@@ -70,7 +70,10 @@ public class UIManager : MonoBehaviour
         keyboardPanel.gameObject.SetActive(false);
 
 
-
+        //clear selected object
+        EventSystem.current.SetSelectedGameObject(null);
+        //set new selected object
+        EventSystem.current.SetSelectedGameObject(menuPlayButton);
 
     }
 
@@ -180,6 +183,11 @@ public class UIManager : MonoBehaviour
             menuPanel.gameObject.SetActive(false);
         }
         dialoguePanel.gameObject.SetActive(true);
+
+         //clear selected object
+        EventSystem.current.SetSelectedGameObject(null);
+        //set new selected object
+        EventSystem.current.SetSelectedGameObject(menuAfterPlayButton);
     }
 
     public void Option()
@@ -454,6 +462,11 @@ public class UIManager : MonoBehaviour
             curDiaInx = dialogueTextList.Count - 1;
             IsMainDiaFinished = true;
             ChooseLevel();
+
+            //clear selected object
+        EventSystem.current.SetSelectedGameObject(null);
+        //set new selected object
+        EventSystem.current.SetSelectedGameObject(chooseLevelFirstButton);
         }
         else if (SelectedLevelOne) //clicked skip button on level one dia
         {
@@ -498,6 +511,12 @@ public class UIManager : MonoBehaviour
         SelectedLevelOne = true;
         levelOneDiaguePanel.gameObject.SetActive(true);
         levelPanel.gameObject.SetActive(false);
+
+        
+        //clear selected object
+        EventSystem.current.SetSelectedGameObject(null);
+        //set new selected object
+        EventSystem.current.SetSelectedGameObject(level1FirstDialogueButton);
     }
 
     public void ChoosedLevelTwo()
@@ -593,12 +612,19 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 1;
         pausePanel.gameObject.SetActive(false);
         SceneManager.LoadScene(MainSceneOrder);
+         //clear selected object
+        EventSystem.current.SetSelectedGameObject(null);
+        //set new selected object
+        EventSystem.current.SetSelectedGameObject(menuPlayButton);
     }
 
     public void CallBackToMenu()
     {
         //back to menu scene for menu button
         SceneManager.LoadScene(MainSceneOrder);
+          EventSystem.current.SetSelectedGameObject(null);
+        //set new selected object
+        EventSystem.current.SetSelectedGameObject(menuPlayButton);
     }
 
     public void ActivateGameOverPanel()

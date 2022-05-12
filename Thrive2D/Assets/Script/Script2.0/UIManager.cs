@@ -535,6 +535,25 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene(ThirdLevelOrder);
     }
 
+ public void CallPauseButton()
+    {
+        //active pause panel after pressing pause button        
+         
+        if (pauseButton != null)
+        {
+            pauseButton.gameObject.SetActive(false);
+        }
+        pausePanel.gameObject.SetActive(true);
+        Time.timeScale = 0;
+        AudioListener.pause = true;       
+        
+        // clear selected object
+        EventSystem.current.SetSelectedGameObject(null);
+        //set new selected object
+        EventSystem.current.SetSelectedGameObject(pauseFirstButton);
+         
+    }
+
     public void CallPause(InputAction.CallbackContext context)
     {
         //active pause panel after pressing pause button with gamepad

@@ -209,18 +209,7 @@ public partial class @PlayerAction : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""25ebe567-d3f8-4093-82c6-4f470711a98a"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Joystick"",
-                    ""action"": ""Fire"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""80c1dd8b-8514-45e3-b446-ac76742939ab"",
-                    ""path"": ""<HID::ShanWan PC/PS3/Android Gamepad>/button3"",
+                    ""path"": ""<Gamepad>/buttonWest"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Joystick"",
@@ -231,7 +220,7 @@ public partial class @PlayerAction : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""75c0c619-a100-490f-9d9e-9fe10776d553"",
-                    ""path"": ""<XInputController>/buttonSouth"",
+                    ""path"": ""<XInputController>/buttonWest"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",

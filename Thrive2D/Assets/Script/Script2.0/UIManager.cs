@@ -41,7 +41,7 @@ public class UIManager : MonoBehaviour
     private bool IsMainDiaFinished;
 
     // for UI buttons with gamepad
-    public GameObject pauseFirstButton, optionFirstButton, optionClosedButton, audioFirstButton, audioClosedButton, controllerFirstButton, controllerClosedButton, keyboardFirstButton, keyboardClosedButton;
+    public GameObject pauseFirstButton, optionFirstButton, optionClosedButton, audioFirstButton, audioClosedButton, controllerFirstButton, controllerClosedButton, keyboardFirstButton, keyboardClosedButton, gameoverFirstButton, gameoverClosedButton, chooseLevelFirstButton;
 
 
     //Scene orders:
@@ -485,6 +485,12 @@ public class UIManager : MonoBehaviour
             GameOverPanel.gameObject.SetActive(false);
         }
         levelPanel.gameObject.SetActive(true);
+
+        
+        //clear selected object
+        EventSystem.current.SetSelectedGameObject(null);
+        //set new selected object
+        EventSystem.current.SetSelectedGameObject(chooseLevelFirstButton);
     }
 
     public void ChoosedLevelOne()
@@ -596,6 +602,11 @@ public class UIManager : MonoBehaviour
             pauseButton.gameObject.SetActive(false);
         }
         GameOverPanel.gameObject.SetActive(true);
+
+        //clear selected object
+        EventSystem.current.SetSelectedGameObject(null);
+        //set new selected object
+        EventSystem.current.SetSelectedGameObject(gameoverFirstButton);
     }
 
     public void ExitGame()

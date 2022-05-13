@@ -53,7 +53,7 @@ public class UIManager : MonoBehaviour
     private bool SelectedLevelOne;
     private bool SelectedLevelTwo;
     private bool SelectedLevelThree;
-
+    public GameObject guideUI;
     void Start()
     {
         IsMainDiaFinished = false;
@@ -68,7 +68,7 @@ public class UIManager : MonoBehaviour
         audioPanel.gameObject.SetActive(false);
         controllerPanel.gameObject.SetActive(false);
         keyboardPanel.gameObject.SetActive(false);
-
+        guideUI.SetActive(false);
 
         //clear selected object
         EventSystem.current.SetSelectedGameObject(null);
@@ -84,7 +84,11 @@ public class UIManager : MonoBehaviour
             TurnPages();
         }
     }
-
+    public void ShowGuide()
+    {
+        guideUI .SetActive(true);
+        dialoguePanel.SetActive(false );
+    }
     public void InitUI()
     {
         //intialize UI elements
@@ -349,7 +353,8 @@ public class UIManager : MonoBehaviour
                 else
                 {
                     IsMainDiaFinished = true;
-                    ChooseLevel();
+                    //ChooseLevel();
+                    ShowGuide();
                 }
             }
             if (Input.GetMouseButtonDown(0))
@@ -369,7 +374,7 @@ public class UIManager : MonoBehaviour
                     if (mouseOnDia)
                     {
                         IsMainDiaFinished = true;
-                        ChooseLevel();
+                        ShowGuide();
                     }
                 }
             }

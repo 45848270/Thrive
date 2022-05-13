@@ -331,7 +331,75 @@ public class UIManager : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(audioClosedButton);
         
     }
-    
+
+    public void TurnNextMain() 
+    //Main dialogue
+    {
+         if (curDiaInx < dialogueTextList.Count - 1)
+                {
+                    curDiaInx++;
+                    dialogueText.GetComponent<TMPro.TextMeshProUGUI>().text = dialogueTextList[curDiaInx];
+                }
+                else
+                {
+                    IsMainDiaFinished = true;
+                    ChooseLevel();
+                }      
+    }              
+
+    public void TurnNextDiaOne()
+    {
+        if (SelectedLevelOne) //Main dia is finished
+            {               
+
+                    if (curLevOneDiaInx < levelOneDiagueTextList.Count - 1)
+                    {
+                        curLevOneDiaInx++;
+                        levelOneDiagueText.GetComponent<TMPro.TextMeshProUGUI>().text = levelOneDiagueTextList[curLevOneDiaInx];
+                    }
+                    else
+                    {
+                        LoadFirstLevel();
+                    }               
+                
+            }
+    }
+
+    public void TurnNextDia2()
+    {
+         if (SelectedLevelTwo)
+            {
+
+                    if (curLevTwoDiaInx < levelTwoDiagueTextList.Count - 1)
+                    {
+                        curLevTwoDiaInx++;
+                        levelTwoDiagueText.GetComponent<TMPro.TextMeshProUGUI>().text = levelTwoDiagueTextList[curLevTwoDiaInx];
+                    }
+                    else
+                    {
+                        LoadSecondLevel();
+                    }
+            }
+    }
+
+    public void TurnNextDia3()
+    {
+         if (SelectedLevelThree)
+                {
+
+                    if (curLevThreeDiaInx < levelThreeDiagueTextList.Count - 1)
+                    {
+                        curLevThreeDiaInx++;
+                        levelThreeDiagueText.GetComponent<TMPro.TextMeshProUGUI>().text = levelThreeDiagueTextList[curLevThreeDiaInx];
+                    }
+                    else
+                    {
+                        LoadThirdLevel();
+                    }
+                }
+    }
+ 
+
 
     public void TurnPages()
     {

@@ -190,6 +190,36 @@ public class UIManager : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(menuAfterPlayButton);
     }
 
+ public void Controls()
+    {        
+          if (menuPanel != null)
+        {
+            menuPanel.gameObject.SetActive(false);
+        }
+         optionPanel.gameObject.SetActive(true);
+
+         //clear selected object
+        EventSystem.current.SetSelectedGameObject(null);
+        //set new selected object
+        EventSystem.current.SetSelectedGameObject(optionFirstButton);
+    }
+
+    public void CloseOptionBack()
+    {
+        //disactive option panel after clicking back button on option panel
+        if (optionPanel != null)
+        {
+            optionPanel.gameObject.SetActive(false);
+        }
+                menuPanel.SetActive(true);
+
+         //clear selected object
+        EventSystem.current.SetSelectedGameObject(null);
+        //set new selected object
+        EventSystem.current.SetSelectedGameObject(optionClosedButton);
+        
+    }   
+
     public void Option()
     {        
         optionPanel.SetActive(true);
@@ -200,6 +230,8 @@ public class UIManager : MonoBehaviour
         //set new selected object
         EventSystem.current.SetSelectedGameObject(optionFirstButton);
     }
+
+    
 
     public void CloseOption()
     {

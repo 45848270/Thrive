@@ -124,11 +124,11 @@ void Awake()
 
     public void TogglePlayerInfoA(InputAction.CallbackContext context)
     {
-        if (context.performed)
-        {         
+       // if (context.performed)
+       // {         
              bool isActive = PanelA.activeSelf;      
             PanelA.SetActive(!isActive);
-        }        
+       // }        
                       
     }
 

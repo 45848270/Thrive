@@ -135,11 +135,11 @@ public class UIManager : MonoBehaviour
             dialogueTextList.Add("As a space outlaw who provides shelter for the exiles, PlayerA, now you are about to get enough resources to provide a new beginning for hundreds of people, ");
             dialogueTextList.Add("they will no longer need to risk nuclear radiation to have a warm place to live--");
             dialogueTextList.Add("You only need to rob one last time");
-            dialogueTextList.Add("Use the w a s d keys to pilot the ship, Space Key to shoot bullets and Shift to shoot Cannon at any target that gets in your way. Check your abilities by using Tab key.");
+           // dialogueTextList.Add("Use the w a s d keys to pilot the ship, Space Key to shoot bullets and Shift to shoot Cannon at any target that gets in your way. Check your abilities by using Tab key.");
             dialogueTextList.Add("As an interstellar police who has sworn to protect the new order, PlayerB, in the past six months, all people in a small town have been displaced because of the robbery.");
             dialogueTextList.Add("Now, you finally found the clue of the gang leader --");
             dialogueTextList.Add("It is time to end this chaos.");
-            dialogueTextList.Add("Use the arrow keys to pilot the ship, num pad 5 to shoot bullets and num pad 2 to shoot Cannon, making your target pays for his viciousness. View your abilities by using num pad Enter key.");
+          //  dialogueTextList.Add("Use the arrow keys to pilot the ship, num pad 5 to shoot bullets and num pad 2 to shoot Cannon, making your target pays for his viciousness. View your abilities by using num pad Enter key.");
             string tempDia = dialogueTextList[0];
             dialogueText.GetComponent<TMPro.TextMeshProUGUI>().text = tempDia;
             curDiaInx = 0;

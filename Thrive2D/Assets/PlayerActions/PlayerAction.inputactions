@@ -294,6 +294,28 @@
                 },
                 {
                     "name": "",
+                    "id": "b99aa4b8-5621-4bf3-a693-e690502d8d6c",
+                    "path": "<Gamepad>/select",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "10bdaa49-badd-47e7-b55e-8ffb10f44cba",
+                    "path": "<DualShockGamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "aaacba7d-1947-450f-9678-7902b7101430",
                     "path": "<Keyboard>/tab",
                     "interactions": "",

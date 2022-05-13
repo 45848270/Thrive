@@ -316,6 +316,28 @@ public partial class @PlayerBaction : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""fae05a0b-0d73-40d3-bc67-98235cb8fe7b"",
+                    ""path"": ""<Gamepad>/select"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8f67be3a-d5b4-4451-91fb-3cf651f28e79"",
+                    ""path"": ""<DualShockGamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""9a816826-87fb-4aee-b6fa-ae26ee9ff502"",
                     ""path"": ""<Keyboard>/numpadEnter"",
                     ""interactions"": """",

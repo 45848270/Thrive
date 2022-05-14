@@ -21,7 +21,7 @@ public class P1FirstGunMP : MonoBehaviourPunCallbacks
     public float health=100;
     public float currentHealth;
 
-    //public ParticleSystem ps;
+    public ParticleSystem ps;
 
 
 
@@ -59,25 +59,25 @@ public class P1FirstGunMP : MonoBehaviourPunCallbacks
     [PunRPC]
     void Shoot()
     {
-       // ps.Play();
+        ps.Play();
 
-        //Ray ray=new Ray(initialPos.position, initialPos.up);
-        //if (Physics.Raycast(ray, out RaycastHit hit, 100f))
-       // {
-        //    var enemyHealth =hit.collider.GetComponent<HealthMP>();
-        //    if (enemyHealth)
-        //    {
-        //        enemyHealth.TakeDamage(20);
-        //    }
-       // }
-        //shooting method
-        GameObject bullet = PhotonNetwork.Instantiate(bulletPrefab.name, initialPos.position, initialPos.rotation);
-
-
-       if (dualGunOn == true) 
+        Ray ray=new Ray(initialPos.position, initialPos.up);
+        if (Physics.Raycast(ray, out RaycastHit hit, 100f))
         {
-           GameObject bullet1 = PhotonNetwork.Instantiate(bulletPrefab.name, secondPos.position, secondPos.rotation); 
+            var enemyHealth =hit.collider.GetComponent<HealthMP>();
+            if (enemyHealth)
+            {
+                enemyHealth.TakeDamage(20);
+            }
         }
+        //shooting method
+       // GameObject bullet = PhotonNetwork.Instantiate(bulletPrefab.name, initialPos.position, initialPos.rotation);
+
+
+       // if (dualGunOn == true) 
+        //{
+        //   GameObject bullet1 = PhotonNetwork.Instantiate(bulletPrefab.name, secondPos.position, secondPos.rotation); 
+       // }
     }
 
     [PunRPC]

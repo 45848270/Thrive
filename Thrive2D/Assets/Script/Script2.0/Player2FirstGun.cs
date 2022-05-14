@@ -50,9 +50,12 @@ public class Player2FirstGun : MonoBehaviour
      public void Fire(InputAction.CallbackContext context)
     {
         if (context.performed && (timeKeeper<=0))
-        {           
+        {
+
+           
             shoot();
             timeKeeper=reloadTime;
+
 
         }
     }

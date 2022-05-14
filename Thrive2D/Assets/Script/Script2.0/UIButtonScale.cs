@@ -4,24 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
-using UnityEngine.InputSystem;
-
 
 public class UIButtonScale : MonoBehaviour
 {
-        public DefaultInputActions buttonScale;
-
 
     private List<Transform> buttonsPool;
     private Vector3 sizeChangeTo;
     private Vector3 initalSize;
     private int curButtonInx;
-
-    void Awake()
-    {
-        buttonScale = new DefaultInputActions();
-
-    }
 
     void Start()
     {

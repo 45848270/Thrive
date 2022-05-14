@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.InputSystem;
-
 
 public class PlayerInfo : MonoBehaviour
 {
@@ -30,7 +28,7 @@ public class PlayerInfo : MonoBehaviour
     public GameObject PanelA;
     public GameObject PanelB;
 
-    public GameObject PlayerAText1; 
+    public GameObject PlayerAText1;
     public GameObject PlayerAText2;
     public GameObject PlayerAText3;
     // public GameObject PlayerAText4;
@@ -45,12 +43,6 @@ public class PlayerInfo : MonoBehaviour
     public GameObject PlayerBText4;
     public GameObject PlayerBText5;
 
-    public PlayerAction controls;
-
-void Awake()
-{
-    controls = new PlayerAction();
-}
 
 
 
@@ -70,6 +62,11 @@ void Awake()
         CurrentReloadA = Player1FirstGun.instance.reloadTime;
         CurrentReloadB = Player2FirstGun.instance.reloadTime;
 
+
+
+
+
+
         PanelA.SetActive(true);
         PanelB.SetActive(true);
 
@@ -81,6 +78,7 @@ void Awake()
         PlayerAText5.SetActive(false);
 
 
+
         PlayerBText1.SetActive(false);
         PlayerBText2.SetActive(false);
         PlayerBText3.SetActive(false);
@@ -88,22 +86,25 @@ void Awake()
         PlayerBText4.SetActive(false);
         PlayerBText5.SetActive(false);
 
+
+
+
     }
 
     void Update()
     {
 
-        // if (Input.GetKeyDown(KeyCode.Tab)) // Show Player 1 information when Tab key pressed
-        // {
-        //     bool isActive = PanelA.activeSelf;
-        //     PanelA.SetActive(!isActive);
-        // }
+        if (Input.GetKeyDown(KeyCode.Tab)) // Show Player 1 information when Tab key pressed
+        {
+            bool isActive = PanelA.activeSelf;
+            PanelA.SetActive(!isActive);
+        }
 
-        // if (Input.GetKeyDown(KeyCode.KeypadEnter)) // Show Player 2 information when KeypadEnter key pressed
-        // {
-        //     bool isActive = PanelB.activeSelf;
-        //     PanelB.SetActive(!isActive);
-        // }
+        if (Input.GetKeyDown(KeyCode.KeypadEnter)) // Show Player 2 information when KeypadEnter key pressed
+        {
+            bool isActive = PanelB.activeSelf;
+            PanelB.SetActive(!isActive);
+        }
 
         UpdatedSpeedA = Movement.instance.accelerationFactor;
         UpdatedSpeedB = Movement2.instance.accelerationFactor;
@@ -120,26 +121,6 @@ void Awake()
         Player1Info();
         Player2Info();
 
-    }
-
-    public void TogglePlayerInfoA(InputAction.CallbackContext context)
-    {
-       // if (context.performed)
-       // {         
-             bool isActive = PanelA.activeSelf;      
-            PanelA.SetActive(!isActive);
-       // }        
-                      
-    }
-
-    public void TogglePlayerInfoB(InputAction.CallbackContext context)
-    {
-        if (context.performed)        
-        {
-            bool isActive = PanelB.activeSelf;                           
-            PanelB.SetActive(!isActive);
-        }        
-                     
     }
 
 

@@ -32,11 +32,6 @@ public class Player1FirstGun : MonoBehaviour
     {
     
          timeKeeper -= Time.deltaTime;
-
-       
-
-
-
     }
 
     void shoot()
@@ -67,7 +62,6 @@ public class Player1FirstGun : MonoBehaviour
         if (context.performed && (timeKeeper<=0))
         {
 
-            Debug.Log("Fire!");
             shoot();
             timeKeeper=reloadTime;
 

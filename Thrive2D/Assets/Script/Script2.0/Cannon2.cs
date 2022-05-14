@@ -45,20 +45,20 @@ public class Cannon2 : MonoBehaviour
     // Update is called once per frame 
     void Update()
     {
-        // if (timeKeeper <= 0)
-        // {
-        //     if (Input.GetKeyDown(KeyCode.Keypad2) && CannonShootOnce == true)
-        //     {
-        //         shoot();
-        //         CannonShootOnce = false;
-        //         timeKeeper = reloadTime;
-        //     }
-        // }
-        // else
-        // {
-        //     timeKeeper -= Time.deltaTime;
+        if (timeKeeper <= 0)
+        {
+            if (Input.GetKeyDown(KeyCode.Keypad2) && CannonShootOnce == true)
+            {
+                shoot();
+                CannonShootOnce = false;
+                timeKeeper = reloadTime;
+            }
+        }
+        else
+        {
+            timeKeeper -= Time.deltaTime;
 
-        // }
+        }
 
     }
 
@@ -79,13 +79,9 @@ public class Cannon2 : MonoBehaviour
         {
             if (context.performed)
             {
-
-                Debug.Log("Cannon!");
                 shoot();
                 CannonShootOnce = false;
                 // Update();
-
-
             }
         }
     }

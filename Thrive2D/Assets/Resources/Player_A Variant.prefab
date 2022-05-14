@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 742001683779687894, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 1424205689764600132, guid: dc8fedb3988f5cf44ab974d5667ad217, type: 3}
     - target: {fileID: 2287024955499315617, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -71,13 +75,46 @@ PrefabInstance:
       propertyPath: m_AngularDrag
       value: 0.2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3739635608207784946, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
+    - {fileID: 742001683779687894, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
+--- !u!4 &225872361578992294 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3985000881189965391, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
+  m_PrefabInstance: {fileID: 3778489882814242025}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2208135114459678110 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3083623964986268023, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
+  m_PrefabInstance: {fileID: 3778489882814242025}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7144009343955207484 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6290255593786137045, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
   m_PrefabInstance: {fileID: 3778489882814242025}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &-4038677853459217544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7144009343955207484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44b9396a2a07f9547ae374e5f178b72b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialPos: {fileID: 2208135114459678110}
+  secondPos: {fileID: 225872361578992294}
+  bulletPrefab: {fileID: 1424205689764600132, guid: dc8fedb3988f5cf44ab974d5667ad217, type: 3}
+  bulletForce: 20
+  reloadTime: 2
+  timeKeeper: 0
+  dualGunOn: 0
+  health: 100
+  currentHealth: 0
 --- !u!114 &1211493247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,11 +134,12 @@ MonoBehaviour:
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents:
+  - {fileID: 2187121708880058979}
   - {fileID: 7150396401360517020}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &6122901098773619316
+--- !u!114 &2187121708880058979
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -110,7 +148,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 7144009343955207484}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f62429323c915b4fb0ccf92aa2d7f26, type: 3}
+  m_Script: {fileID: 11500000, guid: a0c22b6822c55f1448e7fb1c8a09d0bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  currentHealth: 0
+--- !u!114 &4562118492019595743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7144009343955207484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82e9a0a474fb76244936b61c453253b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   accelerationFactor: 30
@@ -141,9 +193,9 @@ MonoBehaviour:
     ExtrapolateNumberOfStoredPositions: 1
   m_RotationModel:
     SynchronizeEnabled: 1
-    InterpolateOption: 1
+    InterpolateOption: 2
     InterpolateRotateTowardsSpeed: 180
-    InterpolateLerpSpeed: 5
+    InterpolateLerpSpeed: 2
   m_ScaleModel:
     SynchronizeEnabled: 0
     InterpolateOption: 0

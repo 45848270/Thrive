@@ -12,13 +12,16 @@ public class P1Bullet : MonoBehaviourPunCallbacks
 
      PhotonView view;
 
-    IEnumerator destroyBullet()
-    {
-        yield return new WaitForSeconds(destroyTime);
-        this.GetComponent<PhotonView>().RPC("destroy", RpcTarget.All);
-    }
+   // IEnumerator destroyBullet()
+    //{
+   //     yield return new WaitForSeconds(destroyTime);
+  //      this.GetComponent<PhotonView>().RPC("destroy", RpcTarget.All);
+  //  }
     // Start is called before the first frame update
-  
+   private void Start() 
+   {
+       this.GetComponent<PhotonView>().RPC("destroy", RpcTarget.All);
+   }
 
     // Update is called once per frame
     void Update()
@@ -29,7 +32,7 @@ public class P1Bullet : MonoBehaviourPunCallbacks
     [PunRPC]
     public void destroy()
     {
-        Destroy(gameObject);
+        Destroy(gameObject,3f);
     }
 
     

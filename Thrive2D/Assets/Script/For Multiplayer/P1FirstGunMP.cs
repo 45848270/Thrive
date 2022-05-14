@@ -47,9 +47,9 @@ public class P1FirstGunMP : MonoBehaviourPunCallbacks
             {
                  if (Input.GetKeyDown(KeyCode.Space))
                  {
-                  //Shoot();
+                  Shoot();
                     Debug.Log("Fire!");
-                    view.RPC("Shoot",RpcTarget.All);
+                    //view.RPC("Shoot",RpcTarget.All);
                     timeKeeper=reloadTime;
                  }    
         }

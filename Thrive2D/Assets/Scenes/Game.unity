@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPrefab:
-  - {fileID: 7144009343955207484, guid: c739a3ff92957114bab2393d57ed2ed5, type: 3}
+  - {fileID: 5922956086583393590, guid: 6a0700f7c6ee2bc4fb5da27e79417e34, type: 3}
   - {fileID: 6987016055580352885, guid: 3d35313230e9fdb4491f1143042876d8, type: 3}
   - {fileID: 8765910452245559094, guid: 3a16d15c776318e4cbf4dee6ddc54879, type: 3}
   spawnPoints:

@@ -38,8 +38,8 @@ public class MOVEment3 : MonoBehaviour
     {
         if(view.IsMine)
         {
-        steeringInput = Input.GetAxis(InputAxes.Player1_xDir);
-        accelerationInput = Input.GetAxis(InputAxes.Player1_yDir);
+        steeringInput = Input.GetAxis(InputAxes.Player2_xDir);
+        accelerationInput = Input.GetAxis(InputAxes.Player2_yDir);
         }
        
     }

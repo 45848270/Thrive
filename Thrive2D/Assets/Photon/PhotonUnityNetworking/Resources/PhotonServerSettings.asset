@@ -28,7 +28,7 @@ MonoBehaviour:
     AuthMode: 0
     EnableLobbyStatistics: 0
     NetworkLogging: 1
-  DevRegion: au
+  DevRegion: 
   PunLogging: 0
   EnableSupportLogger: 0
   RunInBackground: 1
@@ -39,16 +39,12 @@ MonoBehaviour:
   - DestroySpaceship
   - Fire
   - RespawnSpaceship
-  - RPC_Shoot
   - ActivateDualGun
-  - Destroy
+  - DamageGiven
   - destroy
   - Shoot
-  - OnTriggerEnter2D
   - Start
   - TakeDamage
-  - UpdateHealth
-  - DamageGiven
   DisableAutoOpenWizard: 1
   ShowSettings: 0
-  DevRegionSetOnce: 1
+  DevRegionSetOnce: 0

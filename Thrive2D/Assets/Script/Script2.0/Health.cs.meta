@@ -3,7 +3,13 @@ guid: da04361b0075c36488fc95fe3aaf89fe
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - P1slider: {instanceID: 0}
+  - P2slider: {instanceID: 0}
+  - p1: {fileID: 6290255593786137045, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
+  - p2: {fileID: 9103541012551989609, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
+  - audioSource: {instanceID: 0}
+  - uIManager: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

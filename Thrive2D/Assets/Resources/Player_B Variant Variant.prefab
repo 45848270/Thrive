@@ -23,6 +23,22 @@ PrefabInstance:
       propertyPath: sceneViewId
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4902611710527313330, guid: 3d35313230e9fdb4491f1143042876d8, type: 3}
+      propertyPath: m_Size.x
+      value: 1.0127453
+      objectReference: {fileID: 0}
+    - target: {fileID: 4902611710527313330, guid: 3d35313230e9fdb4491f1143042876d8, type: 3}
+      propertyPath: m_Size.y
+      value: 0.54808575
+      objectReference: {fileID: 0}
+    - target: {fileID: 4902611710527313330, guid: 3d35313230e9fdb4491f1143042876d8, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.06896396
+      objectReference: {fileID: 0}
+    - target: {fileID: 4902611710527313330, guid: 3d35313230e9fdb4491f1143042876d8, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.19415554
+      objectReference: {fileID: 0}
     - target: {fileID: 6987016055580352885, guid: 3d35313230e9fdb4491f1143042876d8, type: 3}
       propertyPath: m_Name
       value: Player_B Variant Variant

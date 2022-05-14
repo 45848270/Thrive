@@ -155,6 +155,7 @@ MonoBehaviour:
   playerPrefab:
   - {fileID: 7144009343955207484, guid: c739a3ff92957114bab2393d57ed2ed5, type: 3}
   - {fileID: 6987016055580352885, guid: 3d35313230e9fdb4491f1143042876d8, type: 3}
+  - {fileID: 8765910452245559094, guid: 3a16d15c776318e4cbf4dee6ddc54879, type: 3}
   spawnPoints:
   - {fileID: 767973884}
   - {fileID: 805841602}

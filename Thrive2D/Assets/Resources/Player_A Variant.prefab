@@ -67,6 +67,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player_A Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 7359801837447229738, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
+      propertyPath: m_Size.x
+      value: 1.0127504
+      objectReference: {fileID: 0}
+    - target: {fileID: 7359801837447229738, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
+      propertyPath: m_Size.y
+      value: 0.56581986
+      objectReference: {fileID: 0}
+    - target: {fileID: 7359801837447229738, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.07331139
+      objectReference: {fileID: 0}
+    - target: {fileID: 7359801837447229738, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.18528849
+      objectReference: {fileID: 0}
     - target: {fileID: 9001428975049791055, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
       propertyPath: m_LinearDrag
       value: 8

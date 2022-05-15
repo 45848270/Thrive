@@ -45,7 +45,12 @@ public class PlayerInfo : MonoBehaviour
     public GameObject PlayerBText4;
     public GameObject PlayerBText5;
 
+    public bool ActiveA = false; 
+    public bool ActiveB = false;      
+
+
     public PlayerAction controls;
+
 
 void Awake()
 {
@@ -56,19 +61,13 @@ void Awake()
 
     void Start()
     {
+        
 
-
-        CurrentSpeedA = Movement.instance.accelerationFactor;
-        CurrentSpeedB = Movement2.instance.accelerationFactor;
-
-        CurrentDamageA = Health.instance.player1DamagePerContact;
-        CurrentDamageB = Health.instance.player2DamagePerContact;
+       
 
         // CurrentHealthA = Health.instance.player1_health;
         // CurrentHealthB = Health.instance.player1_health;
 
-        CurrentReloadA = Player1FirstGun.instance.reloadTime;
-        CurrentReloadB = Player2FirstGun.instance.reloadTime;
 
         PanelA.SetActive(true);
         PanelB.SetActive(true);
@@ -88,34 +87,47 @@ void Awake()
         PlayerBText4.SetActive(false);
         PlayerBText5.SetActive(false);
 
+                   
+           
+            CurrentSpeedA = Movement.instance.accelerationFactor;
+            CurrentDamageA = Health.instance.player1DamagePerContact;     
+            CurrentReloadA = Player1FirstGun.instance.reloadTime;
+            
+        
+            CurrentSpeedA = Movement.instance.accelerationFactor;
+            CurrentDamageA = Health.instance.player1DamagePerContact;     
+            CurrentReloadA = Player1FirstGun.instance.reloadTime;                  
+             
+        
+            CurrentSpeedB = Movement2.instance.accelerationFactor;
+            CurrentDamageB = Health.instance.player2DamagePerContact; 
+            CurrentReloadB = Player2FirstGun.instance.reloadTime;
+           
+        
+        
+
     }
 
     void Update()
-    {
+    {        
 
-        // if (Input.GetKeyDown(KeyCode.Tab)) // Show Player 1 information when Tab key pressed
-        // {
-        //     bool isActive = PanelA.activeSelf;
-        //     PanelA.SetActive(!isActive);
-        // }
+        
+            UpdatedSpeedA = Movement.instance.accelerationFactor;
+            UpdatedDamageA = Health.instance.player1DamagePerContact;
+            UpdatedReloadA = Player1FirstGun.instance.reloadTime;   
+                 
+         
+            UpdatedSpeedB = Movement2.instance.accelerationFactor;
+           UpdatedDamageB = Health.instance.player2DamagePerContact;
+            UpdatedReloadB = Player2FirstGun.instance.reloadTime;
+         
 
-        // if (Input.GetKeyDown(KeyCode.KeypadEnter)) // Show Player 2 information when KeypadEnter key pressed
-        // {
-        //     bool isActive = PanelB.activeSelf;
-        //     PanelB.SetActive(!isActive);
-        // }
-
-        UpdatedSpeedA = Movement.instance.accelerationFactor;
-        UpdatedSpeedB = Movement2.instance.accelerationFactor;
-
-        UpdatedDamageA = Health.instance.player1DamagePerContact;
-        UpdatedDamageB = Health.instance.player2DamagePerContact;
+       
 
         // UpdatedHealthA = Health.instance.player1_health;
-        // UpdatedHealthB = Health.instance.player2_health;
-
-        UpdatedReloadA = Player1FirstGun.instance.reloadTime;
-        UpdatedReloadB = Player2FirstGun.instance.reloadTime;
+        // UpdatedHealthB = Health.instance.player2_health;      
+      
+        
 
         Player1Info();
         Player2Info();
@@ -124,11 +136,11 @@ void Awake()
 
     public void TogglePlayerInfoA(InputAction.CallbackContext context)
     {
-       // if (context.performed)
-       // {         
+        if (context.performed)
+        {         
              bool isActive = PanelA.activeSelf;      
             PanelA.SetActive(!isActive);
-       // }        
+        }        
                       
     }
 
@@ -164,8 +176,8 @@ void Awake()
         if (UpdatedReloadA < CurrentReloadA)
         {
             PlayerAText4.SetActive(true);
-        }
-        if (Cannon1.instance.CannonShootOnce == true)
+        }      
+        if (Cannon1.instance.CannonShootOnce == true )
         {
             PlayerAText5.SetActive(true);
         }
@@ -173,9 +185,7 @@ void Awake()
         {
             PlayerAText5.SetActive(false);
 
-        }
-
-
+        }       
 
     }
 
@@ -200,7 +210,7 @@ void Awake()
         if (UpdatedReloadB < CurrentReloadB)
         {
             PlayerBText4.SetActive(true);
-        }
+        }   
         if (Cannon2.instance.CannonShootOnce == true)
         {
             PlayerBText5.SetActive(true);
@@ -210,6 +220,8 @@ void Awake()
             PlayerBText5.SetActive(false);
 
         }
+
+        
 
     }
 

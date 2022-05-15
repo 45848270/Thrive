@@ -688,6 +688,12 @@ public class UIManager : MonoBehaviour
             pauseButton.gameObject.SetActive(false);
         }
         pausePanel.gameObject.SetActive(true);
+        optionPanel.SetActive(false);
+        controllerPanel.SetActive(false);
+        keyboardPanel.SetActive(false);
+        audioPanel.SetActive(false);
+        
+
         Time.timeScale = 0;
         AudioListener.pause = true;
 

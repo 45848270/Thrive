@@ -5,7 +5,7 @@ using UnityEngine;
 public class MusicPlayer : MonoBehaviour
 {
     public AudioSource MusicSource;
-    private float musicVolume = 0.5f;
+    private float musicVolume = 0.2f;
 
     // Start is called before the first frame update
     void Start()

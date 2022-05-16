@@ -36,11 +36,6 @@ public class SpawnWalls : MonoBehaviour
     {
         isFree=new bool[Max];
         AssignBoolValue();
-        CheckPlayerPos();
-        FillUnBreakableWAlls();
-        FillDropItems();
-        FillBreakableWAlls();
-        timer=reArrangeTime;
         
     }
 

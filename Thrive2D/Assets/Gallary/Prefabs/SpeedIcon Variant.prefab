@@ -65,7 +65,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5997668634902008033, guid: b9ccf2c73e9c061488d81b348ba84a20, type: 3}
       propertyPath: revTime
-      value: 60
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 7102282461966010974, guid: b9ccf2c73e9c061488d81b348ba84a20, type: 3}
       propertyPath: m_Sprite

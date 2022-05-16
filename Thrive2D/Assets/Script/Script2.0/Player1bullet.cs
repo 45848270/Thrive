@@ -37,5 +37,5 @@ public class Player1bullet : MonoBehaviour
         {
             Destroy(damageGivenToP2.gameObject);
         }
-    }
+    } 
 }

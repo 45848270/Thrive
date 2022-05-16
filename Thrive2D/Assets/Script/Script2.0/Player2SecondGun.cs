@@ -11,7 +11,7 @@ public class Player2SecondGun : MonoBehaviour
     public GameObject bulletPrefab;
     public float bulletForce = 20f;
     public float reloadTime = 2f;
-    public bool dualGunOn = false;      
+    public bool dualGunOn = false;
     public PlayerBaction controls;
 
 
@@ -26,7 +26,7 @@ public class Player2SecondGun : MonoBehaviour
 
     void Start()
     {
-        timeKeeper = reloadTime; 
+        timeKeeper = reloadTime;
     }
 
     // Update is called once per frame
@@ -41,7 +41,7 @@ public class Player2SecondGun : MonoBehaviour
         //     }
         // }else
         // {
-             timeKeeper -= Time.deltaTime;
+        timeKeeper -= Time.deltaTime;
 
         // }
     }
@@ -54,13 +54,14 @@ public class Player2SecondGun : MonoBehaviour
 
     public void Fire(InputAction.CallbackContext context)
     {
-          
-        if (dualGunOn == true){
-        if (context.performed && (timeKeeper<=0))
-        {           
-            shoot();
-            timeKeeper=reloadTime;
-        }
+
+        if (dualGunOn == true)
+        {
+            if (context.performed && (timeKeeper <= 0))
+            {
+                shoot();
+                timeKeeper = reloadTime;
+            }
         }
     }
 

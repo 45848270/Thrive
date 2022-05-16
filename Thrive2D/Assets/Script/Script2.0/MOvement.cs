@@ -1,14 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Movement : MonoBehaviour
 {
     public static Movement instance;
-    // public float accelerationFactor = 30.0f;
     public float accelerationFactor = 300.0f;
     public float driftFactor = 0.95f;
     public float turnFactor = 3.5f;
+
+      Vector2 moveValue;
 
 
     float accelerationInput = 0;
@@ -29,11 +31,21 @@ public class Movement : MonoBehaviour
 
     }
 
+     public void Moves(InputAction.CallbackContext context)
+    {
+        moveValue = context.ReadValue<Vector2>() ;
+    }
+    
+    
+
     // Update is called once per frame
     void Update()
     {
-        steeringInput = Input.GetAxis(InputAxes.Player1_xDir);
-        accelerationInput = Input.GetAxis(InputAxes.Player1_yDir);
+        // steeringInput = Input.GetAxis(InputAxes.Player1_xDir);
+        // accelerationInput = Input.GetAxis(InputAxes.Player1_yDir);
+
+          steeringInput =  moveValue.x;
+        accelerationInput = moveValue.y;
 
     }
 
@@ -43,9 +55,9 @@ public class Movement : MonoBehaviour
         KillVelocity();
         ApplySteering();
     }
-    void ApplyEngineForce()
+   public void ApplyEngineForce()
     {
-        Vector2 engineForceVector = transform.up * accelerationInput * accelerationFactor;
+        Vector2 engineForceVector =   transform.up * accelerationInput * accelerationFactor;
 
         playerRigidbody2D.AddForce(engineForceVector, ForceMode2D.Force);
     }
@@ -58,8 +70,8 @@ public class Movement : MonoBehaviour
 
     void KillVelocity()
     {
-        Vector2 forwardVelocity = transform.up * Vector2.Dot(playerRigidbody2D.velocity, transform.up);
-        Vector2 rightVelocity = transform.right * Vector2.Dot(playerRigidbody2D.velocity, transform.right);
+        Vector2 forwardVelocity =  transform.up * Vector2.Dot(playerRigidbody2D.velocity, transform.up);
+        Vector2 rightVelocity =  transform.right * Vector2.Dot(playerRigidbody2D.velocity, transform.right);
 
         playerRigidbody2D.velocity = forwardVelocity + rightVelocity * driftFactor;
     }

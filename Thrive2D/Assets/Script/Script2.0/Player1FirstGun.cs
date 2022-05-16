@@ -30,8 +30,8 @@ public class Player1FirstGun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    
-         timeKeeper -= Time.deltaTime;
+
+        timeKeeper -= Time.deltaTime;
     }
 
     void shoot()
@@ -41,29 +41,14 @@ public class Player1FirstGun : MonoBehaviour
         // bullet.GetComponent <Player1bullet >().
     }
 
-    // void onEnable()
-    // {
-    //     move = controls.Player.Move;
-    //     move.Enable();
-
-    //     fire = controls.Player.Fire;
-    //     fire.Enable();
-    //     fire.performed += Fire;
-    // }
-
-    // void onDisable()
-    // {
-    //     move.Disable();
-    //     fire.Disable();
-    // }
 
     public void Fire(InputAction.CallbackContext context)
     {
-        if (context.performed && (timeKeeper<=0))
+        if (context.performed && (timeKeeper <= 0))
         {
 
             shoot();
-            timeKeeper=reloadTime;
+            timeKeeper = reloadTime;
 
 
         }

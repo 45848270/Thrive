@@ -30,7 +30,7 @@ public class PlayerInfo : MonoBehaviour
     public GameObject PanelA;
     public GameObject PanelB;
 
-    public GameObject PlayerAText1; 
+    public GameObject PlayerAText1;
     public GameObject PlayerAText2;
     public GameObject PlayerAText3;
     // public GameObject PlayerAText4;
@@ -45,25 +45,24 @@ public class PlayerInfo : MonoBehaviour
     public GameObject PlayerBText4;
     public GameObject PlayerBText5;
 
-    public bool ActiveA = false; 
-    public bool ActiveB = false;      
+
 
 
     public PlayerAction controls;
 
 
-void Awake()
-{
-    controls = new PlayerAction();
-}
+    void Awake()
+    {
+        controls = new PlayerAction();
+    }
 
 
 
     void Start()
     {
-        
 
-       
+
+
 
         // CurrentHealthA = Health.instance.player1_health;
         // CurrentHealthB = Health.instance.player1_health;
@@ -87,47 +86,47 @@ void Awake()
         PlayerBText4.SetActive(false);
         PlayerBText5.SetActive(false);
 
-                   
-           
-            CurrentSpeedA = Movement.instance.accelerationFactor;
-            CurrentDamageA = Health.instance.player1DamagePerContact;     
-            CurrentReloadA = Player1FirstGun.instance.reloadTime;
-            
-        
-            CurrentSpeedA = Movement.instance.accelerationFactor;
-            CurrentDamageA = Health.instance.player1DamagePerContact;     
-            CurrentReloadA = Player1FirstGun.instance.reloadTime;                  
-             
-        
-            CurrentSpeedB = Movement2.instance.accelerationFactor;
-            CurrentDamageB = Health.instance.player2DamagePerContact; 
-            CurrentReloadB = Player2FirstGun.instance.reloadTime;
-           
-        
-        
+
+
+        CurrentSpeedA = Movement.instance.accelerationFactor;
+        CurrentDamageA = Health.instance.player1DamagePerContact;
+        CurrentReloadA = Player1FirstGun.instance.reloadTime;
+
+
+        CurrentSpeedA = Movement.instance.accelerationFactor;
+        CurrentDamageA = Health.instance.player1DamagePerContact;
+        CurrentReloadA = Player1FirstGun.instance.reloadTime;
+
+
+        CurrentSpeedB = Movement2.instance.accelerationFactor;
+        CurrentDamageB = Health.instance.player2DamagePerContact;
+        CurrentReloadB = Player2FirstGun.instance.reloadTime;
+
+
+
 
     }
 
     void Update()
-    {        
+    {
 
-        
-            UpdatedSpeedA = Movement.instance.accelerationFactor;
-            UpdatedDamageA = Health.instance.player1DamagePerContact;
-            UpdatedReloadA = Player1FirstGun.instance.reloadTime;   
-                 
-         
-            UpdatedSpeedB = Movement2.instance.accelerationFactor;
-           UpdatedDamageB = Health.instance.player2DamagePerContact;
-            UpdatedReloadB = Player2FirstGun.instance.reloadTime;
-         
 
-       
+        UpdatedSpeedA = Movement.instance.accelerationFactor;
+        UpdatedDamageA = Health.instance.player1DamagePerContact;
+        UpdatedReloadA = Player1FirstGun.instance.reloadTime;
+
+
+        UpdatedSpeedB = Movement2.instance.accelerationFactor;
+        UpdatedDamageB = Health.instance.player2DamagePerContact;
+        UpdatedReloadB = Player2FirstGun.instance.reloadTime;
+
+
+
 
         // UpdatedHealthA = Health.instance.player1_health;
         // UpdatedHealthB = Health.instance.player2_health;      
-      
-        
+
+
 
         Player1Info();
         Player2Info();
@@ -137,21 +136,21 @@ void Awake()
     public void TogglePlayerInfoA(InputAction.CallbackContext context)
     {
         if (context.performed)
-        {         
-             bool isActive = PanelA.activeSelf;      
+        {
+            bool isActive = PanelA.activeSelf;
             PanelA.SetActive(!isActive);
-        }        
-                      
+        }
+
     }
 
     public void TogglePlayerInfoB(InputAction.CallbackContext context)
     {
-        if (context.performed)        
+        if (context.performed)
         {
-            bool isActive = PanelB.activeSelf;                           
+            bool isActive = PanelB.activeSelf;
             PanelB.SetActive(!isActive);
-        }        
-                     
+        }
+
     }
 
 
@@ -176,8 +175,8 @@ void Awake()
         if (UpdatedReloadA < CurrentReloadA)
         {
             PlayerAText4.SetActive(true);
-        }      
-        if (Cannon1.instance.CannonShootOnce == true )
+        }
+        if (Cannon1.instance.CannonShootOnce == true)
         {
             PlayerAText5.SetActive(true);
         }
@@ -185,7 +184,7 @@ void Awake()
         {
             PlayerAText5.SetActive(false);
 
-        }       
+        }
 
     }
 
@@ -210,7 +209,7 @@ void Awake()
         if (UpdatedReloadB < CurrentReloadB)
         {
             PlayerBText4.SetActive(true);
-        }   
+        }
         if (Cannon2.instance.CannonShootOnce == true)
         {
             PlayerBText5.SetActive(true);
@@ -221,7 +220,7 @@ void Awake()
 
         }
 
-        
+
 
     }
 

@@ -5,8 +5,8 @@ using UnityEngine;
 public class Activate_and_Deactivate : MonoBehaviour
 {
     public static Activate_and_Deactivate instance;
-    public GameObject Object1;
-    public GameObject Object2;
+  //  public GameObject Object1;
+  //  public GameObject Object2;
   //  public GameObject Object3;
   //  public GameObject Object4;
     public Player1SecondGun script1;
@@ -30,10 +30,10 @@ public class Activate_and_Deactivate : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Object1.SetActive(false);
+        //Object1.SetActive(true);
         script1.enabled = false;
 
-        Object2.SetActive(false);
+       // Object2.SetActive(true);
         script2.enabled = false;
 
        // Object3.SetActive(true);

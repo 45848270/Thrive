@@ -1272,6 +1272,7 @@ GameObject:
   - component: {fileID: 670576906}
   - component: {fileID: 670576905}
   - component: {fileID: 670576904}
+  - component: {fileID: 670576907}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1345,6 +1346,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &670576907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 670576903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 749ea10296a5abb4ab0525eeff1ac3c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &683228757
 GameObject:
   m_ObjectHideFlags: 0
@@ -3922,6 +3935,8 @@ MonoBehaviour:
   numberOfUnbreakableWalls: 9
   numberOfBreakableWalls: 15
   numberOfDrops: 15
+  reArrangeTime: 5
+  camScript: {fileID: 0}
   unBreakWallPrefab: {fileID: 4000023947270765366, guid: 0e44fec1c4931b84e947a2a7e4541187, type: 3}
   breakWallPrefab: {fileID: 3963152551545354560, guid: 19d4aa2990e161d49a41d5c13bf18491, type: 3}
   prefabs:
@@ -4048,6 +4063,7 @@ MonoBehaviour:
   - {fileID: 1376243267}
   - {fileID: 742989269}
   - {fileID: 2087701503}
+  timer: 0
   list: 
 --- !u!4 &1949054003
 Transform:

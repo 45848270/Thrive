@@ -4,33 +4,36 @@ using UnityEngine;
 
 public class SpawnWalls : MonoBehaviour
 {
-   public int numberOfUnbreakableWalls= 12;
-   public int numberOfBreakableWalls=5;
-   public int numberOfDrops=20;
+   public int numberOfUnbreakableWalls= 15;
+   public int numberOfBreakableWalls=50;
+   public int numberOfDrops=30;
    //public Transform p1Pos;
    //public Transform p2Pos;
    public GameObject unBreakWallPrefab;
    public GameObject breakWallPrefab;
    public GameObject[] prefabs;
    public Transform[] spawnPosition;
-   public int randomNumber;
-   
-   public bool[] ifFilled;
 
     private int Max;
     private int val; 
+
+    int Rand;
+   public List<int> list = new List<int>();
    
+   private void Awake() {
+       Max=spawnPosition.Length-1;
+       val=numberOfBreakableWalls+numberOfUnbreakableWalls+numberOfDrops;
+        CreateRandomvalues();
+   }
 
     // Start is called before the first frame update
     void Start()
     {
-        ifFilled = new bool[spawnPosition.Length];
-        Max=spawnPosition.Length;
-        AssignBoolValues();
-
+        
         FillUnBreakableWAlls();
-        FillBreakableWAlls();
         FillDropItems();
+        FillBreakableWAlls();
+        
     }
 
     // Update is called once per frame
@@ -48,32 +51,35 @@ public class SpawnWalls : MonoBehaviour
         //}
     }
 
-    void AssignBoolValues()
+    void CreateRandomvalues()
     {
-       for(int i = 0; i<spawnPosition.Length; i++)
+        list = new List<int>(new int[val]);
+
+        for (int j=0; j<val; j++)
         {
-            ifFilled[i]=false;
-        }  
+            Rand = Random.Range(0,Max+1);
+
+            while (list.Contains(Rand))
+            {
+                Rand=Random.Range(0,Max+1);
+            }
+
+            list[j]=Rand;
+        }
     }
 
     void FillUnBreakableWAlls()
     {
         for(int i=0; i<numberOfUnbreakableWalls; i++)
         {
-            randomNumber= Random.Range(0, Max);
-            Instantiate(unBreakWallPrefab, spawnPosition[randomNumber].position, Quaternion.identity);
-            ifFilled[randomNumber]=true;
+            Instantiate(unBreakWallPrefab, spawnPosition[list[i]].position, Quaternion.identity);
         }
     }
     void FillBreakableWAlls()
     {
         for(int i=0; i<numberOfBreakableWalls; i++)
         {
-            returnRandomNumber();
-
-            
-            Instantiate(breakWallPrefab, spawnPosition[val].position, Quaternion.identity);
-            ifFilled[val]=true;
+            Instantiate(breakWallPrefab, spawnPosition[list[(numberOfUnbreakableWalls+i)]].position, Quaternion.identity);
             
         }
     }
@@ -82,33 +88,10 @@ public class SpawnWalls : MonoBehaviour
     {
         for(int i=0; i<numberOfDrops; i++)
         {
-            returnRandomNumber();
-
-            int drop = Random.Range(0, prefabs.Length +1);
-            Instantiate(prefabs[drop], spawnPosition[val].position, Quaternion.identity);
-            ifFilled[val]=true;
+            int drop = Random.Range(0, prefabs.Length);
+            Instantiate(prefabs[drop], spawnPosition[list[(numberOfUnbreakableWalls+numberOfBreakableWalls+i)]].position, Quaternion.identity);
             
         }
     }
 
-    void returnRandomNumber()
-    {
-        randomNumber= Random.Range(0, Max);
-            for(int i=0; i<=Max; i++)
-            {
-                 if (ifFilled[randomNumber]==true)
-                 {
-                randomNumber= Random.Range(0, Max);
-                }
-                else
-                {
-                    ran(randomNumber);
-                }
-            } 
-    }
-
-    void ran(int x)
-    {
-        val=x;
-    }
 }

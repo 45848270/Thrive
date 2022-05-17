@@ -10,7 +10,7 @@ public class SpawnWalls : MonoBehaviour
    public float reArrangeTime=30;
    public CameraScript camScript;
    public Transform p1Pos;
-   //public Transform p2Pos;
+   public Transform p2Pos;
    public GameObject unBreakWallPrefab;
    public GameObject breakWallPrefab;
    public GameObject[] prefabs;
@@ -21,11 +21,14 @@ public class SpawnWalls : MonoBehaviour
     public bool[] isFree;
     private int Max;
     private int val; 
+    private float decreseTime=0;
+    private bool once=true;
 
     int Rand;
    public List<int> list = new List<int>();
    
-   private void Awake() {
+   private void Awake() 
+   {
        Max=spawnPosition.Length;
        val=numberOfBreakableWalls+numberOfUnbreakableWalls+numberOfDrops;
         
@@ -42,21 +45,58 @@ public class SpawnWalls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {  
-        
-        if (timer<=0)
-        {
-            AssignBoolValue();
-            CheckPlayerPos();
-            CreateRandomvalues();
-            FillUnBreakableWAlls();
-            FillDropItems();
-            FillBreakableWAlls(); 
-            //StartCoroutine(camScript.Shake(.5f,1.9f)); 
+        if (decreseTime<55)
+         {
+             if(timer<=0)
+             {
+                AssignBoolValue();
+                CheckPlayerPos();
+                CreateRandomvalues();
+                FillUnBreakableWAlls();
+                FillDropItems();
+                FillBreakableWAlls(); 
+                //StartCoroutine(camScript.Shake(.5f,1.9f)); 
 
-            timer = reArrangeTime;
+                timer = reArrangeTime;
+             }
+           
+        }   
+        else
+        {
+            if(decreseTime<85)
+            {
+                    if(once)
+                {
+                numberOfUnbreakableWalls=2;
+                numberOfBreakableWalls=10;
+                numberOfDrops=prefabs.Length;
+                AssignBoolValue();
+                CheckPlayerPos();
+                CreateRandomvalues();
+                FillUnBreakableWAlls();
+                FillDropItemsAllOnce();
+                FillBreakableWAlls(); 
+
+                once=false;
+                }
+            } 
+            else
+            {
+             if(decreseTime>85)
+             {
+                 Instantiate(breakWallPrefab, new Vector2(-2,0), Quaternion.identity);
+                 Instantiate(unBreakWallPrefab, new Vector2(-2,1), Quaternion.identity);
+
+                 Instantiate(breakWallPrefab, new Vector2(2,0), Quaternion.identity);
+                 Instantiate(unBreakWallPrefab, new Vector2(2,-1), Quaternion.identity);
+             }
+         }          
         }
+         
+       
 
         timer-=Time.deltaTime;
+        decreseTime+=Time.deltaTime;
     }
 
     void AssignPos()
@@ -106,6 +146,7 @@ public class SpawnWalls : MonoBehaviour
           
         }
     }
+
     void FillBreakableWAlls()
     {
         for(int i=0; i<numberOfBreakableWalls; i++)
@@ -134,27 +175,59 @@ public class SpawnWalls : MonoBehaviour
         }
     }
 
+     void FillDropItemsAllOnce()
+    {
+        for(int i=0; i<numberOfDrops; i++)
+        {
+             if(isFree[list[(numberOfUnbreakableWalls+numberOfBreakableWalls+i)]]==true)
+             {
+                 Instantiate(prefabs[i], spawnPosition[list[(numberOfUnbreakableWalls+numberOfBreakableWalls+i)]].position, Quaternion.identity);
+                 isFree[list[(numberOfUnbreakableWalls+numberOfBreakableWalls+i)]]=false;
+             }
+            
+        }
+    }
+
+
+
     void CheckPlayerPos()
     {
         int x1=(int)p1Pos.position.x;
         int y1=(int)p1Pos.position.y;
-    for (int i=0; i<Max;i++)
-    {
-       int x=(int)spawnPosition[i].position.x;
-       int y=(int)spawnPosition[i].position.y;
-        if((int)x1==x && (int)y1 ==y)
-        {
-             if(!((i-1)<0))
+
+        int x2=(int)p2Pos.position.x;
+        int y2=(int)p2Pos.position.y;
+
+            for (int i=0; i<Max;i++)
             {
-                isFree[i-1]=false;
+                 int x=(int)spawnPosition[i].position.x;
+                 int y=(int)spawnPosition[i].position.y;
+
+                if((int)x1==x && (int)y1 ==y)
+                {
+                    if(!((i-1)<0))
+                    {
+                        isFree[i-1]=false;
+                    }
+                    isFree[i]=false;
+                    if(!((i+1)>Max))
+                    {
+                        isFree[i+1]=false;
+                    }
+                }
+                if((int)x2==x && (int)y2 ==y)
+                {
+                    if(!((i-1)<0))
+                    {
+                        isFree[i-1]=false;
+                    }
+                    isFree[i]=false;
+                    if(!((i+1)>Max))
+                    {
+                        isFree[i+1]=false;
+                    }
+                }
             }
-            isFree[i]=false;
-              if(!((i+1)>Max))
-            {
-                isFree[i+1]=false;
-            }
-        }
-    }
     }
         
 }

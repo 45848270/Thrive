@@ -10,6 +10,8 @@ public class Movement2 : MonoBehaviour
     public float driftFactor = 0.95f;
     public float turnFactor = 3.5f;
 
+     Vector2 moveValue;
+
 
     float accelerationInput = 0;
     float steeringInput = 0;

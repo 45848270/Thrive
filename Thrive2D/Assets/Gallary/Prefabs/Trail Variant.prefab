@@ -15,6 +15,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trail Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4414914990882015947, guid: 51c338ace9b490b48858500a6986c3e4, type: 3}
+      propertyPath: m_Layer
+      value: 22
+      objectReference: {fileID: 0}
     - target: {fileID: 4414914990882015949, guid: 51c338ace9b490b48858500a6986c3e4, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -58,6 +62,10 @@ PrefabInstance:
     - target: {fileID: 4414914990882015949, guid: 51c338ace9b490b48858500a6986c3e4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4414914991695189090, guid: 51c338ace9b490b48858500a6986c3e4, type: 3}
+      propertyPath: m_Layer
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 4414914991695189093, guid: 51c338ace9b490b48858500a6986c3e4, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key1.b
@@ -115,22 +123,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4414914990882015947, guid: 51c338ace9b490b48858500a6986c3e4, type: 3}
   m_PrefabInstance: {fileID: 5598775074694019600}
   m_PrefabAsset: {fileID: 0}
---- !u!58 &6306904409578655056
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8139752266180817115}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!114 &2560233329171939528
 MonoBehaviour:
   m_ObjectHideFlags: 0

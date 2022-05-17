@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 4414914990882015949}
   - component: {fileID: 4414914990882015948}
   - component: {fileID: 2835312818072542335}
-  - component: {fileID: 4963357444404294900}
-  m_Layer: 0
+  m_Layer: 21
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,22 +70,6 @@ MonoBehaviour:
   player: {fileID: 0}
   moveSpeed: 20
   ps: {fileID: 4414914991695189093}
---- !u!58 &4963357444404294900
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4414914990882015947}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!1 &4414914991695189090
 GameObject:
   m_ObjectHideFlags: 0
@@ -99,9 +82,8 @@ GameObject:
   - component: {fileID: 4414914991695189093}
   - component: {fileID: 4414914991695189092}
   - component: {fileID: 4414914991695189094}
-  - component: {fileID: 4523735050223350386}
   - component: {fileID: 1621191640632942075}
-  m_Layer: 0
+  m_Layer: 21
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4917,22 +4899,6 @@ MonoBehaviour:
   player: {fileID: 0}
   moveSpeed: 20
   ps: {fileID: 0}
---- !u!58 &4523735050223350386
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4414914991695189090}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!114 &1621191640632942075
 MonoBehaviour:
   m_ObjectHideFlags: 0

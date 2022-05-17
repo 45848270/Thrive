@@ -68,11 +68,11 @@ public class Cannon1 : MonoBehaviour
 
     public void Fire2(InputAction.CallbackContext context)
     {
-        if (CannonShootOnce == true)
+        
         {
-            if (context.performed)
+            if (context.performed && (CannonShootOnce == true))
             {
-
+                Debug.Log("shot");
                 shoot();
                 CannonShootOnce = false;
                 // Update();

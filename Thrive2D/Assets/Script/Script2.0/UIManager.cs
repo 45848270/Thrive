@@ -64,11 +64,6 @@ public class UIManager : MonoBehaviour
         SelectedLevelTwo = false;
         SelectedLevelThree = false;
 
-        optionPanel.gameObject.SetActive(false);
-        audioPanel.gameObject.SetActive(false);
-        controllerPanel.gameObject.SetActive(false);
-        keyboardPanel.gameObject.SetActive(false);
-        guideUI.SetActive(false);
 
         //clear selected object
         EventSystem.current.SetSelectedGameObject(null);

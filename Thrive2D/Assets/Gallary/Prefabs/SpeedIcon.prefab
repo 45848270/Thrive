@@ -73,6 +73,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   revTime: 5
+  psRed: {fileID: 8139752266180817115, guid: bde564fc7b6b9c94b9f5de2b295b57ee, type: 3}
+  psBlue: {fileID: 4414914990882015947, guid: 51c338ace9b490b48858500a6986c3e4, type: 3}
 --- !u!1 &8794733106223446946
 GameObject:
   m_ObjectHideFlags: 0

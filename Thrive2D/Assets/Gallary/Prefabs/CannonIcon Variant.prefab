@@ -108,6 +108,14 @@ PrefabInstance:
       value: CannonIcon Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7334710161053196239, guid: 225a0d0b9e7612e45a178912e9d667b5, type: 3}
+      propertyPath: psRed
+      value: 
+      objectReference: {fileID: 8139752266180817115, guid: bde564fc7b6b9c94b9f5de2b295b57ee, type: 3}
+    - target: {fileID: 7334710161053196239, guid: 225a0d0b9e7612e45a178912e9d667b5, type: 3}
+      propertyPath: psBlue
+      value: 
+      objectReference: {fileID: 4414914990882015947, guid: 51c338ace9b490b48858500a6986c3e4, type: 3}
+    - target: {fileID: 7334710161053196239, guid: 225a0d0b9e7612e45a178912e9d667b5, type: 3}
       propertyPath: revTime
       value: 30
       objectReference: {fileID: 0}

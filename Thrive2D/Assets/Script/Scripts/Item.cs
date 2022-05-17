@@ -6,6 +6,7 @@ using UnityEngine;
 public class Item : MonoBehaviour
 {
     public float revTime;
+
     private void Start()
     {
         Destroy(gameObject, revTime);

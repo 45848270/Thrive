@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class ReloadIcon : Item
 {
+
+      public GameObject psRed;
+    public GameObject psBlue;
   
      void OnTriggerEnter2D(Collider2D ReloadIncrease)
     {
@@ -11,6 +14,7 @@ public class ReloadIcon : Item
          if (ReloadIncrease.gameObject.tag.Equals("player1Bullet"))                                            //condition if it comes in contact with enemy
         {   
             Destroy(ReloadIncrease.gameObject);
+            Instantiate(psRed,transform.position,Quaternion.identity);
             Destroy(gameObject);
             Player1FirstGun.instance.Decrease_P1_ReloadTime();   
             Player1SecondGun.instance.Decrease_P1_ReloadTime();                                                               
@@ -18,6 +22,7 @@ public class ReloadIcon : Item
         if (ReloadIncrease.gameObject.tag.Equals("player2Bullet"))                                            //condition if it comes in contact with enemy
         {
             Destroy(ReloadIncrease.gameObject);
+            Instantiate(psBlue,transform.position,Quaternion.identity);
             Destroy(gameObject);
             Player2FirstGun.instance.Decrease_P2_ReloadTime();   
             Player2SecondGun.instance.Decrease_P2_ReloadTime();                                                                    

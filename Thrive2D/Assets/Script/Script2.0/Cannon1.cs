@@ -12,7 +12,7 @@ public class Cannon1 : MonoBehaviour
     ParticleSystem cannonEffect;
     public float bulletForce = 20f;
     public float reloadTime = 2f;
-    public float timeKeeper; 
+    public float timeKeeper;
     public static AudioClip cannonSound;
     public bool CannonShootOnce = false;
     public PlayerAction controls;

@@ -438,7 +438,7 @@ GameObject:
   - component: {fileID: 50585980}
   - component: {fileID: 50585981}
   m_Layer: 0
-  m_Name: paotai
+  m_Name: battery1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -469,10 +469,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 50585978}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa446baad45ca5942bf69a833d360d58, type: 3}
+  m_Script: {fileID: 11500000, guid: e50cccd406109b04bad0c2b14f743e66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FireEnable: 0
+  FireEnable: 1
   timerSpace: 5
   timer: 0
   bullet: {fileID: 8633490796933255573, guid: ccfd08765fe9939419701212e78f55b9, type: 3}
@@ -3016,7 +3016,7 @@ GameObject:
   - component: {fileID: 504541640}
   - component: {fileID: 504541639}
   m_Layer: 0
-  m_Name: paotai (1)
+  m_Name: battery2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3047,10 +3047,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 504541638}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa446baad45ca5942bf69a833d360d58, type: 3}
+  m_Script: {fileID: 11500000, guid: e50cccd406109b04bad0c2b14f743e66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FireEnable: 0
+  FireEnable: 1
   timerSpace: 5
   timer: 0
   bullet: {fileID: 8633490796933255573, guid: ccfd08765fe9939419701212e78f55b9, type: 3}

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Test : MonoBehaviour
+public class batteries : MonoBehaviour
 {
     public bool FireEnable;
     public float timerSpace;
@@ -43,7 +43,7 @@ public class Test : MonoBehaviour
                 FireEnable = true;
                 timer = timerSpace;
             }
-           
+
             allPlayers.Add(collision.transform);
         }
     }

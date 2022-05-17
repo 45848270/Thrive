@@ -23,6 +23,7 @@ public class SpawnWalls : MonoBehaviour
     private int val; 
     private float decreseTime=0;
     private bool once=true;
+    private bool onceMore=true;
 
     int Rand;
    public List<int> list = new List<int>();
@@ -84,11 +85,15 @@ public class SpawnWalls : MonoBehaviour
             {
              if(decreseTime>85)
              {
-                 Instantiate(breakWallPrefab, new Vector2(-2,0), Quaternion.identity);
+                 if(onceMore)
+                 {
+                Instantiate(breakWallPrefab, new Vector2(-2,0), Quaternion.identity);
                  Instantiate(unBreakWallPrefab, new Vector2(-2,1), Quaternion.identity);
 
                  Instantiate(breakWallPrefab, new Vector2(2,0), Quaternion.identity);
                  Instantiate(unBreakWallPrefab, new Vector2(2,-1), Quaternion.identity);
+                 }
+                 
              }
          }          
         }

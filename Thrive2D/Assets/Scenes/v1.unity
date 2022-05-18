@@ -1456,6 +1456,11 @@ Transform:
   m_Father: {fileID: 1648297939}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &484465774 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 952364114048531318, guid: 7ef22aac947abb7428a87ec03656c2de, type: 3}
+  m_PrefabInstance: {fileID: 1067080857}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &501856549
 GameObject:
   m_ObjectHideFlags: 0
@@ -1517,22 +1522,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuPanel: {fileID: 0}
-  levelPanel: {fileID: 0}
+  levelPanel: {fileID: 625261260}
   dialoguePanel: {fileID: 0}
   dialogueText: {fileID: 0}
-  pausePanel: {fileID: 0}
+  pausePanel: {fileID: 1244093755}
   optionPanel: {fileID: 0}
   audioPanel: {fileID: 0}
   controllerPanel: {fileID: 0}
   keyboardPanel: {fileID: 0}
-  GameOverPanel: {fileID: 0}
+  GameOverPanel: {fileID: 1209374717}
   levelOneDiaguePanel: {fileID: 0}
   levelOneDiagueText: {fileID: 0}
   levelTwoDiaguePanel: {fileID: 0}
   levelTwoDiagueText: {fileID: 0}
   levelThreeDiaguePanel: {fileID: 0}
   levelThreeDiagueText: {fileID: 0}
-  pauseButton: {fileID: 0}
+  pauseButton: {fileID: 484465774}
   dialogueTextList: []
   levelOneDiagueTextList: []
   levelTwoDiagueTextList: []
@@ -1865,6 +1870,11 @@ Transform:
   m_Father: {fileID: 27445310}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &625261260 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 952364114182203691, guid: 7ef22aac947abb7428a87ec03656c2de, type: 3}
+  m_PrefabInstance: {fileID: 1067080857}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &627386156
 GameObject:
   m_ObjectHideFlags: 0
@@ -3029,9 +3039,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 952364113389573780, guid: 7ef22aac947abb7428a87ec03656c2de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 521735185}
+    - target: {fileID: 952364113389573780, guid: 7ef22aac947abb7428a87ec03656c2de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CallBackToMain
+      objectReference: {fileID: 0}
+    - target: {fileID: 952364113914453422, guid: 7ef22aac947abb7428a87ec03656c2de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 521735185}
+    - target: {fileID: 952364113914453422, guid: 7ef22aac947abb7428a87ec03656c2de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CallBackToMain
+      objectReference: {fileID: 0}
+    - target: {fileID: 952364114048531208, guid: 7ef22aac947abb7428a87ec03656c2de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 521735185}
+    - target: {fileID: 952364114048531208, guid: 7ef22aac947abb7428a87ec03656c2de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CallPauseButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 952364114140883305, guid: 7ef22aac947abb7428a87ec03656c2de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 521735185}
+    - target: {fileID: 952364114140883305, guid: 7ef22aac947abb7428a87ec03656c2de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChooseLevel
+      objectReference: {fileID: 0}
     - target: {fileID: 952364114199329185, guid: 7ef22aac947abb7428a87ec03656c2de, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 952364114751031805, guid: 7ef22aac947abb7428a87ec03656c2de, type: 3}
       propertyPath: m_AnchorMax.x
@@ -3040,6 +3082,22 @@ PrefabInstance:
     - target: {fileID: 952364114751031805, guid: 7ef22aac947abb7428a87ec03656c2de, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 952364114903093829, guid: 7ef22aac947abb7428a87ec03656c2de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 521735185}
+    - target: {fileID: 952364114903093829, guid: 7ef22aac947abb7428a87ec03656c2de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Option
+      objectReference: {fileID: 0}
+    - target: {fileID: 952364114976635519, guid: 7ef22aac947abb7428a87ec03656c2de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 521735185}
+    - target: {fileID: 952364114976635519, guid: 7ef22aac947abb7428a87ec03656c2de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CallResume
       objectReference: {fileID: 0}
     - target: {fileID: 952364115074153719, guid: 7ef22aac947abb7428a87ec03656c2de, type: 3}
       propertyPath: m_AnchorMax.x
@@ -3719,6 +3777,11 @@ Transform:
   m_Father: {fileID: 643249480}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1209374717 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 952364113582722345, guid: 7ef22aac947abb7428a87ec03656c2de, type: 3}
+  m_PrefabInstance: {fileID: 1067080857}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1210625349
 GameObject:
   m_ObjectHideFlags: 0
@@ -3794,6 +3857,11 @@ Transform:
   m_Father: {fileID: 2123568124}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1244093755 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 952364114199329185, guid: 7ef22aac947abb7428a87ec03656c2de, type: 3}
+  m_PrefabInstance: {fileID: 1067080857}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1273072192 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 952364113637392211, guid: 7ef22aac947abb7428a87ec03656c2de, type: 3}

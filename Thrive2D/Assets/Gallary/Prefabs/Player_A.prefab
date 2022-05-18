@@ -5257,7 +5257,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initialPos: {fileID: 1430341747}
   cannonShotPrefab1: {fileID: 5984086284696767151, guid: 5b10b515fbe2ac8408245dc27af29b88, type: 3}
-  bulletForce: 20
+  bulletForce: 4000
   reloadTime: 2
   timeKeeper: 0
   CannonShootOnce: 0

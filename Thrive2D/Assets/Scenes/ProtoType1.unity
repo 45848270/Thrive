@@ -2219,6 +2219,14 @@ PrefabInstance:
       propertyPath: bulletForce
       value: 4000
       objectReference: {fileID: 0}
+    - target: {fileID: 1131165461103806718, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131165461103806718, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -680258423
+      objectReference: {fileID: 0}
     - target: {fileID: 2287024955499315617, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
       propertyPath: m_RootOrder
       value: 10

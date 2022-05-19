@@ -199,7 +199,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 268857322, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
       propertyPath: m_DefaultControlScheme
-      value: Gamepad
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 268857322, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
       propertyPath: m_NeverAutoSwitchControlSchemes
@@ -268,7 +268,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2403367132759127101, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.44
+      value: 4.82
       objectReference: {fileID: 0}
     - target: {fileID: 2403367132759127101, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
       propertyPath: m_LocalPosition.y
@@ -305,6 +305,10 @@ PrefabInstance:
     - target: {fileID: 2403367132759127101, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3328123019469354258, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7879688876603249433, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
       propertyPath: m_Actions

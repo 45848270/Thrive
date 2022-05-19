@@ -12,7 +12,7 @@ public class Movement2 : MonoBehaviour
     public float driftFactor = 0.95f;
     public float turnFactor = 3.5f;
 
-     Vector2 moveValue;
+    Vector2 moveValue;
 
 
     float accelerationInput = 0;
@@ -33,11 +33,17 @@ public class Movement2 : MonoBehaviour
 
     }
 
+    public void Moves(InputAction.CallbackContext context)
+    {
+        moveValue = context.ReadValue<Vector2>();
+    }
+
+
     // Update is called once per frame
     void Update()
     {
-        steeringInput = Input.GetAxis(InputAxes.Player2_xDir);
-        accelerationInput = Input.GetAxis(InputAxes.Player2_yDir);
+        steeringInput = moveValue.x;
+        accelerationInput = moveValue.y;
     }
 
     void FixedUpdate()

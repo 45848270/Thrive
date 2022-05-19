@@ -288,12 +288,12 @@ GameObject:
   - component: {fileID: 2997421266361659967}
   - component: {fileID: 7965508677034725919}
   - component: {fileID: 3431105922439013109}
-  - component: {fileID: 3328123019469354258}
   - component: {fileID: 3441469674564054049}
   - component: {fileID: 2965633404063213194}
   - component: {fileID: 7830864167068225326}
   - component: {fileID: 7879688876603249433}
   - component: {fileID: 8970733849060499322}
+  - component: {fileID: 7998186198032328458}
   m_Layer: 7
   m_Name: Player_B
   m_TagString: Player2
@@ -414,21 +414,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b9eda5733b7ba74dada0853e4bde150, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3328123019469354258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8786166215055857030}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3573ab59c2f3cf4498e7c3e26a287269, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  accelerationFactor: 300
-  driftFactor: 0.95
-  turnFactor: 3.5
 --- !u!114 &3441469674564054049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5311,8 +5296,8 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3328123019469354258}
-        m_TargetAssemblyTypeName: Movement, Assembly-CSharp
+      - m_Target: {fileID: 7998186198032328458}
+        m_TargetAssemblyTypeName: Movement2, Assembly-CSharp
         m_MethodName: Moves
         m_Mode: 0
         m_Arguments:
@@ -5339,18 +5324,66 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7965508677034725919}
+        m_TargetAssemblyTypeName: Player2SecondGun, Assembly-CSharp
+        m_MethodName: Fire
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 1c1d0b61-496d-4dae-bea8-0d8575f81a88
     m_ActionName: Player/Fire[/Keyboard/numpad5,/XInputControllerWindows1/buttonWest,/XInputControllerWindows/buttonWest]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3441469674564054049}
+        m_TargetAssemblyTypeName: Cannon2, Assembly-CSharp
+        m_MethodName: Fire2
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: d73adfc6-80a5-49fa-8ff0-53c3c01126c0
     m_ActionName: Player/Fire2[/Keyboard/numpad2,/XInputControllerWindows1/buttonEast,/XInputControllerWindows/buttonEast]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 5872d4ef-3c81-4833-8914-4131f94708b0
     m_ActionName: Player/Pause[/Keyboard/escape,/XInputControllerWindows1/start,/XInputControllerWindows/start,/XInputControllerWindows1/select,/XInputControllerWindows/select]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: ca82a009-3528-4f69-abb2-20392b5ff93e
     m_ActionName: Player/PlayerInfo[/Keyboard/numpadEnter,/XInputControllerWindows1/buttonNorth,/XInputControllerWindows/buttonNorth]
   - m_PersistentCalls:
@@ -5410,3 +5443,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b9eda5733b7ba74dada0853e4bde150, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7998186198032328458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8786166215055857030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ba7738a16452a8408b30b52a1df77a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  accelerationFactor: 300
+  driftFactor: 0.95
+  turnFactor: 3.5

@@ -689,7 +689,7 @@ public class UIManager : MonoBehaviour
         audioPanel.SetActive(false);
         
 
-     //   Time.timeScale = 0;
+        Time.timeScale = 0;
         AudioListener.pause = true;
 
         // clear selected object

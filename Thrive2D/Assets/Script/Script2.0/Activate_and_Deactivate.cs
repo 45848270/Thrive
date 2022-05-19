@@ -5,16 +5,13 @@ using UnityEngine;
 public class Activate_and_Deactivate : MonoBehaviour
 {
     public static Activate_and_Deactivate instance;
-  //  public GameObject Object1;
-  //  public GameObject Object2;
-  //  public GameObject Object3;
-  //  public GameObject Object4;
+    public GameObject Object1;
+    public GameObject Object2;
+ 
     public Player1SecondGun script1;
     public Player2SecondGun script2;
     public Cannon1 script3;
     public Cannon2 script4;
-
- 
 
 
     private bool script1Activated = false; 
@@ -30,16 +27,27 @@ public class Activate_and_Deactivate : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Object1.SetActive(true);
+          if(Object1 == null)
+        {
+            Object1=GameObject.FindWithTag("Player1");
+        }
+         if(Object2 == null)
+        {
+            Object2=GameObject.FindWithTag("Player2");
+        }
+
+
+
+        Object1.SetActive(true);
         script1.enabled = false;
 
-       // Object2.SetActive(true);
+        Object2.SetActive(true);
         script2.enabled = false;
 
-       // Object3.SetActive(true);
+        Object1.SetActive(true);
         script3.enabled = false;
 
-       // Object4.SetActive(true);
+        Object2.SetActive(true);
         script4.enabled = false;
     }
 
@@ -48,22 +56,22 @@ public class Activate_and_Deactivate : MonoBehaviour
     {
         if (script1Activated)
         {
-           // Object1.SetActive(true);
+            Object1.SetActive(true);
             script1.enabled = true;
         }
         if (script2Activated)
         {
-          //  Object2.SetActive(true);
+            Object2.SetActive(true);
             script2.enabled = true;
         }
         if (script3Activated)
         {
-           // Object3.SetActive(true);
+            Object1.SetActive(true);
             script3.enabled = true;
         }
         if (script4Activated)
         {
-          //  Object4.SetActive(true);
+            Object2.SetActive(true);
             script4.enabled = true;
         }
     }

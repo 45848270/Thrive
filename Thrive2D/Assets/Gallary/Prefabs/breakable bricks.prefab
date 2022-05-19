@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3279498677210747155, guid: 7afe4fb2ce367eb4092b364571b9a757, type: 3}
       propertyPath: m_Name
-      value: breakable bricks Variant
+      value: breakable bricks
       objectReference: {fileID: 0}
     - target: {fileID: 3279498677210747159, guid: 7afe4fb2ce367eb4092b364571b9a757, type: 3}
       propertyPath: m_RootOrder

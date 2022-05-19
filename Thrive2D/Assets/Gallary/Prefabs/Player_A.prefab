@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 268857324}
   - component: {fileID: 268857322}
   - component: {fileID: 268857323}
+  - component: {fileID: 5607605740595347861}
   m_Layer: 6
   m_Name: Player_A
   m_TagString: Player1
@@ -5261,6 +5262,18 @@ MonoBehaviour:
   reloadTime: 2
   timeKeeper: 0
   CannonShootOnce: 0
+--- !u!114 &5607605740595347861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6290255593786137045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b9eda5733b7ba74dada0853e4bde150, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6313877504258536566
 GameObject:
   m_ObjectHideFlags: 0

@@ -60,10 +60,6 @@ public class PlayerInfo : MonoBehaviour
 
     void Start()
     {
-
-
-
-
         // CurrentHealthA = Health.instance.player1_health;
         // CurrentHealthB = Health.instance.player1_health;
 
@@ -87,17 +83,13 @@ public class PlayerInfo : MonoBehaviour
         PlayerBText5.SetActive(false);
 
 
-
+    // Player A info
         CurrentSpeedA = Movement.instance.accelerationFactor;
         CurrentDamageA = Health.instance.player1DamagePerContact;
         CurrentReloadA = Player1FirstGun.instance.reloadTime;
 
-
-        CurrentSpeedA = Movement.instance.accelerationFactor;
-        CurrentDamageA = Health.instance.player1DamagePerContact;
-        CurrentReloadA = Player1FirstGun.instance.reloadTime;
-
-
+     
+    // Player B info
         CurrentSpeedB = Movement2.instance.accelerationFactor;
         CurrentDamageB = Health.instance.player2DamagePerContact;
         CurrentReloadB = Player2FirstGun.instance.reloadTime;
@@ -110,7 +102,6 @@ public class PlayerInfo : MonoBehaviour
     void Update()
     {
 
-
         UpdatedSpeedA = Movement.instance.accelerationFactor;
         UpdatedDamageA = Health.instance.player1DamagePerContact;
         UpdatedReloadA = Player1FirstGun.instance.reloadTime;
@@ -119,8 +110,6 @@ public class PlayerInfo : MonoBehaviour
         UpdatedSpeedB = Movement2.instance.accelerationFactor;
         UpdatedDamageB = Health.instance.player2DamagePerContact;
         UpdatedReloadB = Player2FirstGun.instance.reloadTime;
-
-
 
 
         // UpdatedHealthA = Health.instance.player1_health;

@@ -72,7 +72,7 @@ public class Cannon1 : MonoBehaviour
         {
             if (context.performed && (CannonShootOnce == true))
             {
-                Debug.Log("shot");
+                
                 shoot();
                 CannonShootOnce = false;
                 // Update();

@@ -42,7 +42,7 @@ public class UIManager : MonoBehaviour
 
     // for UI buttons with gamepad
     public GameObject pauseFirstButton, optionFirstButton, optionClosedButton, audioFirstButton, audioClosedButton, controllerFirstButton, controllerClosedButton, keyboardFirstButton, keyboardClosedButton, gameoverFirstButton, gameoverClosedButton, chooseLevelFirstButton;
-    public GameObject menuPlayButton, menuAfterPlayButton, level1FirstDialogueButton;
+    public GameObject menuPlayButton, menuAfterPlayButton, level1FirstDialogueButton, level2FirstDialogueButton, level3FirstDialogueButton;
 
     //Scene orders:
     private int MainSceneOrder = 0;
@@ -81,8 +81,8 @@ public class UIManager : MonoBehaviour
     }
     public void ShowGuide()
     {
-        guideUI .SetActive(true);
-        dialoguePanel.SetActive(false );
+        guideUI.SetActive(true);
+        dialoguePanel.SetActive(false);
     }
     public void InitUI()
     {
@@ -134,11 +134,11 @@ public class UIManager : MonoBehaviour
             dialogueTextList.Add("As a space outlaw who provides shelter for the exiles, PlayerA, now you are about to get enough resources to provide a new beginning for hundreds of people, ");
             dialogueTextList.Add("they will no longer need to risk nuclear radiation to have a warm place to live--");
             dialogueTextList.Add("You only need to rob one last time");
-           // dialogueTextList.Add("Use the w a s d keys to pilot the ship, Space Key to shoot bullets and Shift to shoot Cannon at any target that gets in your way. Check your abilities by using Tab key.");
+            // dialogueTextList.Add("Use the w a s d keys to pilot the ship, Space Key to shoot bullets and Shift to shoot Cannon at any target that gets in your way. Check your abilities by using Tab key.");
             dialogueTextList.Add("As an interstellar police who has sworn to protect the new order, PlayerB, in the past six months, all people in a small town have been displaced because of the robbery.");
             dialogueTextList.Add("Now, you finally found the clue of the gang leader --");
             dialogueTextList.Add("It is time to end this chaos.");
-          //  dialogueTextList.Add("Use the arrow keys to pilot the ship, num pad 5 to shoot bullets and num pad 2 to shoot Cannon, making your target pays for his viciousness. View your abilities by using num pad Enter key.");
+            //  dialogueTextList.Add("Use the arrow keys to pilot the ship, num pad 5 to shoot bullets and num pad 2 to shoot Cannon, making your target pays for his viciousness. View your abilities by using num pad Enter key.");
             string tempDia = dialogueTextList[0];
             dialogueText.GetComponent<TMPro.TextMeshProUGUI>().text = tempDia;
             curDiaInx = 0;
@@ -183,21 +183,21 @@ public class UIManager : MonoBehaviour
         }
         dialoguePanel.gameObject.SetActive(true);
 
-         //clear selected object
+        //clear selected object
         EventSystem.current.SetSelectedGameObject(null);
         //set new selected object
         EventSystem.current.SetSelectedGameObject(menuAfterPlayButton);
     }
 
- public void Controls()
-    {        
-          if (menuPanel != null)
+    public void Controls()
+    {
+        if (menuPanel != null)
         {
             menuPanel.gameObject.SetActive(false);
         }
-         optionPanel.gameObject.SetActive(true);
+        optionPanel.gameObject.SetActive(true);
 
-         //clear selected object
+        //clear selected object
         EventSystem.current.SetSelectedGameObject(null);
         //set new selected object
         EventSystem.current.SetSelectedGameObject(optionFirstButton);
@@ -210,27 +210,27 @@ public class UIManager : MonoBehaviour
         {
             optionPanel.gameObject.SetActive(false);
         }
-                menuPanel.SetActive(true);
+        menuPanel.SetActive(true);
 
-         //clear selected object
+        //clear selected object
         EventSystem.current.SetSelectedGameObject(null);
         //set new selected object
         EventSystem.current.SetSelectedGameObject(optionClosedButton);
-        
-    }   
+
+    }
 
     public void Option()
-    {        
+    {
         optionPanel.SetActive(true);
         pausePanel.SetActive(false);
 
-         //clear selected object
+        //clear selected object
         EventSystem.current.SetSelectedGameObject(null);
         //set new selected object
         EventSystem.current.SetSelectedGameObject(optionFirstButton);
     }
 
-    
+
 
     public void CloseOption()
     {
@@ -239,165 +239,165 @@ public class UIManager : MonoBehaviour
         {
             optionPanel.gameObject.SetActive(false);
         }
-                pausePanel.SetActive(true);
+        pausePanel.SetActive(true);
 
-         //clear selected object
+        //clear selected object
         EventSystem.current.SetSelectedGameObject(null);
         //set new selected object
         EventSystem.current.SetSelectedGameObject(optionClosedButton);
-        
-    }   
+
+    }
 
     public void ControllerPanelOption()
     {
-        
+
         optionPanel.SetActive(false);
         controllerPanel.SetActive(true);
 
 
-         //clear selected object
+        //clear selected object
         EventSystem.current.SetSelectedGameObject(null);
         //set new selected object
         EventSystem.current.SetSelectedGameObject(controllerFirstButton);
-        
+
     }
 
-     public void ControllerPanelOptionBack()
+    public void ControllerPanelOptionBack()
     {
-        
+
         optionPanel.SetActive(true);
         controllerPanel.SetActive(false);
 
 
-         //clear selected object
+        //clear selected object
         EventSystem.current.SetSelectedGameObject(null);
         //set new selected object
         EventSystem.current.SetSelectedGameObject(controllerClosedButton);
-        
+
     }
 
-     public void KeyboardPanelOption()
+    public void KeyboardPanelOption()
     {
-        
+
         optionPanel.SetActive(false);
         keyboardPanel.SetActive(true);
 
 
-         //clear selected object
+        //clear selected object
         EventSystem.current.SetSelectedGameObject(null);
         //set new selected object
         EventSystem.current.SetSelectedGameObject(keyboardFirstButton);
-        
+
     }
 
-     public void KeyboardPanelOptionBack()
+    public void KeyboardPanelOptionBack()
     {
-        
+
         optionPanel.SetActive(true);
         keyboardPanel.SetActive(false);
 
 
-         //clear selected object
+        //clear selected object
         EventSystem.current.SetSelectedGameObject(null);
         //set new selected object
         EventSystem.current.SetSelectedGameObject(keyboardClosedButton);
-        
+
     }
 
-  public void AudioOption()
+    public void AudioOption()
     {
-        
+
         audioPanel.SetActive(true);
         optionPanel.SetActive(false);
         pausePanel.SetActive(false);
 
 
-         //clear selected object
+        //clear selected object
         EventSystem.current.SetSelectedGameObject(null);
         //set new selected object
         EventSystem.current.SetSelectedGameObject(audioFirstButton);
-        
+
     }
 
     public void AudioBackToOption()
     {
-        
+
         audioPanel.SetActive(false);
         optionPanel.SetActive(true);
-         //clear selected object
+        //clear selected object
         EventSystem.current.SetSelectedGameObject(null);
         //set new selected object
         EventSystem.current.SetSelectedGameObject(audioClosedButton);
-        
+
     }
 
-    public void TurnNextMain() 
+    public void TurnNextMain()
     //Main dialogue
     {
-         if (curDiaInx < dialogueTextList.Count - 1)
-                {
-                    curDiaInx++;
-                    dialogueText.GetComponent<TMPro.TextMeshProUGUI>().text = dialogueTextList[curDiaInx];
-                }
-                else
-                {
-                    IsMainDiaFinished = true;
-                    ChooseLevel();
-                }      
-    }              
+        if (curDiaInx < dialogueTextList.Count - 1)
+        {
+            curDiaInx++;
+            dialogueText.GetComponent<TMPro.TextMeshProUGUI>().text = dialogueTextList[curDiaInx];
+        }
+        else
+        {
+            IsMainDiaFinished = true;
+            ChooseLevel();
+        }
+    }
 
     public void TurnNextDiaOne()
     {
         if (SelectedLevelOne) //Main dia is finished
-            {               
+        {
 
-                    if (curLevOneDiaInx < levelOneDiagueTextList.Count - 1)
-                    {
-                        curLevOneDiaInx++;
-                        levelOneDiagueText.GetComponent<TMPro.TextMeshProUGUI>().text = levelOneDiagueTextList[curLevOneDiaInx];
-                    }
-                    else
-                    {
-                        LoadFirstLevel();
-                    }               
-                
+            if (curLevOneDiaInx < levelOneDiagueTextList.Count - 1)
+            {
+                curLevOneDiaInx++;
+                levelOneDiagueText.GetComponent<TMPro.TextMeshProUGUI>().text = levelOneDiagueTextList[curLevOneDiaInx];
             }
+            else
+            {
+                LoadFirstLevel();
+            }
+
+        }
     }
 
     public void TurnNextDia2()
     {
-         if (SelectedLevelTwo)
-            {
+        if (SelectedLevelTwo)
+        {
 
-                    if (curLevTwoDiaInx < levelTwoDiagueTextList.Count - 1)
-                    {
-                        curLevTwoDiaInx++;
-                        levelTwoDiagueText.GetComponent<TMPro.TextMeshProUGUI>().text = levelTwoDiagueTextList[curLevTwoDiaInx];
-                    }
-                    else
-                    {
-                        LoadSecondLevel();
-                    }
+            if (curLevTwoDiaInx < levelTwoDiagueTextList.Count - 1)
+            {
+                curLevTwoDiaInx++;
+                levelTwoDiagueText.GetComponent<TMPro.TextMeshProUGUI>().text = levelTwoDiagueTextList[curLevTwoDiaInx];
             }
+            else
+            {
+                LoadSecondLevel();
+            }
+        }
     }
 
     public void TurnNextDia3()
     {
-         if (SelectedLevelThree)
-                {
+        if (SelectedLevelThree)
+        {
 
-                    if (curLevThreeDiaInx < levelThreeDiagueTextList.Count - 1)
-                    {
-                        curLevThreeDiaInx++;
-                        levelThreeDiagueText.GetComponent<TMPro.TextMeshProUGUI>().text = levelThreeDiagueTextList[curLevThreeDiaInx];
-                    }
-                    else
-                    {
-                        LoadThirdLevel();
-                    }
-                }
+            if (curLevThreeDiaInx < levelThreeDiagueTextList.Count - 1)
+            {
+                curLevThreeDiaInx++;
+                levelThreeDiagueText.GetComponent<TMPro.TextMeshProUGUI>().text = levelThreeDiagueTextList[curLevThreeDiaInx];
+            }
+            else
+            {
+                LoadThirdLevel();
+            }
+        }
     }
- 
+
 
 
     public void TurnPages()
@@ -564,9 +564,9 @@ public class UIManager : MonoBehaviour
             ChooseLevel();
 
             //clear selected object
-        EventSystem.current.SetSelectedGameObject(null);
-        //set new selected object
-        EventSystem.current.SetSelectedGameObject(chooseLevelFirstButton);
+            EventSystem.current.SetSelectedGameObject(null);
+            //set new selected object
+            EventSystem.current.SetSelectedGameObject(chooseLevelFirstButton);
         }
         else if (SelectedLevelOne) //clicked skip button on level one dia
         {
@@ -599,7 +599,7 @@ public class UIManager : MonoBehaviour
         }
         levelPanel.gameObject.SetActive(true);
 
-        
+
         //clear selected object
         EventSystem.current.SetSelectedGameObject(null);
         //set new selected object
@@ -612,7 +612,7 @@ public class UIManager : MonoBehaviour
         levelOneDiaguePanel.gameObject.SetActive(true);
         levelPanel.gameObject.SetActive(false);
 
-        
+
         //clear selected object
         EventSystem.current.SetSelectedGameObject(null);
         //set new selected object
@@ -624,6 +624,11 @@ public class UIManager : MonoBehaviour
         SelectedLevelTwo = true;
         levelTwoDiaguePanel.gameObject.SetActive(true);
         levelPanel.gameObject.SetActive(false);
+
+         //clear selected object
+        EventSystem.current.SetSelectedGameObject(null);
+        //set new selected object
+        EventSystem.current.SetSelectedGameObject(level2FirstDialogueButton);
     }
 
     public void ChoosedLevelThree()
@@ -631,6 +636,11 @@ public class UIManager : MonoBehaviour
         SelectedLevelThree = true;
         levelThreeDiaguePanel.gameObject.SetActive(true);
         levelPanel.gameObject.SetActive(false);
+
+         //clear selected object
+        EventSystem.current.SetSelectedGameObject(null);
+        //set new selected object
+        EventSystem.current.SetSelectedGameObject(level3FirstDialogueButton);
     }
 
     public void LoadFirstLevel()
@@ -654,41 +664,15 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene(ThirdLevelOrder);
     }
 
- public void CallPauseButton()
+    public void CallPauseButton()
     {
         //active pause panel after pressing pause button        
-         
+
         if (pauseButton != null)
         {
             pauseButton.gameObject.SetActive(false);
         }
         pausePanel.gameObject.SetActive(true);
-        Time.timeScale = 0;
-        AudioListener.pause = true;       
-        
-        // clear selected object
-        EventSystem.current.SetSelectedGameObject(null);
-        //set new selected object
-        EventSystem.current.SetSelectedGameObject(pauseFirstButton);
-         
-    }
-
-    public void CallPause(InputAction.CallbackContext context)
-    {
-        //active pause panel after pressing pause button with gamepad
-         if (context.performed)
-         {
-        if (pauseButton != null)
-        {
-            pauseButton.gameObject.SetActive(false);
-        }        
-        pausePanel.gameObject.SetActive(true);
-        optionPanel.SetActive(false);
-        controllerPanel.SetActive(false);
-        keyboardPanel.SetActive(false);
-        audioPanel.SetActive(false);
-        
-
         Time.timeScale = 0;
         AudioListener.pause = true;
 
@@ -696,10 +680,36 @@ public class UIManager : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(null);
         //set new selected object
         EventSystem.current.SetSelectedGameObject(pauseFirstButton);
-         }
+
     }
 
-    
+    public void CallPause(InputAction.CallbackContext context)
+    {
+        //active pause panel after pressing pause button with gamepad
+        if (context.performed)
+        {
+            if (pauseButton != null)
+            {
+                pauseButton.gameObject.SetActive(false);
+            }
+            pausePanel.gameObject.SetActive(true);
+            optionPanel.SetActive(false);
+            controllerPanel.SetActive(false);
+            keyboardPanel.SetActive(false);
+            audioPanel.SetActive(false);
+
+
+            Time.timeScale = 0;
+            AudioListener.pause = true;
+
+            // clear selected object
+            EventSystem.current.SetSelectedGameObject(null);
+            //set new selected object
+            EventSystem.current.SetSelectedGameObject(pauseFirstButton);
+        }
+    }
+
+
     public void CallResume()
     {
         //disactive pause panel after clicking resume button on pause panel
@@ -718,7 +728,7 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 1;
         pausePanel.gameObject.SetActive(false);
         SceneManager.LoadScene(MainSceneOrder);
-         //clear selected object
+        //clear selected object
         EventSystem.current.SetSelectedGameObject(null);
         //set new selected object
         EventSystem.current.SetSelectedGameObject(menuPlayButton);
@@ -728,7 +738,7 @@ public class UIManager : MonoBehaviour
     {
         //back to menu scene for menu button
         SceneManager.LoadScene(MainSceneOrder);
-          EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(null);
         //set new selected object
         EventSystem.current.SetSelectedGameObject(menuPlayButton);
     }

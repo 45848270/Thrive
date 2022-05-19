@@ -15,7 +15,7 @@ public class SpawnWalls : MonoBehaviour
     public GameObject breakWallPrefab;
     public GameObject[] prefabs;
     public Transform[] spawnPosition;
-
+    public Transform pointsParent;
     public float timer = 0;
 
     public bool[] isFree;
@@ -32,7 +32,7 @@ public class SpawnWalls : MonoBehaviour
     {
         Max = spawnPosition.Length;
         val = numberOfBreakableWalls + numberOfUnbreakableWalls + numberOfDrops;
-
+        spawnPosition = pointsParent.GetComponentsInChildren<Transform>();
     }
 
     // Start is called before the first frame update
@@ -129,11 +129,11 @@ public class SpawnWalls : MonoBehaviour
 
         for (int j = 0; j < val; j++)
         {
-            Rand = Random.Range(0, Max + 1);
+            Rand = Random.Range(0, Max );
 
             while (list.Contains(Rand))
             {
-                Rand = Random.Range(0, Max + 1);
+                Rand = Random.Range(0, Max );
             }
 
             list[j] = Rand;

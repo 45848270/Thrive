@@ -21,7 +21,7 @@ public class cannonShot1 : MonoBehaviour
     {
         transform.Translate(Vector2.up * Time.deltaTime * speed);
     }
- 
+
     void OnTriggerEnter2D(Collider2D damageGivenToP2)
     {
         if (damageGivenToP2.gameObject.tag.Equals("Player1"))
@@ -39,4 +39,3 @@ public class cannonShot1 : MonoBehaviour
         }
     }
 }
- 

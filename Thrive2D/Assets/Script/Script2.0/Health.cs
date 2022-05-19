@@ -59,6 +59,7 @@ public class Health : MonoBehaviour
 
         audioSource = GetComponent<AudioSource>();
         audioSource.Play();
+        
 
         damage1 = Resources.Load<AudioClip>("damage1");
         damage2 = Resources.Load<AudioClip>("damage2");

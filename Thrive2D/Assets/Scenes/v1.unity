@@ -6979,8 +6979,159 @@ MonoBehaviour:
   - {fileID: 3389707781338253858, guid: 68384d245d707a44b95d3bb082b12111, type: 3}
   - {fileID: 3803602686419167764, guid: 7f258242ddff04f4ba3934cdd25f8a09, type: 3}
   - {fileID: 3536973800150184737, guid: ca7896782931f434f89a18cac6892b33, type: 3}
-  spawnPosition: []
-  pointsParent: {fileID: 2123568124}
+  spawnPosition:
+  - {fileID: 1688924157}
+  - {fileID: 1310444323}
+  - {fileID: 1316364410}
+  - {fileID: 1155176842}
+  - {fileID: 1500413628}
+  - {fileID: 236052379}
+  - {fileID: 1696462717}
+  - {fileID: 17012059}
+  - {fileID: 162254956}
+  - {fileID: 821781399}
+  - {fileID: 398354591}
+  - {fileID: 931652833}
+  - {fileID: 2013801535}
+  - {fileID: 1363069845}
+  - {fileID: 734100254}
+  - {fileID: 972998617}
+  - {fileID: 1766333168}
+  - {fileID: 1204271170}
+  - {fileID: 1167779581}
+  - {fileID: 1876420153}
+  - {fileID: 1966830414}
+  - {fileID: 525578632}
+  - {fileID: 607247045}
+  - {fileID: 1121650096}
+  - {fileID: 542727012}
+  - {fileID: 1311682292}
+  - {fileID: 1385892190}
+  - {fileID: 1542739424}
+  - {fileID: 683228758}
+  - {fileID: 402694477}
+  - {fileID: 1806453086}
+  - {fileID: 377272398}
+  - {fileID: 455435677}
+  - {fileID: 420305487}
+  - {fileID: 329111042}
+  - {fileID: 113337008}
+  - {fileID: 1331281510}
+  - {fileID: 1346065449}
+  - {fileID: 409056540}
+  - {fileID: 23298630}
+  - {fileID: 1997938311}
+  - {fileID: 1926159941}
+  - {fileID: 1040707514}
+  - {fileID: 571117873}
+  - {fileID: 793068313}
+  - {fileID: 639451919}
+  - {fileID: 1602773812}
+  - {fileID: 1210625350}
+  - {fileID: 1199166721}
+  - {fileID: 2098237340}
+  - {fileID: 141813892}
+  - {fileID: 1596591749}
+  - {fileID: 1011303259}
+  - {fileID: 815222308}
+  - {fileID: 764622839}
+  - {fileID: 627386157}
+  - {fileID: 1964345403}
+  - {fileID: 743243783}
+  - {fileID: 1546295949}
+  - {fileID: 501856550}
+  - {fileID: 2141504698}
+  - {fileID: 1852034698}
+  - {fileID: 2031555255}
+  - {fileID: 1971512742}
+  - {fileID: 1731090340}
+  - {fileID: 1436016960}
+  - {fileID: 775920303}
+  - {fileID: 1511155300}
+  - {fileID: 729106886}
+  - {fileID: 981671106}
+  - {fileID: 1847219218}
+  - {fileID: 252315726}
+  - {fileID: 1702790085}
+  - {fileID: 2010159705}
+  - {fileID: 109411677}
+  - {fileID: 788907470}
+  - {fileID: 1421700553}
+  - {fileID: 1925203832}
+  - {fileID: 1042702027}
+  - {fileID: 1122422718}
+  - {fileID: 1554707200}
+  - {fileID: 785140958}
+  - {fileID: 1519699231}
+  - {fileID: 624389284}
+  - {fileID: 652906453}
+  - {fileID: 1050232496}
+  - {fileID: 1113043323}
+  - {fileID: 307376516}
+  - {fileID: 579292558}
+  - {fileID: 978898243}
+  - {fileID: 1749751252}
+  - {fileID: 927326277}
+  - {fileID: 329339355}
+  - {fileID: 1411639744}
+  - {fileID: 1157847630}
+  - {fileID: 1704475418}
+  - {fileID: 167364503}
+  - {fileID: 191060553}
+  - {fileID: 1456398002}
+  - {fileID: 864805073}
+  - {fileID: 1807557799}
+  - {fileID: 1291984463}
+  - {fileID: 1667287065}
+  - {fileID: 2009741923}
+  - {fileID: 1643771565}
+  - {fileID: 1500471268}
+  - {fileID: 734236065}
+  - {fileID: 2022561029}
+  - {fileID: 1473113215}
+  - {fileID: 1788025267}
+  - {fileID: 109753088}
+  - {fileID: 1648993504}
+  - {fileID: 1627108102}
+  - {fileID: 1376243267}
+  - {fileID: 742989269}
+  - {fileID: 2087701503}
+  - {fileID: 1746324206}
+  - {fileID: 657541674}
+  - {fileID: 55949435}
+  - {fileID: 1656558559}
+  - {fileID: 462064735}
+  - {fileID: 663775756}
+  - {fileID: 1069274702}
+  - {fileID: 60774964}
+  - {fileID: 910253284}
+  - {fileID: 2130201610}
+  - {fileID: 318039012}
+  - {fileID: 1910092511}
+  - {fileID: 1901112787}
+  - {fileID: 340727274}
+  - {fileID: 1384528136}
+  - {fileID: 1195960383}
+  - {fileID: 268255459}
+  - {fileID: 1518571928}
+  - {fileID: 454716664}
+  - {fileID: 1604403525}
+  - {fileID: 41953598}
+  - {fileID: 1676946603}
+  - {fileID: 2109159695}
+  - {fileID: 2109159695}
+  - {fileID: 1957868790}
+  - {fileID: 556265302}
+  - {fileID: 2068976371}
+  - {fileID: 863815580}
+  - {fileID: 1086541185}
+  - {fileID: 278050500}
+  - {fileID: 1361288226}
+  - {fileID: 586823390}
+  - {fileID: 1358966826}
+  - {fileID: 1123049495}
+  - {fileID: 172965032}
+  - {fileID: 1273437634}
   timer: 0
   isFree: 
   list: 
@@ -7091,57 +7242,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 643249480}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1967074744
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1967074746}
-  - component: {fileID: 1967074745}
-  m_Layer: 0
-  m_Name: GameObject (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1967074745
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1967074744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50948af8cb0bc304e992cd42bd3857e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allItems:
-  - {fileID: 3389707781338253858, guid: 68384d245d707a44b95d3bb082b12111, type: 3}
-  - {fileID: 8598197964347583143, guid: ba337ab32229f2546bb090a960ad1451, type: 3}
-  - {fileID: 1701830804163013932, guid: 453b0b82749cfcb488a386563dd949d8, type: 3}
-  - {fileID: 6057043428403489328, guid: 5685a6c6716ced848beb9735d7800d41, type: 3}
-  - {fileID: 3803602686419167764, guid: 7f258242ddff04f4ba3934cdd25f8a09, type: 3}
-  - {fileID: 3536973800150184737, guid: ca7896782931f434f89a18cac6892b33, type: 3}
---- !u!4 &1967074746
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1967074744}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5490054, y: 0.8134834, z: -0.13989593}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1971394562 stripped
 GameObject:

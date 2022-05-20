@@ -6,7 +6,9 @@ using UnityEngine;
 /// </summary>
 public class Block : MonoBehaviour
 {
+    public GameObject followObj;
     public bool crash;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +34,8 @@ public class Block : MonoBehaviour
     /// </summary>
     public void OnHit()
     {
-        RandomItem.instance.RandomClone(transform .position );
+        if (followObj != null)
+            Instantiate(followObj, transform.position, Quaternion.identity);
         if (crash)
         {
             GetComponentInChildren<Animator>().SetTrigger("Crash");

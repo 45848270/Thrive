@@ -12,5 +12,8 @@ public class Item : MonoBehaviour
         Destroy(gameObject, revTime);
     }
 
- 
+    private void OnDestroy()
+    {
+        CreatePos.instance.RemoveVec(transform.parent);
+    }
 }

@@ -191,7 +191,7 @@ public class PlayerInfo : MonoBehaviour
         {
             PlayerBText3.SetActive(true);
         }
-        // if (UpdatedHealthB > CurrentHealthB)
+        // if (UpdatedHealthB > CurrentHealthB) 
         // {
         //     PlayerBText4.SetActive(true);
         // }

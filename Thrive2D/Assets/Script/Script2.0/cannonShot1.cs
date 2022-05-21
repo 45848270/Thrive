@@ -37,5 +37,6 @@ public class cannonShot1 : MonoBehaviour
         {
             Destroy(damageGivenToP2.gameObject);
         }
+       
     }
 }

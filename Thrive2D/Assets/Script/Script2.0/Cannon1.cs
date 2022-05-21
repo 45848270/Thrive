@@ -14,8 +14,7 @@ public class Cannon1 : MonoBehaviour
     public float reloadTime = 2f;
     public float timeKeeper;
     public static AudioClip cannonSound;
-    public bool CannonShootOnce = false;
-    public GameObject CannonShot;
+    public bool CannonShootOnce = false;    
     public PlayerAction controls;
 
 
@@ -43,21 +42,7 @@ public class Cannon1 : MonoBehaviour
     }
     // Update is called once per frame
     void Update()
-    {
-        // if (timeKeeper <= 0)
-        // {
-        //     if ((Input.GetKeyDown(KeyCode.LeftShift) || Input.GetMouseButton(1)  ) && CannonShootOnce == true)
-        //     {
-        //         shoot();
-        //         CannonShootOnce = false;
-        //         timeKeeper = reloadTime;
-        //     }
-        // }
-        // else
-        // {
-        //     timeKeeper -= Time.deltaTime;
-
-        // }
+    {       
 
     }
 
@@ -68,7 +53,6 @@ public class Cannon1 : MonoBehaviour
         audioSource.PlayOneShot(cannonSound);
         cannonEffect.Play();
         
-         Destroy(cannonShotPrefab1,2f);
     }
 
     public void Fire2(InputAction.CallbackContext context)

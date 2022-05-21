@@ -220,6 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4499c3645df40a2408e67542c0e5002c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  followObj: {fileID: 0}
   crash: 0
 --- !u!114 &100296045
 MonoBehaviour:
@@ -272,6 +273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4499c3645df40a2408e67542c0e5002c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  followObj: {fileID: 0}
   crash: 0
 --- !u!114 &269949491
 MonoBehaviour:
@@ -303,6 +305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4499c3645df40a2408e67542c0e5002c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  followObj: {fileID: 0}
   crash: 0
 --- !u!114 &279310654
 MonoBehaviour:
@@ -329,6 +332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4499c3645df40a2408e67542c0e5002c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  followObj: {fileID: 0}
   crash: 0
 --- !u!114 &285191436
 MonoBehaviour:
@@ -424,6 +428,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3778489882545664770, guid: c739a3ff92957114bab2393d57ed2ed5, type: 3}
+      propertyPath: bulletForce
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 3778489882545664771, guid: c739a3ff92957114bab2393d57ed2ed5, type: 3}
       propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -505,8 +513,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8944557870741210698, guid: c739a3ff92957114bab2393d57ed2ed5, type: 3}
+      propertyPath: turnFactor
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8944557870741210698, guid: c739a3ff92957114bab2393d57ed2ed5, type: 3}
       propertyPath: accelerationFactor
-      value: 50
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4562118492019595743, guid: c739a3ff92957114bab2393d57ed2ed5, type: 3}
@@ -771,6 +783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4499c3645df40a2408e67542c0e5002c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  followObj: {fileID: 0}
   crash: 0
 --- !u!114 &515799667
 MonoBehaviour:
@@ -815,6 +828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4499c3645df40a2408e67542c0e5002c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  followObj: {fileID: 0}
   crash: 0
 --- !u!1 &552028964 stripped
 GameObject:
@@ -908,6 +922,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4499c3645df40a2408e67542c0e5002c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  followObj: {fileID: 0}
   crash: 0
 --- !u!114 &601995151
 MonoBehaviour:
@@ -944,6 +959,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4499c3645df40a2408e67542c0e5002c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  followObj: {fileID: 0}
   crash: 0
 --- !u!114 &630693216
 MonoBehaviour:
@@ -970,6 +986,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4499c3645df40a2408e67542c0e5002c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  followObj: {fileID: 0}
   crash: 0
 --- !u!114 &634056023
 MonoBehaviour:
@@ -1432,6 +1449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4499c3645df40a2408e67542c0e5002c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  followObj: {fileID: 0}
   crash: 0
 --- !u!114 &976665133
 MonoBehaviour:
@@ -1458,6 +1476,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4499c3645df40a2408e67542c0e5002c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  followObj: {fileID: 0}
   crash: 0
 --- !u!114 &1008607992
 MonoBehaviour:
@@ -1494,6 +1513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4499c3645df40a2408e67542c0e5002c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  followObj: {fileID: 0}
   crash: 0
 --- !u!114 &1099270576
 MonoBehaviour:
@@ -1533,6 +1553,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4499c3645df40a2408e67542c0e5002c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  followObj: {fileID: 0}
   crash: 0
 --- !u!114 &1121058649
 MonoBehaviour:
@@ -1600,6 +1621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4499c3645df40a2408e67542c0e5002c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  followObj: {fileID: 0}
   crash: 0
 --- !u!114 &1281275238
 MonoBehaviour:
@@ -1707,7 +1729,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8097432257795145494, guid: 3d35313230e9fdb4491f1143042876d8, type: 3}
       propertyPath: accelerationFactor
-      value: 50
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8357237305014323973, guid: 3d35313230e9fdb4491f1143042876d8, type: 3}
       propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1834,6 +1856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4499c3645df40a2408e67542c0e5002c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  followObj: {fileID: 0}
   crash: 0
 --- !u!114 &1563971967
 MonoBehaviour:
@@ -1860,6 +1883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4499c3645df40a2408e67542c0e5002c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  followObj: {fileID: 0}
   crash: 0
 --- !u!114 &1573058514
 MonoBehaviour:
@@ -1904,6 +1928,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4499c3645df40a2408e67542c0e5002c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  followObj: {fileID: 0}
   crash: 0
 --- !u!1 &1611135269 stripped
 GameObject:
@@ -1948,6 +1973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4499c3645df40a2408e67542c0e5002c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  followObj: {fileID: 0}
   crash: 0
 --- !u!114 &1704351921
 MonoBehaviour:
@@ -2852,6 +2878,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4499c3645df40a2408e67542c0e5002c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  followObj: {fileID: 0}
   crash: 0
 --- !u!114 &1790534801
 MonoBehaviour:
@@ -4141,6 +4168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4499c3645df40a2408e67542c0e5002c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  followObj: {fileID: 0}
   crash: 0
 --- !u!114 &2005949180
 MonoBehaviour:
@@ -4167,6 +4195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4499c3645df40a2408e67542c0e5002c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  followObj: {fileID: 0}
   crash: 0
 --- !u!114 &2005949182
 MonoBehaviour:
@@ -4206,6 +4235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4499c3645df40a2408e67542c0e5002c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  followObj: {fileID: 0}
   crash: 0
 --- !u!114 &2080247721
 MonoBehaviour:
@@ -4219,6 +4249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4499c3645df40a2408e67542c0e5002c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  followObj: {fileID: 0}
   crash: 0
 --- !u!114 &2080247722
 MonoBehaviour:
@@ -4271,6 +4302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4499c3645df40a2408e67542c0e5002c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  followObj: {fileID: 0}
   crash: 0
 --- !u!114 &2112711375
 MonoBehaviour:

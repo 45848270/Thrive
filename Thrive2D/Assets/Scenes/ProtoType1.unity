@@ -10567,7 +10567,7 @@ MonoBehaviour:
   player2_regainHealth: 20
   player1_health: 0
   player2_health: 0
-  p1: {fileID: 1868229513}
+  p1: {fileID: 0}
   p2: {fileID: 1339303345}
   p1_Slidder_HealthValue: 0
   p2_Slidder_HealthValue: 0
@@ -12222,8 +12222,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1427312233}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0199, y: -0.0179, z: 0}
-  m_LocalScale: {x: 0.9298037, y: 0.92776144, z: 1}
+  m_LocalPosition: {x: 0.0191, y: -0.0179, z: 0}
+  m_LocalScale: {x: 0.98661757, y: 0.9277474, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3279498675841958730}

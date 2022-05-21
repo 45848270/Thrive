@@ -670,38 +670,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &231212756 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8786166215055857030, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
-  m_PrefabInstance: {fileID: 459526147}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &231212762 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3441469674564054049, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
-  m_PrefabInstance: {fileID: 459526147}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 231212756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4f9200e3897c814a90a28c6ff782549, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &231212764 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7965508677034725919, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
-  m_PrefabInstance: {fileID: 459526147}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 231212756}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9dd6a9bae6bb29429c7536675f98b3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &231212768 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2403367132759127101, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
-  m_PrefabInstance: {fileID: 459526147}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &236052378
 GameObject:
   m_ObjectHideFlags: 0
@@ -1439,6 +1407,10 @@ PrefabInstance:
     - target: {fileID: 7879688876603249433, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
       propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: TogglePlayerInfoB
+      objectReference: {fileID: 0}
+    - target: {fileID: 8753642854719118244, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8786166215055857030, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
       propertyPath: m_Name
@@ -3149,11 +3121,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Object1: {fileID: 1369755678}
-  Object2: {fileID: 231212756}
+  Object2: {fileID: 0}
   script1: {fileID: 1369755684}
-  script2: {fileID: 231212764}
-  script3: {fileID: 1369755682}
-  script4: {fileID: 231212762}
+  script2: {fileID: 0}
+  script3: {fileID: 0}
+  script4: {fileID: 0}
 --- !u!114 &1005426828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3201,7 +3173,7 @@ MonoBehaviour:
   player1_health: 0
   player2_health: 0
   p1: {fileID: 1369755678}
-  p2: {fileID: 231212756}
+  p2: {fileID: 0}
   p1_Slidder_HealthValue: 0
   p2_Slidder_HealthValue: 0
   player1_CurrentHealth: 0
@@ -4467,7 +4439,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -5171,17 +5143,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6290255593786137045, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
   m_PrefabInstance: {fileID: 504213906}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1369755682 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 268857323, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
-  m_PrefabInstance: {fileID: 504213906}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1369755678}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21b70208e1889a54b87837c4159bc776, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1369755684 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 742001683779687894, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
@@ -6969,7 +6930,7 @@ MonoBehaviour:
   reArrangeTime: 30
   camScript: {fileID: 670576907}
   p1Pos: {fileID: 1369755689}
-  p2Pos: {fileID: 231212768}
+  p2Pos: {fileID: 0}
   unBreakWallPrefab: {fileID: 4000023947270765366, guid: 0e44fec1c4931b84e947a2a7e4541187, type: 3}
   breakWallPrefab: {fileID: 4395474120463622539, guid: ffada6590dc70f843b1dd667bcf8aaee, type: 3}
   prefabs:

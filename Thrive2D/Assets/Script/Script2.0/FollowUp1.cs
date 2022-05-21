@@ -32,7 +32,7 @@ public class FollowUp1 : MonoBehaviour
         movement=direction;
 
          Destroy(gameObject,2f);
-    }
+    } 
     void FixedUpdate() 
     {
     moveCharacter(movement);

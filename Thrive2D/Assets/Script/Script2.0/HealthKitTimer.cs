@@ -9,6 +9,7 @@ public class HealthKitTimer : Item
 
     void OnTriggerEnter2D(Collider2D health)
     {
+        Debug.Log(health.tag);
          if (health.gameObject.tag.Equals("player1Bullet"))                                            //condition if it comes in contact with enemy
         {
             Destroy(health.gameObject);

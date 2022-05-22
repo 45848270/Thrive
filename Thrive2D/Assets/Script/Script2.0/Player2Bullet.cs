@@ -9,7 +9,7 @@ public class Player2Bullet : MonoBehaviour
     void Start()
     {
 
-        Destroy(gameObject, 3f);
+       // Destroy(gameObject, 3f);
     }
 
     // Update is called once per frame
@@ -20,6 +20,7 @@ public class Player2Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D damageGivenToP1)
     {
+        Debug.Log(damageGivenToP1.tag);
         if (damageGivenToP1.gameObject.tag.Equals("Player2"))
             return;
         Destroy(gameObject);

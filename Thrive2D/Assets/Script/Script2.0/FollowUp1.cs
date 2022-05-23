@@ -5,7 +5,7 @@ using UnityEngine;
 public class FollowUp1 : MonoBehaviour
 {
     public GameObject player;
-    public float moveSpeed=20;
+    public float moveSpeed = 20;
     public ParticleSystem ps;
     private Rigidbody2D rb;
     private Vector2 movement;
@@ -13,41 +13,41 @@ public class FollowUp1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb=this.GetComponent<Rigidbody2D>();  
-          if(player == null)
+        rb = this.GetComponent<Rigidbody2D>();
+        if (player == null)
         {
-            player=GameObject.FindWithTag("Player1");
-        }  
+            player = GameObject.FindWithTag("Player1");
+        }
         ps.Play();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 direction =player.transform.position-transform.position;
-        float angle =Mathf.Atan2(direction.y,direction.x)*Mathf.Rad2Deg;
+        Vector3 direction = player.transform.position - transform.position;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        rb.rotation=angle;
+        rb.rotation = angle;
         direction.Normalize();
-        movement=direction;
+        movement = direction;
 
-         Destroy(gameObject,2f);
-    } 
-    void FixedUpdate() 
+        Destroy(gameObject, 1f);
+    }
+    void FixedUpdate()
     {
-    moveCharacter(movement);
-    //ps.Play();   
+        moveCharacter(movement);
+        //ps.Play();   
     }
     void moveCharacter(Vector2 direction)
     {
-        rb.MovePosition((Vector2)transform.position +(direction*moveSpeed*Time.deltaTime));
+        rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
     }
     void OnTriggerEnter2D(Collider2D collide)
     {
         if (collide.gameObject.tag.Equals("Player1"))
         {
             ps.Stop();
-           Destroy(gameObject); 
+            Destroy(gameObject);
         }
     }
 }

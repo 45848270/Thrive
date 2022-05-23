@@ -514,7 +514,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8944557870741210698, guid: c739a3ff92957114bab2393d57ed2ed5, type: 3}
       propertyPath: accelerationFactor
-      value: 60
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4562118492019595743, guid: c739a3ff92957114bab2393d57ed2ed5, type: 3}
@@ -1850,7 +1850,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8097432257795145494, guid: 3d35313230e9fdb4491f1143042876d8, type: 3}
       propertyPath: accelerationFactor
-      value: 60
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 8357237305014323973, guid: 3d35313230e9fdb4491f1143042876d8, type: 3}
       propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Target

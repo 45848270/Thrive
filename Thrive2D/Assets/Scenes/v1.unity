@@ -595,7 +595,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7998186198032328458, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
       propertyPath: accelerationFactor
-      value: 60
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 8786166215055857030, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
       propertyPath: m_Name
@@ -1559,7 +1559,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5210268366118886051, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
       propertyPath: accelerationFactor
-      value: 60
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6290255593786137045, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
       propertyPath: m_Name

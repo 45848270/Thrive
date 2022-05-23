@@ -222,8 +222,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initialPos: {fileID: 3083623964986268023}
   bulletPrefab: {fileID: 6883185369413308729, guid: 2337fbd222b66a34cb29c108a378c6da, type: 3}
-  bulletForce: 4000
-  reloadTime: 5
+  bulletForce: 20
+  reloadTime: 2
   timeKeeper: 0
 --- !u!114 &5210268366118886051
 MonoBehaviour:
@@ -255,7 +255,7 @@ MonoBehaviour:
   initialPos: {fileID: 3985000881189965391}
   bulletPrefab: {fileID: 6883185369413308729, guid: 2337fbd222b66a34cb29c108a378c6da, type: 3}
   bulletForce: 20
-  reloadTime: 5
+  reloadTime: 2
   dualGunOn: 0
   timeKeeper: 0
 --- !u!114 &268857322

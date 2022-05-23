@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 441545604076935076}
   - component: {fileID: 3549396405620484318}
   - component: {fileID: 4083705603465200588}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: dual gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}

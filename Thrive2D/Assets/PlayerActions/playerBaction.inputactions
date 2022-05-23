@@ -219,6 +219,17 @@
                 },
                 {
                     "name": "",
+                    "id": "708fa247-c4b1-428e-93c8-dcc6587f8e38",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "9a816826-87fb-4aee-b6fa-ae26ee9ff502",
                     "path": "<Keyboard>/numpadEnter",
                     "interactions": "",

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5120176467062425842}
   - component: {fileID: 7325375492630566358}
   - component: {fileID: 5156509896232456181}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: shift shooting
   m_TagString: Untagged
   m_Icon: {fileID: 0}

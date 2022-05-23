@@ -1266,7 +1266,7 @@ PrefabInstance:
       objectReference: {fileID: 1312713491}
     - target: {fileID: 742001683779687894, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
       propertyPath: reloadTime
-      value: 3.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2287024955499315617, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
       propertyPath: m_RootOrder
@@ -1323,6 +1323,10 @@ PrefabInstance:
     - target: {fileID: 5210268366118886051, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
       propertyPath: turnFactor
       value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5210268366118886051, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
+      propertyPath: accelerationFactor
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 6290255593786137045, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
       propertyPath: m_Name
@@ -3123,7 +3127,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &537642885
 MonoBehaviour:
@@ -9930,7 +9934,7 @@ MonoBehaviour:
   player2_regainHealth: 20
   player1_health: 0
   player2_health: 0
-  p1: {fileID: 0}
+  p1: {fileID: 173736075}
   p2: {fileID: 1339303345}
   p1_Slidder_HealthValue: 0
   p2_Slidder_HealthValue: 0
@@ -10332,7 +10336,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2403367132759127101, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2403367132759127101, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10382,6 +10386,10 @@ PrefabInstance:
       propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1312713491}
+    - target: {fileID: 7998186198032328458, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
+      propertyPath: accelerationFactor
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 8786166215055857030, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
       propertyPath: m_Name
       value: Player_B

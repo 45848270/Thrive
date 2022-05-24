@@ -45,6 +45,7 @@ public class PlayerInfo : MonoBehaviour
     public GameObject PlayerBText4;
     public GameObject PlayerBText5;
 
+ 
 
 
 

@@ -10,20 +10,22 @@ public class SpeedIcon : Item
 
     void OnTriggerEnter2D(Collider2D SpeedIncrease)
     {
-        
-         if (SpeedIncrease.gameObject.tag.Equals("player1Bullet"))                                            //condition if it comes in contact with enemy
+
+        if (SpeedIncrease.gameObject.tag.Equals("player1Bullet"))                                            //condition if it comes in contact with enemy
         {
+            SpeedA.incrementSpeedA += 1;
             Destroy(SpeedIncrease.gameObject);
-            Instantiate(psRed,transform.position,Quaternion.identity);
+            Instantiate(psRed, transform.position, Quaternion.identity);
             Destroy(gameObject);
-            Movement.instance.Increase_P1_Speed();                                                                   
+            Movement.instance.Increase_P1_Speed();
         }
         if (SpeedIncrease.gameObject.tag.Equals("player2Bullet"))                                            //condition if it comes in contact with enemy
         {
+            SpeedB.incrementSpeedB += 1;
             Destroy(SpeedIncrease.gameObject);
-            Instantiate(psBlue,transform.position,Quaternion.identity);
+            Instantiate(psBlue, transform.position, Quaternion.identity);
             Destroy(gameObject);
-            Movement2.instance.Increase_P2_Speed();                                                                   
+            Movement2.instance.Increase_P2_Speed();
         }
     }
 }

@@ -46,57 +46,45 @@ public class SpawnWalls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (decreseTime < 55)
+        if (timer <= 0)
         {
-            if (timer <= 0)
+            AssignBoolValue();
+            CheckPlayerPos();
+            CreateRandomvalues();
+            FillUnBreakableWAlls();
+            //FillDropItems();
+            FillBreakableWAlls();
+            //StartCoroutine(camScript.Shake(.5f,1.9f)); 
+
+            timer = reArrangeTime;
+        }
+        if (decreseTime < 85)
+        {
+            if (once)
             {
+                numberOfUnbreakableWalls = 2;
+                numberOfBreakableWalls = 10;
+                numberOfDrops = prefabs.Length;
                 AssignBoolValue();
                 CheckPlayerPos();
                 CreateRandomvalues();
                 FillUnBreakableWAlls();
-                //FillDropItems();
+                FillDropItemsAllOnce();
                 FillBreakableWAlls();
-                //StartCoroutine(camScript.Shake(.5f,1.9f)); 
 
-                timer = reArrangeTime;
+                once = false;
             }
-
-        }
-        else
+        }else
         {
-            if (decreseTime < 85)
+            if (onceMore)
             {
-                if (once)
-                {
-                    numberOfUnbreakableWalls = 2;
-                    numberOfBreakableWalls = 10;
-                    numberOfDrops = prefabs.Length;
-                    AssignBoolValue();
-                    CheckPlayerPos();
-                    CreateRandomvalues();
-                    FillUnBreakableWAlls();
-                    FillDropItemsAllOnce();
-                    FillBreakableWAlls();
+                Instantiate(breakWallPrefab, new Vector2(-2, 0), Quaternion.identity);
+                Instantiate(unBreakWallPrefab, new Vector2(-2, 1), Quaternion.identity);
 
-                    once = false;
-                }
-            }
-            else
-            {
-                if (decreseTime > 85)
-                {
-                    if (onceMore)
-                    {
-                        Instantiate(breakWallPrefab, new Vector2(-2, 0), Quaternion.identity);
-                        Instantiate(unBreakWallPrefab, new Vector2(-2, 1), Quaternion.identity);
+                Instantiate(breakWallPrefab, new Vector2(2, 0), Quaternion.identity);
+                Instantiate(unBreakWallPrefab, new Vector2(2, -1), Quaternion.identity);
 
-                        Instantiate(breakWallPrefab, new Vector2(2, 0), Quaternion.identity);
-                        Instantiate(unBreakWallPrefab, new Vector2(2, -1), Quaternion.identity);
-
-                        onceMore = false;
-                    }
-
-                }
+                onceMore = false;
             }
         }
 
@@ -129,11 +117,11 @@ public class SpawnWalls : MonoBehaviour
 
         for (int j = 0; j < val; j++)
         {
-            Rand = Random.Range(0, Max + 1);
+            Rand = Random.Range(0, Max);
 
             while (list.Contains(Rand))
             {
-                Rand = Random.Range(0, Max + 1);
+                Rand = Random.Range(0, Max );
             }
 
             list[j] = Rand;

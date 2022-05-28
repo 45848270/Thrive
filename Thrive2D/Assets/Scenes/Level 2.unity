@@ -491,6 +491,10 @@ PrefabInstance:
       propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 5225472378972965542, guid: c739a3ff92957114bab2393d57ed2ed5, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 7144009343955207484, guid: c739a3ff92957114bab2393d57ed2ed5, type: 3}
       propertyPath: m_Name
       value: Player_A Variant
@@ -1800,6 +1804,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3558431031564858429, guid: 3d35313230e9fdb4491f1143042876d8, type: 3}
+      propertyPath: bulletForce
+      value: 4000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3979038601470880291, guid: 3d35313230e9fdb4491f1143042876d8, type: 3}
+      propertyPath: bulletForce
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 4610245557254482977, guid: 3d35313230e9fdb4491f1143042876d8, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1844,9 +1856,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5822542164127166832, guid: 3d35313230e9fdb4491f1143042876d8, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 7443926657904954778, guid: 3d35313230e9fdb4491f1143042876d8, type: 3}
       propertyPath: m_Name
       value: Player_B Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8082751543104719363, guid: 3d35313230e9fdb4491f1143042876d8, type: 3}
+      propertyPath: bulletForce
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 8097432257795145494, guid: 3d35313230e9fdb4491f1143042876d8, type: 3}
       propertyPath: accelerationFactor

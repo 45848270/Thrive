@@ -6888,15 +6888,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d9f802c395546342a232e877ee530d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfUnbreakableWalls: 9
+  numberOfUnbreakableWalls: 10
   numberOfBreakableWalls: 15
   numberOfDrops: 15
   reArrangeTime: 30
+  fullRoundNum: 3
   camScript: {fileID: 670576907}
   p1Pos: {fileID: 1369755689}
   p2Pos: {fileID: 2100056749}
   unBreakWallPrefab: {fileID: 4000023947270765366, guid: 0e44fec1c4931b84e947a2a7e4541187, type: 3}
-  breakWallPrefab: {fileID: 3963152551545354560, guid: 19d4aa2990e161d49a41d5c13bf18491, type: 3}
+  breakWallPrefab: {fileID: 4395474120463622539, guid: ffada6590dc70f843b1dd667bcf8aaee, type: 3}
   prefabs:
   - {fileID: 1701830804163013932, guid: 453b0b82749cfcb488a386563dd949d8, type: 3}
   - {fileID: 6057043428403489328, guid: 5685a6c6716ced848beb9735d7800d41, type: 3}

@@ -8,7 +8,7 @@ public class Movement2 : MonoBehaviour
 {
     public static Movement2 instance;
     // public float accelerationFactor = 30.0f;
-    public float accelerationFactor = 300.0f;
+    public float accelerationFactor = 50.0f;
     public float driftFactor = 0.95f;
     public float turnFactor = 3.5f;
 
@@ -54,6 +54,10 @@ public class Movement2 : MonoBehaviour
     }
     void ApplyEngineForce()
     {
+        if (accelerationFactor>=400)
+        {
+            accelerationFactor=400;
+        }
         Vector2 engineForceVector = transform.up * accelerationInput * accelerationFactor;
 
         playerRigidbody2D.AddForce(engineForceVector, ForceMode2D.Force);
@@ -75,6 +79,6 @@ public class Movement2 : MonoBehaviour
 
     public void Increase_P2_Speed()
     {
-        accelerationFactor *= 2;
+        accelerationFactor += 30;
     }
 }

@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class Movement : MonoBehaviour
 {
     public static Movement instance;
-    public float accelerationFactor = 300.0f;
+    public float accelerationFactor = 50.0f;
     public float driftFactor = 0.95f;
     public float turnFactor = 3.5f;
 
@@ -58,6 +58,10 @@ public class Movement : MonoBehaviour
     }
     public void ApplyEngineForce()
     {
+        if (accelerationFactor>=400)
+        {
+            accelerationFactor=400;
+        }
         Vector2 engineForceVector = transform.up * accelerationInput * accelerationFactor;
 
         playerRigidbody2D.AddForce(engineForceVector, ForceMode2D.Force);
@@ -79,6 +83,6 @@ public class Movement : MonoBehaviour
 
     public void Increase_P1_Speed()
     {
-        accelerationFactor *= 2;
+        accelerationFactor += 30;
     }
 }

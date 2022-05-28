@@ -8,6 +8,7 @@ public class SpawnWalls : MonoBehaviour
     public int numberOfBreakableWalls = 20;
     public int numberOfDrops = 20;
     public float reArrangeTime = 30;
+    public int fullRoundNum=3;
     public CameraScript camScript;
     public Transform p1Pos;
     public Transform p2Pos;
@@ -45,8 +46,8 @@ public class SpawnWalls : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        if (decreseTime < 55)
+    {   
+        if (decreseTime <= (fullRoundNum*reArrangeTime-0.5f))
         {
             if (timer <= 0)
             {
@@ -54,17 +55,17 @@ public class SpawnWalls : MonoBehaviour
                 CheckPlayerPos();
                 CreateRandomvalues();
                 FillUnBreakableWAlls();
-                //FillDropItems();
+                FillDropItems();
                 FillBreakableWAlls();
                 //StartCoroutine(camScript.Shake(.5f,1.9f)); 
 
                 timer = reArrangeTime;
             }
-
         }
-        else
+
+        if (decreseTime > (fullRoundNum*reArrangeTime-0.5f))
         {
-            if (decreseTime < 85)
+            if (timer <= 0)
             {
                 if (once)
                 {
@@ -79,11 +80,10 @@ public class SpawnWalls : MonoBehaviour
                     FillBreakableWAlls();
 
                     once = false;
+                    timer=reArrangeTime;
+                    
                 }
-            }
-            else
-            {
-                if (decreseTime > 85)
+                else
                 {
                     if (onceMore)
                     {
@@ -95,11 +95,9 @@ public class SpawnWalls : MonoBehaviour
 
                         onceMore = false;
                     }
-
-                }
+                } 
             }
         }
-
 
 
         timer -= Time.deltaTime;
@@ -129,11 +127,11 @@ public class SpawnWalls : MonoBehaviour
 
         for (int j = 0; j < val; j++)
         {
-            Rand = Random.Range(0, Max + 1);
+            Rand = Random.Range(0, Max);
 
             while (list.Contains(Rand))
             {
-                Rand = Random.Range(0, Max + 1);
+                Rand = Random.Range(0, Max );
             }
 
             list[j] = Rand;

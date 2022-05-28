@@ -21,15 +21,21 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "CheckPoint") return;
-        Destroy(gameObject);
+        if (collision.tag == "CheckPoint"||collision.tag == "Block") return;
+     
         Debug .Log (collision .tag );
-        if(collision .tag == "Player")
+        if(collision .tag =="Player1")
         {
-            collision.GetComponent<PlayerBase>().OnHurt(damage);
-        }else if(collision.tag == "Block")
+            Destroy(gameObject);
+            Health.instance.Player1MaxHealth(damage);
+        }else if(collision.tag == "Player2")
         {
-            collision.GetComponent<Block>().OnHit();
+            Destroy(gameObject);
+            Health.instance.Player2MaxHealth(damage);
         }
+        //else if(collision.tag == "Block")
+        //{
+        //    collision.GetComponent<Block>().OnHit();
+        //}
     }
 }

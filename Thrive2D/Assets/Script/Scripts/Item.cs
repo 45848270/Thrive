@@ -9,7 +9,8 @@ public class Item : MonoBehaviour
 
     private void Start()
     {
-        Destroy(gameObject, revTime);
+        if (revTime > 0)
+            Destroy(gameObject, revTime);
     }
 
 }

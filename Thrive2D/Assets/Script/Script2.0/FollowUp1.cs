@@ -31,7 +31,7 @@ public class FollowUp1 : MonoBehaviour
         direction.Normalize();
         movement = direction;
 
-        Destroy(gameObject, 1f);
+        Destroy(gameObject, 0.5f);
     }
     void FixedUpdate()
     {

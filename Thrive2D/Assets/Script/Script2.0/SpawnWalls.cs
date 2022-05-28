@@ -8,6 +8,7 @@ public class SpawnWalls : MonoBehaviour
     public int numberOfBreakableWalls = 20;
     public int numberOfDrops = 20;
     public float reArrangeTime = 30;
+    public int fullRoundNum=3;
     public CameraScript camScript;
     public Transform p1Pos;
     public Transform p2Pos;
@@ -45,49 +46,58 @@ public class SpawnWalls : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        if (timer <= 0)
+    {   
+        if (decreseTime <= (fullRoundNum*reArrangeTime-0.5f))
         {
-            AssignBoolValue();
-            CheckPlayerPos();
-            CreateRandomvalues();
-            FillUnBreakableWAlls();
-            //FillDropItems();
-            FillBreakableWAlls();
-            //StartCoroutine(camScript.Shake(.5f,1.9f)); 
-
-            timer = reArrangeTime;
-        }
-        if (decreseTime < 85)
-        {
-            if (once)
+            if (timer <= 0)
             {
-                numberOfUnbreakableWalls = 2;
-                numberOfBreakableWalls = 10;
-                numberOfDrops = prefabs.Length;
                 AssignBoolValue();
                 CheckPlayerPos();
                 CreateRandomvalues();
                 FillUnBreakableWAlls();
-                FillDropItemsAllOnce();
+                FillDropItems();
                 FillBreakableWAlls();
+                //StartCoroutine(camScript.Shake(.5f,1.9f)); 
 
-                once = false;
-            }
-        }else
-        {
-            if (onceMore)
-            {
-                Instantiate(breakWallPrefab, new Vector2(-2, 0), Quaternion.identity);
-                Instantiate(unBreakWallPrefab, new Vector2(-2, 1), Quaternion.identity);
-
-                Instantiate(breakWallPrefab, new Vector2(2, 0), Quaternion.identity);
-                Instantiate(unBreakWallPrefab, new Vector2(2, -1), Quaternion.identity);
-
-                onceMore = false;
+                timer = reArrangeTime;
             }
         }
 
+        if (decreseTime > (fullRoundNum*reArrangeTime-0.5f))
+        {
+            if (timer <= 0)
+            {
+                if (once)
+                {
+                    numberOfUnbreakableWalls = 2;
+                    numberOfBreakableWalls = 10;
+                    numberOfDrops = prefabs.Length;
+                    AssignBoolValue();
+                    CheckPlayerPos();
+                    CreateRandomvalues();
+                    FillUnBreakableWAlls();
+                    FillDropItemsAllOnce();
+                    FillBreakableWAlls();
+
+                    once = false;
+                    timer=reArrangeTime;
+                    
+                }
+                else
+                {
+                    if (onceMore)
+                    {
+                        Instantiate(breakWallPrefab, new Vector2(-2, 0), Quaternion.identity);
+                        Instantiate(unBreakWallPrefab, new Vector2(-2, 1), Quaternion.identity);
+
+                        Instantiate(breakWallPrefab, new Vector2(2, 0), Quaternion.identity);
+                        Instantiate(unBreakWallPrefab, new Vector2(2, -1), Quaternion.identity);
+
+                        onceMore = false;
+                    }
+                } 
+            }
+        }
 
 
         timer -= Time.deltaTime;

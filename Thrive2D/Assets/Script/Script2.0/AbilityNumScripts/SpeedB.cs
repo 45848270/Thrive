@@ -8,7 +8,7 @@ public class SpeedB : MonoBehaviour
 {
     public static int incrementSpeedB = 0;
     public TextMeshProUGUI SpeedNumB;
-    // Start is called before the fist frame update
+    // Start is called before the first frame update
     void Start()
     {
         SpeedNumB = GetComponent<TextMeshProUGUI>();

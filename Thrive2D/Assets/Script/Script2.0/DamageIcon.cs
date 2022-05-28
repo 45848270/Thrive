@@ -7,7 +7,7 @@ public class DamageIcon : Item
     public GameObject psRed;
     public GameObject psBlue;
     // Update is called once per frame
-    void Update() 
+    void Update()
     {
     }
 

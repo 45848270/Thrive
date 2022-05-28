@@ -601,7 +601,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player_B (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8970733849060499322, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
 --- !u!1 &165436092 stripped
 GameObject:
@@ -1594,7 +1595,7 @@ MonoBehaviour:
   pausePanel: {fileID: 1244093755}
   optionPanel: {fileID: 1067080861}
   audioPanel: {fileID: 1067080860}
-  controllerPanel: {fileID: 1067080859}
+  controllerPanel: {fileID: 0}
   keyboardPanel: {fileID: 1067080858}
   GameOverPanel: {fileID: 1209374717}
   levelOneDiaguePanel: {fileID: 0}
@@ -1613,7 +1614,7 @@ MonoBehaviour:
   optionClosedButton: {fileID: 1067080870}
   audioFirstButton: {fileID: 1067080864}
   audioClosedButton: {fileID: 1067080867}
-  controllerFirstButton: {fileID: 1067080863}
+  controllerFirstButton: {fileID: 0}
   controllerClosedButton: {fileID: 1067080866}
   keyboardFirstButton: {fileID: 1067080862}
   keyboardClosedButton: {fileID: 1067080865}
@@ -4114,16 +4115,15 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ControllerPanelOptionBack
       objectReference: {fileID: 0}
+    - target: {fileID: 2610066034253031094, guid: 7ef22aac947abb7428a87ec03656c2de, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ef22aac947abb7428a87ec03656c2de, type: 3}
 --- !u!1 &1067080858 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 952364114353009018, guid: 7ef22aac947abb7428a87ec03656c2de, type: 3}
-  m_PrefabInstance: {fileID: 1067080857}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1067080859 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 952364113720694160, guid: 7ef22aac947abb7428a87ec03656c2de, type: 3}
   m_PrefabInstance: {fileID: 1067080857}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1067080860 stripped
@@ -4139,11 +4139,6 @@ GameObject:
 --- !u!1 &1067080862 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 952364115077917356, guid: 7ef22aac947abb7428a87ec03656c2de, type: 3}
-  m_PrefabInstance: {fileID: 1067080857}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1067080863 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 952364115287019611, guid: 7ef22aac947abb7428a87ec03656c2de, type: 3}
   m_PrefabInstance: {fileID: 1067080857}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1067080864 stripped

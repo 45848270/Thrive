@@ -17,7 +17,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 742001683779687894, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
       propertyPath: bulletForce
-      value: 110
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 1131165461103806718, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
       propertyPath: m_SortingLayer
@@ -101,7 +101,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3739635608207784946, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
       propertyPath: bulletForce
-      value: 100
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 3739635608207784946, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
       propertyPath: move.m_Name

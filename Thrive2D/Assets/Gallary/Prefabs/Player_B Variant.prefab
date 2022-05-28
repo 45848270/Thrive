@@ -255,6 +255,10 @@ PrefabInstance:
       propertyPath: m_ActionEvents.Array.data[12].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2997421266361659967, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
+      propertyPath: bulletForce
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 4669500110019384955, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -286,6 +290,14 @@ PrefabInstance:
     - target: {fileID: 7879688876603249433, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
       propertyPath: m_DefaultControlScheme
       value: Gamepad
+      objectReference: {fileID: 0}
+    - target: {fileID: 7965508677034725919, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
+      propertyPath: bulletForce
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7998186198032328458, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
+      propertyPath: accelerationFactor
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 8753642854719118244, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
       propertyPath: m_RootOrder

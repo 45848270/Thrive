@@ -124,6 +124,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 105b861aa00ef7f499d64461de7b0c4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  revTime: 30
+  revTime: 10
   psRed: {fileID: 8139752266180817115, guid: bde564fc7b6b9c94b9f5de2b295b57ee, type: 3}
   psBlue: {fileID: 4414914990882015947, guid: 51c338ace9b490b48858500a6986c3e4, type: 3}

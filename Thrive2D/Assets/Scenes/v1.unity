@@ -4125,6 +4125,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ControllerPanelOptionBack
       objectReference: {fileID: 0}
+    - target: {fileID: 1864233696725903158, guid: 7ef22aac947abb7428a87ec03656c2de, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2055139312531576155, guid: 7ef22aac947abb7428a87ec03656c2de, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

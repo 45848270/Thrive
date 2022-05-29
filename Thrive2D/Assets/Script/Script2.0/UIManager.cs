@@ -70,6 +70,7 @@ public class UIManager : MonoBehaviour
         //set new selected object
         EventSystem.current.SetSelectedGameObject(menuPlayButton);
 
+
     }
 
     void Update()
@@ -717,10 +718,14 @@ public class UIManager : MonoBehaviour
         {
             pauseButton.gameObject.SetActive(true);
         }
-        pausePanel.gameObject.SetActive(false);
-        Time.timeScale = 1;
-        AudioListener.pause = false;
+        pausePanel.gameObject.SetActive(false);    
+         Time.timeScale = 1;
+        AudioListener.pause = false;                 	
+
     }
+
+  
+
 
     public void CallBackToMain()
     {

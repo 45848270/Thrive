@@ -61,13 +61,13 @@ public class Health : MonoBehaviour
         audioSource.Play();
         
 
-        damage1 = Resources.Load<AudioClip>("damage1");
-        damage2 = Resources.Load<AudioClip>("damage2");
-        damage3 = Resources.Load<AudioClip>("damage3");
-        damage4 = Resources.Load<AudioClip>("damage4");
-        heartBeat = Resources.Load<AudioClip>("heartbeat");
-        alive = Resources.Load<AudioClip>("alive");
-        death = Resources.Load<AudioClip>("death");
+        // damage1 = Resources.Load<AudioClip>("damage1");
+        // damage2 = Resources.Load<AudioClip>("damage2");
+        // damage3 = Resources.Load<AudioClip>("damage3");
+        // damage4 = Resources.Load<AudioClip>("damage4");
+        // heartBeat = Resources.Load<AudioClip>("heartbeat");
+        // alive = Resources.Load<AudioClip>("alive");
+        // death = Resources.Load<AudioClip>("death");
 
         gameOver = false;
 
@@ -117,7 +117,7 @@ public class Health : MonoBehaviour
     {
         player1_CurrentHealth -= player1DamagePerContact;
 
-        audioSource.PlayOneShot(damage1);
+       // audioSource.PlayOneShot(damage1);
 
 
         //SetPlayer1Health();
@@ -125,7 +125,7 @@ public class Health : MonoBehaviour
         {
             Destroy(p1);
             audioSource.Stop();
-            audioSource.PlayOneShot(death);
+          //  audioSource.PlayOneShot(death);
 
 
         } 
@@ -136,7 +136,7 @@ public class Health : MonoBehaviour
     {
         player1_CurrentHealth -= player1DamagePerContactFromCannon;
 
-        audioSource.PlayOneShot(damage1);
+      //  audioSource.PlayOneShot(damage1);
 
 
         //SetPlayer1Health();
@@ -144,7 +144,7 @@ public class Health : MonoBehaviour
         {
             Destroy(p1);
             audioSource.Stop();
-            audioSource.PlayOneShot(death);
+        //    audioSource.PlayOneShot(death);
 
 
         }
@@ -154,14 +154,14 @@ public class Health : MonoBehaviour
     {
         player2_CurrentHealth -= player2DamagePerContact;
 
-        audioSource.PlayOneShot(damage4);
+     //   audioSource.PlayOneShot(damage4);
 
         //SetPlayer2Health();
         if (player2_CurrentHealth <= 0)
         {
             Destroy(p2);
             audioSource.Stop();
-            audioSource.PlayOneShot(death);
+        //    audioSource.PlayOneShot(death);
 
         }
         return player2_CurrentHealth;
@@ -172,14 +172,14 @@ public class Health : MonoBehaviour
         player2_CurrentHealth -= player2DamagePerContactFromCannon;
 
 
-        audioSource.PlayOneShot(damage2);
+       // audioSource.PlayOneShot(damage2);
 
         //SetPlayer2Health();
         if (player2_CurrentHealth <= 0)
         {
             Destroy(p2);
             audioSource.Stop();
-            audioSource.PlayOneShot(death);
+        //    audioSource.PlayOneShot(death);
 
         }
         return player2_CurrentHealth;

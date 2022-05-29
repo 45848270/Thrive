@@ -963,7 +963,7 @@ MonoBehaviour:
   pausePanel: {fileID: 1428789124}
   optionPanel: {fileID: 846976765}
   audioPanel: {fileID: 527245137}
-  controllerPanel: {fileID: 0}
+  controllerPanel: {fileID: 1729874843}
   keyboardPanel: {fileID: 48355707}
   GameOverPanel: {fileID: 817548384}
   levelOneDiaguePanel: {fileID: 0}
@@ -1933,7 +1933,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 180b2dbf03138af4fabf66b2a4b9acf7, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0.3
   m_Pitch: 0.89
@@ -3777,6 +3777,11 @@ GameObject:
 --- !u!1 &1729874842 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 952364115077917356, guid: 7ef22aac947abb7428a87ec03656c2de, type: 3}
+  m_PrefabInstance: {fileID: 1729874838}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1729874843 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2610066034253031094, guid: 7ef22aac947abb7428a87ec03656c2de, type: 3}
   m_PrefabInstance: {fileID: 1729874838}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1729874844 stripped

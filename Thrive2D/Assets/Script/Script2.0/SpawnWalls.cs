@@ -55,7 +55,7 @@ public class SpawnWalls : MonoBehaviour
                 CheckPlayerPos();
                 CreateRandomvalues();
                 FillUnBreakableWAlls();
-                FillDropItems();
+                //FillDropItems();
                 FillBreakableWAlls();
                 //StartCoroutine(camScript.Shake(.5f,1.9f)); 
 

@@ -6,7 +6,7 @@ using TMPro;
 
 public class DamageA : MonoBehaviour
 {
-    public static int incrementDamA = 0; 
+    public static int incrementDamA = 1; 
     public TextMeshProUGUI damageNumA;
     // Start is called before the first frame update
     void Start()

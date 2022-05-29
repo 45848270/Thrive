@@ -6,7 +6,7 @@ using TMPro;
 
 public class ReloadA : MonoBehaviour
 {
-    public static int incrementReloadA = 0;
+    public static int incrementReloadA = 1;
     public TextMeshProUGUI ReloadNumA;
     // Start is called before the fist frame update
     void Start()

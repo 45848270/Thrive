@@ -28,9 +28,8 @@ public class Movement : MonoBehaviour
     }
     void Start()
     {
-
-
-    }
+        
+    }   
 
     public void Moves(InputAction.CallbackContext context)
     {

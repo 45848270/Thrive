@@ -6888,9 +6888,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d9f802c395546342a232e877ee530d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfUnbreakableWalls: 10
-  numberOfBreakableWalls: 15
-  numberOfDrops: 15
+  numberOfUnbreakableWalls: 15
+  numberOfBreakableWalls: 22
+  numberOfDrops: 0
   reArrangeTime: 30
   fullRoundNum: 3
   camScript: {fileID: 670576907}

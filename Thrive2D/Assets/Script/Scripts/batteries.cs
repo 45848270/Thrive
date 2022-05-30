@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class batteries : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class batteries : MonoBehaviour
     public float timer = 0;
     public GameObject bullet;
     public Transform firepos;
-
+    public Transform icons;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +29,7 @@ public class batteries : MonoBehaviour
             else
             {
                 timer = timerSpace;
-                transform.right = allPlayers[0].position - transform.position;
+                icons.right = allPlayers[0].position - transform.position;
                 Instantiate(bullet, firepos.position, firepos.rotation);
             }
         }

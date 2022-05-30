@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1108751308943896107}
   - component: {fileID: 342131027802848230}
-  - component: {fileID: 9024260786195844133}
   - component: {fileID: 2738800925517545219}
   m_Layer: 18
   m_Name: unbreakable3
@@ -86,19 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &9024260786195844133
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3817695744937160621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b85f7d5bbe27ef24299aeb29ffcbc034, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DestroyTime: 30
 --- !u!61 &2738800925517545219
 BoxCollider2D:
   m_ObjectHideFlags: 0

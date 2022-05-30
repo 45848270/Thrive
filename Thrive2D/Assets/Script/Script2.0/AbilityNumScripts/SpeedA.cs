@@ -6,7 +6,7 @@ using TMPro;
 
 public class SpeedA : MonoBehaviour
 {
-    public static int incrementSpeedA = 1; 
+    public static int incrementSpeedA = 0; 
     public TextMeshProUGUI speedNumA;
     // Start is called before the first frame update
     void Start()

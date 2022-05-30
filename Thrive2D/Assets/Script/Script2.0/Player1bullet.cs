@@ -31,6 +31,7 @@ public class Player1bullet : MonoBehaviour
         if (damageGivenToP2.gameObject.tag.Equals("Player2"))                                            //condition if it comes in contact with enemy
         {
             Health.instance.Decrease_P2_Health();
+            
 
         }
         if (damageGivenToP2.gameObject.tag.Equals("player2Bullet"))                                            //condition if it comes in contact with enemy

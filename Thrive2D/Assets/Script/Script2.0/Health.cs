@@ -30,9 +30,9 @@ public class Health : MonoBehaviour
     public static AudioClip damage1, damage2, damage3, damage4, heartBeat, alive, death;
 
     public AudioSource audioSource;
-
     public UIManager uIManager;
     private bool gameOver;
+ 
 
 
     public void Awake()
@@ -59,6 +59,8 @@ public class Health : MonoBehaviour
 
         audioSource = GetComponent<AudioSource>();
         audioSource.Play();
+
+       
         
 
         // damage1 = Resources.Load<AudioClip>("damage1");
@@ -171,8 +173,10 @@ public class Health : MonoBehaviour
     {
         player2_CurrentHealth -= player2DamagePerContactFromCannon;
 
-
        // audioSource.PlayOneShot(damage2);
+           
+          
+
 
         //SetPlayer2Health();
         if (player2_CurrentHealth <= 0)

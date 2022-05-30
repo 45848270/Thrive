@@ -42,7 +42,7 @@ public class Cannon1 : MonoBehaviour
     }
     // Update is called once per frame
     void Update()
-    {       
+    {        
 
     }
 

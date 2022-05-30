@@ -3077,6 +3077,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 952364113782466391, guid: 7ef22aac947abb7428a87ec03656c2de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 449635919}
+    - target: {fileID: 952364113782466391, guid: 7ef22aac947abb7428a87ec03656c2de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadFirstLevel
+      objectReference: {fileID: 0}
     - target: {fileID: 952364113799243942, guid: 7ef22aac947abb7428a87ec03656c2de, type: 3}
       propertyPath: m_fontSize
       value: 21
@@ -3401,6 +3409,14 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: -6470105169393230361, guid: d2d0f93309b953a49bdc82cd6ed8e742, type: 2}
+    - target: {fileID: 952364114474088403, guid: 7ef22aac947abb7428a87ec03656c2de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 449635919}
+    - target: {fileID: 952364114474088403, guid: 7ef22aac947abb7428a87ec03656c2de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadThirdLevel
+      objectReference: {fileID: 0}
     - target: {fileID: 952364114502387842, guid: 7ef22aac947abb7428a87ec03656c2de, type: 3}
       propertyPath: m_SizeDelta.x
       value: 934
@@ -3752,6 +3768,14 @@ PrefabInstance:
     - target: {fileID: 952364115287019613, guid: 7ef22aac947abb7428a87ec03656c2de, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ControllerPanelOptionBack
+      objectReference: {fileID: 0}
+    - target: {fileID: 952364115380809589, guid: 7ef22aac947abb7428a87ec03656c2de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 449635919}
+    - target: {fileID: 952364115380809589, guid: 7ef22aac947abb7428a87ec03656c2de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadSecondLevel
       objectReference: {fileID: 0}
     - target: {fileID: 2610066034253031094, guid: 7ef22aac947abb7428a87ec03656c2de, type: 3}
       propertyPath: m_IsActive

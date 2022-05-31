@@ -23,14 +23,15 @@ public class Player2Bullet : MonoBehaviour
         Debug.Log(damageGivenToP1.tag);
         if (damageGivenToP1.gameObject.tag.Equals("Player2"))
             return;
-        Destroy(gameObject);
         if (damageGivenToP1.gameObject.tag.Equals("Player1"))                                            //condition if it comes in contact with enemy
         {
             Health.instance.Decrease_P1_Health();
+            Destroy(gameObject);
         }
         if (damageGivenToP1.gameObject.tag.Equals("player1Bullet"))                                            //condition if it comes in contact with enemy
         {
             Destroy(damageGivenToP1.gameObject);
+            Destroy(gameObject);
 
         }
     }

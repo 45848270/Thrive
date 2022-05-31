@@ -27,15 +27,17 @@ public class Bullet : MonoBehaviour
         if(collision .tag =="Player1")
         {
             Destroy(gameObject);
-            Health.instance.Player1MaxHealth(damage);
+            Health.instance.Decrease_P1_Health();
         }else if(collision.tag == "Player2")
         {
             Destroy(gameObject);
-            Health.instance.Player2MaxHealth(damage);
+            Health.instance.Decrease_P2_Health ();
         }
         //else if(collision.tag == "Block")
         //{
         //    collision.GetComponent<Block>().OnHit();
         //}
     }
+
+  
 }

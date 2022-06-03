@@ -103,13 +103,13 @@ public class Health : MonoBehaviour
 
     public float IncreasePlayer1DamagePerCOntact()
     {
-        player1DamagePerContact = player1DamagePerContact + (0.9f * player1DamagePerContact);
+        player1DamagePerContact = player1DamagePerContact + (0.5f * player1DamagePerContact);
         return player1DamagePerContact;
     }
 
     public float IncreasePlayer2DamagePerCOntact()
     {
-        player2DamagePerContact = player2DamagePerContact + (0.9f * player2DamagePerContact);
+        player2DamagePerContact = player2DamagePerContact + (0.5f * player2DamagePerContact);
         return player1DamagePerContact;
     }
 
@@ -188,7 +188,7 @@ public class Health : MonoBehaviour
     {
         player1_health += player1_regainHealth;
         player1_CurrentHealth += player1_regainHealth;
-        player1_regainHealth = player1_regainHealth + player1_regainHealth * (0.5f);
+        player1_regainHealth = player1_regainHealth + 20;
 
         Debug.Log("Health Added");
         //SetPlayer1Health();
@@ -199,7 +199,7 @@ public class Health : MonoBehaviour
     {
         player2_health += player2_regainHealth;
         player2_CurrentHealth += player2_regainHealth;
-        player2_regainHealth = player2_regainHealth + player2_regainHealth * (0.5f);
+        player2_regainHealth = player2_regainHealth + 20;
         //SetPlayer2Health();
         return player2_health;
     }

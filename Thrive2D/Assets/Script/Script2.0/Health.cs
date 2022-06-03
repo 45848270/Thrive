@@ -115,7 +115,7 @@ public class Health : MonoBehaviour
 
     public float Decrease_P1_Health()
     {
-        player1_CurrentHealth -= player1DamagePerContact;
+        player1_CurrentHealth -= player2DamagePerContact;
 
        // audioSource.PlayOneShot(damage1);
 
@@ -152,7 +152,7 @@ public class Health : MonoBehaviour
     }
     public float Decrease_P2_Health()
     {
-        player2_CurrentHealth -= player2DamagePerContact;
+        player2_CurrentHealth -= player1DamagePerContact;
 
      //   audioSource.PlayOneShot(damage4);
 

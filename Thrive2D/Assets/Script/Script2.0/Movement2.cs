@@ -21,6 +21,7 @@ public class Movement2 : MonoBehaviour
     // Start is called before the first frame update
 
     Rigidbody2D playerRigidbody2D;
+    public buffNumUI BuffNumUI;
 
 
     void Awake()
@@ -79,6 +80,7 @@ public class Movement2 : MonoBehaviour
 
     public void Increase_P2_Speed()
     {
+        BuffNumUI.AddSpeedBNum();
         accelerationFactor += 30;
     }
 }

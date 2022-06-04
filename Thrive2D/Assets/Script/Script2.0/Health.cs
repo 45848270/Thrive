@@ -32,6 +32,7 @@ public class Health : MonoBehaviour
     public AudioSource audioSource;
 
     public UIManager uIManager;
+    public buffNumUI BuffNumUI;
     private bool gameOver;
 
 
@@ -102,12 +103,14 @@ public class Health : MonoBehaviour
     public float IncreasePlayer1DamagePerCOntact()
     {
         player1DamagePerContact = player1DamagePerContact + (0.5f * player1DamagePerContact);
+        BuffNumUI.AddDamageANum();
         return player1DamagePerContact;
     }
 
     public float IncreasePlayer2DamagePerCOntact()
     {
         player2DamagePerContact = player2DamagePerContact + (0.5f * player2DamagePerContact);
+        BuffNumUI.AddDamageBNum();
         return player1DamagePerContact;
     }
 

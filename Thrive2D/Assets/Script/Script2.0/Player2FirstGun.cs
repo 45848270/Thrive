@@ -12,6 +12,7 @@ public class Player2FirstGun : MonoBehaviour
     public float reloadTime = 2f;
     public float timeKeeper;
     public PlayerBaction controls;
+    public buffNumUI BuffNumUI;
 
     void Awake()
     {
@@ -59,6 +60,7 @@ public class Player2FirstGun : MonoBehaviour
 
     public void Decrease_P2_ReloadTime()
     {
+        BuffNumUI.AddReloadBNum();
         reloadTime -= (0.15f * reloadTime);
     }
 }

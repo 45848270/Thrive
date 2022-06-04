@@ -43,7 +43,7 @@ public class Movement : MonoBehaviour
     {
         // steeringInput = Input.GetAxis(InputAxes.Player1_xDir);
         // accelerationInput = Input.GetAxis(InputAxes.Player1_yDir);
-
+        if (GameManger.instance.gameEnd) return;
         steeringInput = moveValue.x;
         accelerationInput = moveValue.y;
 
@@ -51,6 +51,7 @@ public class Movement : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (GameManger.instance.gameEnd) return;
         ApplyEngineForce();
         KillVelocity();
         ApplySteering();

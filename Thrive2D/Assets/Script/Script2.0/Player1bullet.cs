@@ -24,7 +24,8 @@ public class Player1bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D damageGivenToP2)
     {
-        if (damageGivenToP2.gameObject.tag.Equals("Player1"))
+        //Debug.Log(damageGivenToP2.name );
+        if (damageGivenToP2.gameObject.tag.Equals("Player1") || damageGivenToP2.tag == "CheckPoint")
             return;
         Destroy(gameObject);
 

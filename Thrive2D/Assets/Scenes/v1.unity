@@ -1574,6 +1574,7 @@ GameObject:
   m_Component:
   - component: {fileID: 521735186}
   - component: {fileID: 521735185}
+  - component: {fileID: 521735187}
   m_Layer: 0
   m_Name: UIManager
   m_TagString: Untagged
@@ -1647,6 +1648,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &521735187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 521735184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad3d2b078f4fe7949a0d9ce02aa26c62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEnd: 0
 --- !u!1 &525578631
 GameObject:
   m_ObjectHideFlags: 0
@@ -5230,6 +5244,40 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2287024955499315617, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
   m_PrefabInstance: {fileID: 504213906}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1369755699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369755678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da04361b0075c36488fc95fe3aaf89fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  P1slider: {fileID: 0}
+  P2slider: {fileID: 0}
+  player1DamagePerContact: 10
+  player1DamagePerContactFromCannon: 20
+  player2DamagePerContact: 10
+  player2DamagePerContactFromCannon: 20
+  player1_regainHealth: 20
+  player2_regainHealth: 20
+  player1_health: 100
+  player2_health: 100
+  p1: {fileID: 6290255593786137045, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
+  p2: {fileID: 0}
+  p1_Slidder_HealthValue: 0
+  p2_Slidder_HealthValue: 0
+  player1_CurrentHealth: 0
+  player2_CurrentHealth: 0
+  time1: 0
+  time2: 0
+  x: 0
+  y: 0
+  audioSource: {fileID: 0}
+  uIManager: {fileID: 0}
 --- !u!114 &1371271593 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 952364113753474963, guid: 7ef22aac947abb7428a87ec03656c2de, type: 3}
@@ -7547,6 +7595,40 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2403367132759127101, guid: 9a09e754f7b08514985fa77fbb264a75, type: 3}
   m_PrefabInstance: {fileID: 165436091}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2100056759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165436092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da04361b0075c36488fc95fe3aaf89fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  P1slider: {fileID: 0}
+  P2slider: {fileID: 0}
+  player1DamagePerContact: 10
+  player1DamagePerContactFromCannon: 20
+  player2DamagePerContact: 10
+  player2DamagePerContactFromCannon: 20
+  player1_regainHealth: 20
+  player2_regainHealth: 20
+  player1_health: 100
+  player2_health: 100
+  p1: {fileID: 6290255593786137045, guid: c6eb9cc122b50904d93d8c6e40e1e385, type: 3}
+  p2: {fileID: 0}
+  p1_Slidder_HealthValue: 0
+  p2_Slidder_HealthValue: 0
+  player1_CurrentHealth: 0
+  player2_CurrentHealth: 0
+  time1: 0
+  time2: 0
+  x: 0
+  y: 0
+  audioSource: {fileID: 0}
+  uIManager: {fileID: 0}
 --- !u!1 &2109159694
 GameObject:
   m_ObjectHideFlags: 0

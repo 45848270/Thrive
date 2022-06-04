@@ -21,17 +21,17 @@ public class Player2Bullet : MonoBehaviour
     void OnTriggerEnter2D(Collider2D damageGivenToP1)
     {
         Debug.Log(damageGivenToP1.tag);
-        if (damageGivenToP1.gameObject.tag.Equals("Player2"))
+        if (damageGivenToP1.gameObject.tag.Equals("Player2")||damageGivenToP1 .tag =="CheckPoint")
             return;
+        Debug.Log(damageGivenToP1.name );
+        Destroy(gameObject);
         if (damageGivenToP1.gameObject.tag.Equals("Player1"))                                            //condition if it comes in contact with enemy
         {
             Health.instance.Decrease_P1_Health();
-            Destroy(gameObject);
         }
         if (damageGivenToP1.gameObject.tag.Equals("player1Bullet"))                                            //condition if it comes in contact with enemy
         {
             Destroy(damageGivenToP1.gameObject);
-            Destroy(gameObject);
 
         }
     }

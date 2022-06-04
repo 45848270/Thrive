@@ -103,6 +103,7 @@ public class PlayerInfo : MonoBehaviour
     void Update()
     {
 
+        if (GameManger.instance.gameEnd) return;
         UpdatedSpeedA = Movement.instance.accelerationFactor;
         UpdatedDamageA = Health.instance.player1DamagePerContact;
         UpdatedReloadA = Player1FirstGun.instance.reloadTime;
@@ -115,7 +116,6 @@ public class PlayerInfo : MonoBehaviour
 
         // UpdatedHealthA = Health.instance.player1_health;
         // UpdatedHealthB = Health.instance.player2_health;      
-
 
 
         Player1Info();

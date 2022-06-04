@@ -15,8 +15,8 @@ public class Health : MonoBehaviour
     public float player2DamagePerContactFromCannon = 20f;
     public float player1_regainHealth = 20f;
     public float player2_regainHealth = 20f;
-    public float player1_health;
-    public float player2_health;
+    public float player1_health = 100f;
+    public float player2_health = 100f;
     public GameObject p1;
     public GameObject p2;
     public float p1_Slidder_HealthValue;
@@ -38,8 +38,6 @@ public class Health : MonoBehaviour
     public void Awake()
     {
         instance = this;
-        player1_health = 100f;
-        player2_health = 100f;
 
         player1_CurrentHealth = player1_health;
         player2_CurrentHealth = player2_health;
@@ -123,6 +121,7 @@ public class Health : MonoBehaviour
         //SetPlayer1Health();
         if (player1_CurrentHealth <= 0)
         {
+            GameManger.instance.GameEnd();
             Destroy(p1);
             audioSource.Stop();
           //  audioSource.PlayOneShot(death);
@@ -142,6 +141,7 @@ public class Health : MonoBehaviour
         //SetPlayer1Health();
         if (player1_CurrentHealth <= 0)
         {
+            GameManger.instance.GameEnd();
             Destroy(p1);
             audioSource.Stop();
         //    audioSource.PlayOneShot(death);
@@ -159,6 +159,7 @@ public class Health : MonoBehaviour
         //SetPlayer2Health();
         if (player2_CurrentHealth <= 0)
         {
+            GameManger.instance.GameEnd();
             Destroy(p2);
             audioSource.Stop();
         //    audioSource.PlayOneShot(death);
@@ -177,6 +178,7 @@ public class Health : MonoBehaviour
         //SetPlayer2Health();
         if (player2_CurrentHealth <= 0)
         {
+            GameManger.instance.GameEnd();
             Destroy(p2);
             audioSource.Stop();
         //    audioSource.PlayOneShot(death);

@@ -67,6 +67,6 @@ public class Player2SecondGun : MonoBehaviour
 
     public void Decrease_P2_ReloadTime()
     {
-        reloadTime -= (0.17f * reloadTime);
+        reloadTime -= (0.15f * reloadTime);
     }
 }

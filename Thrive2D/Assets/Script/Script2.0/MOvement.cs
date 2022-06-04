@@ -85,6 +85,6 @@ public class Movement : MonoBehaviour
     public void Increase_P1_Speed()
     {
         BuffNumUI.AddSpeedANum();
-        accelerationFactor += 30;
+        accelerationFactor += 60;
     }
 }

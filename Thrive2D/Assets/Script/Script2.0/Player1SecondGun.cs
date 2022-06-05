@@ -15,7 +15,6 @@ public class Player1SecondGun : MonoBehaviour
 
     public PlayerAction controls;
 
-
     public float timeKeeper;
 
     void Awake()

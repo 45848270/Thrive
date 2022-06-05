@@ -20,6 +20,7 @@ public class batteries : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameManger.instance.gameEnd) return;
         if (FireEnable)
         {
             if (timer > 0)

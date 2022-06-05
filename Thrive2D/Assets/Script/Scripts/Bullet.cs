@@ -22,7 +22,8 @@ public class Bullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "CheckPoint"||collision.tag == "Block") return;
-     
+        if (GameManger.instance.gameEnd) return;
+
         Debug .Log (collision .tag );
         if(collision .tag =="Player1")
         {

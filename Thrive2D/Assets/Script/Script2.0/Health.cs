@@ -15,8 +15,8 @@ public class Health : MonoBehaviour
     public float player2DamagePerContactFromCannon = 20f;
     public float player1_regainHealth = 20f;
     public float player2_regainHealth = 20f;
-    public float player1_health;
-    public float player2_health;
+    public float player1_health = 100f;
+    public float player2_health = 100f;
     public GameObject p1;
     public GameObject p2;
     public float p1_Slidder_HealthValue;
@@ -31,6 +31,7 @@ public class Health : MonoBehaviour
 
     public AudioSource audioSource;
     public UIManager uIManager;
+    public buffNumUI BuffNumUI;
     private bool gameOver;
  
 
@@ -38,8 +39,6 @@ public class Health : MonoBehaviour
     public void Awake()
     {
         instance = this;
-        player1_health = 100f;
-        player2_health = 100f;
 
         player1_CurrentHealth = player1_health;
         player2_CurrentHealth = player2_health;
@@ -105,19 +104,21 @@ public class Health : MonoBehaviour
 
     public float IncreasePlayer1DamagePerCOntact()
     {
-        player1DamagePerContact = player1DamagePerContact + (0.9f * player1DamagePerContact);
+        player1DamagePerContact = player1DamagePerContact + (0.5f * player1DamagePerContact);
+        BuffNumUI.AddDamageANum();
         return player1DamagePerContact;
     }
 
     public float IncreasePlayer2DamagePerCOntact()
     {
-        player2DamagePerContact = player2DamagePerContact + (0.9f * player2DamagePerContact);
+        player2DamagePerContact = player2DamagePerContact + (0.5f * player2DamagePerContact);
+        BuffNumUI.AddDamageBNum();
         return player1DamagePerContact;
     }
 
     public float Decrease_P1_Health()
     {
-        player1_CurrentHealth -= player1DamagePerContact;
+        player1_CurrentHealth -= player2DamagePerContact;
 
        // audioSource.PlayOneShot(damage1);
 
@@ -125,6 +126,7 @@ public class Health : MonoBehaviour
         //SetPlayer1Health();
         if (player1_CurrentHealth <= 0)
         {
+            GameManger.instance.GameEnd();
             Destroy(p1);
             audioSource.Stop();
           //  audioSource.PlayOneShot(death);
@@ -144,6 +146,7 @@ public class Health : MonoBehaviour
         //SetPlayer1Health();
         if (player1_CurrentHealth <= 0)
         {
+            GameManger.instance.GameEnd();
             Destroy(p1);
             audioSource.Stop();
         //    audioSource.PlayOneShot(death);
@@ -154,13 +157,14 @@ public class Health : MonoBehaviour
     }
     public float Decrease_P2_Health()
     {
-        player2_CurrentHealth -= player2DamagePerContact;
+        player2_CurrentHealth -= player1DamagePerContact;
 
      //   audioSource.PlayOneShot(damage4);
 
         //SetPlayer2Health();
         if (player2_CurrentHealth <= 0)
         {
+            GameManger.instance.GameEnd();
             Destroy(p2);
             audioSource.Stop();
         //    audioSource.PlayOneShot(death);
@@ -181,6 +185,7 @@ public class Health : MonoBehaviour
         //SetPlayer2Health();
         if (player2_CurrentHealth <= 0)
         {
+            GameManger.instance.GameEnd();
             Destroy(p2);
             audioSource.Stop();
         //    audioSource.PlayOneShot(death);
@@ -192,7 +197,7 @@ public class Health : MonoBehaviour
     {
         player1_health += player1_regainHealth;
         player1_CurrentHealth += player1_regainHealth;
-        player1_regainHealth = player1_regainHealth + player1_regainHealth * (0.5f);
+        player1_regainHealth = player1_regainHealth + 20;
 
         Debug.Log("Health Added");
         //SetPlayer1Health();
@@ -203,7 +208,7 @@ public class Health : MonoBehaviour
     {
         player2_health += player2_regainHealth;
         player2_CurrentHealth += player2_regainHealth;
-        player2_regainHealth = player2_regainHealth + player2_regainHealth * (0.5f);
+        player2_regainHealth = player2_regainHealth + 20;
         //SetPlayer2Health();
         return player2_health;
     }

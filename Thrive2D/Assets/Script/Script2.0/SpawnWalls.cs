@@ -46,7 +46,8 @@ public class SpawnWalls : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {   
+    {
+        if (GameManger.instance.gameEnd) return;
         if (decreseTime <= (fullRoundNum*reArrangeTime-0.5f))
         {
             if (timer <= 0)

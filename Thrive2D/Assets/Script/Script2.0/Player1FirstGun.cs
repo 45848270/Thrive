@@ -14,8 +14,9 @@ public class Player1FirstGun : MonoBehaviour
     public float timeKeeper;
     public PlayerAction controls;
     public buffNumUI BuffNumUI;
+    public static AudioClip bulletSound;
 
-
+    private AudioSource audioSource;
 
     void Awake()
     {
@@ -26,11 +27,12 @@ public class Player1FirstGun : MonoBehaviour
     void Start()
     {
         timeKeeper = reloadTime;
+        audioSource = GetComponent<AudioSource>();
+         bulletSound = Resources.Load<AudioClip>("bullet");
     }
     // Update is called once per frame
     void Update()
     {
-
         timeKeeper -= Time.deltaTime;
     }
 
@@ -38,7 +40,9 @@ public class Player1FirstGun : MonoBehaviour
     {
         //shooting method
         GameObject bullet = Instantiate(bulletPrefab, initialPos.position, initialPos.rotation);
-        // bullet.GetComponent <Player1bullet >().
+        audioSource.PlayOneShot(bulletSound);
+
+        
     }
 
 

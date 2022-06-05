@@ -34,7 +34,7 @@ public class Cannon1 : MonoBehaviour
         timeKeeper = reloadTime;
 
         audioSource = GetComponent<AudioSource>();
-        cannonSound = Resources.Load<AudioClip>("Cannon");
+        cannonSound = Resources.Load<AudioClip>("cannon");
 
         cannonEffect = GetComponent<ParticleSystem>();
 
@@ -63,8 +63,7 @@ public class Cannon1 : MonoBehaviour
             {
                 
                 shoot();
-                CannonShootOnce = false;
-                // Update();
+                CannonShootOnce = false;               
 
 
             }

@@ -27,8 +27,7 @@ public class Health : MonoBehaviour
     public float time2;
     public float x;
     public float y;
-    public static AudioClip damage1, damage2, damage3, damage4, heartBeat, alive, death;
-
+    public static AudioClip damage;
     public AudioSource audioSource;
     public UIManager uIManager;
     public buffNumUI BuffNumUI;
@@ -57,18 +56,11 @@ public class Health : MonoBehaviour
         P2slider.value = p1_Slidder_HealthValue;
 
         audioSource = GetComponent<AudioSource>();
-        audioSource.Play();
-
-       
+        audioSource.Play();       
         
 
-        // damage1 = Resources.Load<AudioClip>("damage1");
-        // damage2 = Resources.Load<AudioClip>("damage2");
-        // damage3 = Resources.Load<AudioClip>("damage3");
-        // damage4 = Resources.Load<AudioClip>("damage4");
-        // heartBeat = Resources.Load<AudioClip>("heartbeat");
-        // alive = Resources.Load<AudioClip>("alive");
-        // death = Resources.Load<AudioClip>("death");
+         damage = Resources.Load<AudioClip>("damage");
+        
 
         gameOver = false;
 
@@ -120,7 +112,7 @@ public class Health : MonoBehaviour
     {
         player1_CurrentHealth -= player2DamagePerContact;
 
-       // audioSource.PlayOneShot(damage1);
+        audioSource.PlayOneShot(damage);
 
 
         //SetPlayer1Health();
@@ -129,7 +121,7 @@ public class Health : MonoBehaviour
             GameManger.instance.GameEnd();
             Destroy(p1);
             audioSource.Stop();
-          //  audioSource.PlayOneShot(death);
+          
 
 
         } 
@@ -140,7 +132,7 @@ public class Health : MonoBehaviour
     {
         player1_CurrentHealth -= player1DamagePerContactFromCannon;
 
-      //  audioSource.PlayOneShot(damage1);
+        audioSource.PlayOneShot(damage);
 
 
         //SetPlayer1Health();
@@ -148,8 +140,7 @@ public class Health : MonoBehaviour
         {
             GameManger.instance.GameEnd();
             Destroy(p1);
-            audioSource.Stop();
-        //    audioSource.PlayOneShot(death);
+            audioSource.Stop();        
 
 
         }
@@ -159,7 +150,7 @@ public class Health : MonoBehaviour
     {
         player2_CurrentHealth -= player1DamagePerContact;
 
-     //   audioSource.PlayOneShot(damage4);
+        audioSource.PlayOneShot(damage);
 
         //SetPlayer2Health();
         if (player2_CurrentHealth <= 0)
@@ -167,7 +158,6 @@ public class Health : MonoBehaviour
             GameManger.instance.GameEnd();
             Destroy(p2);
             audioSource.Stop();
-        //    audioSource.PlayOneShot(death);
 
         }
         return player2_CurrentHealth;
@@ -177,7 +167,7 @@ public class Health : MonoBehaviour
     {
         player2_CurrentHealth -= player2DamagePerContactFromCannon;
 
-       // audioSource.PlayOneShot(damage2);
+        audioSource.PlayOneShot(damage);
            
           
 
@@ -188,7 +178,6 @@ public class Health : MonoBehaviour
             GameManger.instance.GameEnd();
             Destroy(p2);
             audioSource.Stop();
-        //    audioSource.PlayOneShot(death);
 
         }
         return player2_CurrentHealth;

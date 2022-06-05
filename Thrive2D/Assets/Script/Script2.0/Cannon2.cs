@@ -18,8 +18,6 @@ public class Cannon2 : MonoBehaviour
     public bool CannonShootOnce = false;
     public PlayerAction controls;
 
-
-
     private AudioSource audioSource;
 
 
@@ -36,7 +34,7 @@ public class Cannon2 : MonoBehaviour
         timeKeeper = reloadTime;
 
         audioSource = GetComponent<AudioSource>();
-        cannonSound = Resources.Load<AudioClip>("Cannon");
+        cannonSound = Resources.Load<AudioClip>("cannon");
 
         cannonEffect = GetComponent<ParticleSystem>();
 
@@ -45,51 +43,32 @@ public class Cannon2 : MonoBehaviour
     // Update is called once per frame 
     void Update()
     {
-        if (timeKeeper <= 0)
-        {
-            if (Input.GetKeyDown(KeyCode.Keypad2) && CannonShootOnce == true)
-            {
-                shoot();
-                CannonShootOnce = false;
-                timeKeeper = reloadTime;
-            }
-        }
-        else
-        {
-            timeKeeper -= Time.deltaTime;
-
-        }
-
+       
     }
 
     void shoot()
     {
         //shooting method
         GameObject cannon = Instantiate(cannonShotPrefab2, initialPos.position, initialPos.rotation);
-        audioSource.PlayOneShot(cannonSound);
-        cannonEffect.Play();
-
-
-        // bullet.GetComponent <Player1bullet >().
+       audioSource.PlayOneShot(cannonSound);
+        cannonEffect.Play();        
     }
 
  public void Fire2(InputAction.CallbackContext context)
     {
-        if (CannonShootOnce == true)
+        
         {
-            if (context.performed)
+            if (context.performed && (CannonShootOnce == true))
             {
+                
                 shoot();
-                CannonShootOnce = false;
-                // Update();
+                CannonShootOnce = false;               
+
+
             }
         }
     }
 
 
 
-    // public void Decrease_P1_ReloadTime()
-    // {
-    //     reloadTime -= (0.15f * reloadTime);
-    // }
-}
+    }

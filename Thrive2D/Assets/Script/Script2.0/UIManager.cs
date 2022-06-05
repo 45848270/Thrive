@@ -44,7 +44,7 @@ public class UIManager : MonoBehaviour
     public GameObject pauseFirstButton, optionFirstButton, optionClosedButton, audioFirstButton, audioClosedButton, controllerFirstButton, controllerClosedButton, keyboardFirstButton, keyboardClosedButton, gameoverFirstButton, gameoverClosedButton, chooseLevelFirstButton;
     public GameObject menuPlayButton, menuAfterPlayButton, level1FirstDialogueButton, level2FirstDialogueButton, level3FirstDialogueButton;
 
-    //Scene orders:
+    //Scene orders: 
     private int MainSceneOrder = 0;
     private int FirstlevelOrder = 1;
     private int SecondlevelOrder = 2;
